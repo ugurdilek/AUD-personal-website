@@ -5,23 +5,29 @@ const closeBtn = document.querySelector(".close");
 const toggleBtn = document.querySelector(".menu-toggle");
 const navMenu = document.querySelector(".navbar ul");
 
-images.forEach(img => {
-  img.addEventListener("click", () => {
-    lightbox.style.display = "flex";
-    lightboxImg.src = img.src;
+// LIGHTBOX (sadece varsa uygula)
+if (images.length > 0 && lightbox && lightboxImg && closeBtn) {
+  images.forEach(img => {
+    img.addEventListener("click", () => {
+      lightbox.style.display = "flex";
+      lightboxImg.src = img.src;
+    });
   });
-});
 
-closeBtn.addEventListener("click", () => {
-  lightbox.style.display = "none";
-});
-
-lightbox.addEventListener("click", (e) => {
-  if (e.target === lightbox) {
+  closeBtn.addEventListener("click", () => {
     lightbox.style.display = "none";
-  }
-});
+  });
 
-toggleBtn.addEventListener("click", () => {
-  navMenu.classList.toggle("show");
-});
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) {
+      lightbox.style.display = "none";
+    }
+  });
+}
+
+// MOBILE MENU (sadece varsa uygula)
+if (toggleBtn && navMenu) {
+  toggleBtn.addEventListener("click", () => {
+    navMenu.classList.toggle("show");
+  });
+}
