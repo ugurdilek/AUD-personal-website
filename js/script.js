@@ -24,10 +24,3 @@ if (images.length > 0 && lightbox && lightboxImg && closeBtn) {
     }
   });
 }
-
-// MOBILE MENU (sadece varsa uygula)
-if (toggleBtn && navMenu) {
-  toggleBtn.addEventListener("click", () => {
-    navMenu.classList.toggle("show");
-  });
-}

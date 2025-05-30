@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8"/>
     <title>Resume | Ahmet Uğur Dilek</title>
-    <link rel="stylesheet" href="/css/style.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="/css/style.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 </head>
 <body>
 
 <header>
     <nav class="navbar">
-        <button class="menu-toggle" aria-label="Toggle menu">
+        <button aria-label="Toggle menu" class="menu-toggle">
             <i class="fa-solid fa-bars"></i>
         </button>
         <ul>
             <li><a href="/"><i class="fa-solid fa-house"></i> Home</a></li>
             <li><a href="/gallery"><i class="fa-solid fa-image"></i> Gallery</a></li>
-            <li><a href="/resume" class="active"><i class="fa-solid fa-file-lines"></i> Resume</a></li>
+            <li><a class="active" href="/resume"><i class="fa-solid fa-file-lines"></i> Resume</a></li>
             <li><a href="/contact"><i class="fa-solid fa-envelope"></i> Contact</a></li>
         </ul>
     </nav>
@@ -30,39 +30,69 @@
 
     <section>
         <h2>Work Experience</h2>
-        <ul>
-            <li>Experienced Software Test Engineer&nbsp;&nbsp;&nbsp;&nbsp;- R&D Department, Siemens, Mar 2023 – Present</li>
-            <li>Senior Software Test Engineer - R&D Department, Arçelik, Dec 2021 – Mar 2023</li>
-            <li>Software Test Engineer - R&D Department,Panasonic, Jul 2019 – Dec 2021</li>
+        <ul class="resume-table">
+            <li>
+                <span class="role">Experienced Software Test Engineer</span>
+                <span class="dash">–</span>
+                <span class="company">R&D Department, Siemens</span>
+                <span class="dash">–</span>
+                <span class="dates">Mar 2023 – Present</span>
+            </li>
+            <li>
+                <span class="role">Senior Software Test Engineer</span>
+                <span class="dash">–</span>
+                <span class="company">R&D Department, Arçelik</span>
+                <span class="dash">–</span>
+                <span class="dates">Dec 2021 – Mar 2023</span>
+            </li>
+            <li>
+                <span class="role">Software Test Engineer</span>
+                <span class="dash">–</span>
+                <span class="company">R&D Department, Panasonic</span>
+                <span class="dash">–</span>
+                <span class="dates">Jul 2019 – Dec 2021</span>
+            </li>
         </ul>
+
     </section>
 
     <section>
         <h2>Education</h2>
         <ul>
-            <li>MSc – Electrical & Electronics Engineering, Bilgi University (2015–2017)</li>
-            <li>BSc – Electrical & Electronics Engineering, Bilgi University (2010–2015)</li>
+            <li>MSc – Electrical & Electronics Engineering, Bilgi University Sep 2015 - Jun 2017)</li>
+            <li>BSc – Electrical & Electronics Engineering, Bilgi University Oct 2010 - Jun 2015)</li>
         </ul>
     </section>
 
     <section>
         <h2>Skills</h2>
         <ul>
-            <li>Manual Testing, Agile/Scrum, IoT, JIRA, Test Design, Reporting</li>
+
+            <li>Test Case Design & Execution</li>
+            <li>Bug Tracking & Reporting</li>
+            <li>Manual & Automation Testing</li>
+            <li>Functional & Regression Testing</li>
+            <li>Agile / Scrum</li>
+            <li>JIRA, Azure DevOps</li>
+
         </ul>
     </section>
 
     <section>
         <h2>Certificates</h2>
         <ul>
-            <li>ISTQB CTFL – GASQ (2023)</li>
-            <li>CCNA – Cisco (2023–2024)</li>
-            <li>KNX Certified – Basic, Advanced, HVAC</li>
+            <li>ISTQB Certified Tester Foundation Level - GASQ</li>
+            <li>Switching, Routing, and Wireless Essentials - CCNA</li>
+            <li>Introduction to Networks - CCNA</li>
+            <li>KNX Advanced - KNX Association</li>
+            <li>KNX HVAC Specialist - KNX Association</li>
+            <li>KNX Basic - KNX Association</li>
+            <li>Scrum: The Basics - LinkedIn</li>
         </ul>
     </section>
 
     <section>
-        <a href="/resume/AUD_resume.pdf" target="_blank" class="view-link">
+        <a class="view-link" href="/resume/AUD_resume.pdf" target="_blank">
             <i class="fa-solid fa-view"></i> View full PDF version
         </a>
     </section>
