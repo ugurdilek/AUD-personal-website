@@ -206,7 +206,7 @@ body {
   }
 }
 
-.download-link {
+.view-link {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -219,7 +219,7 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.download-link:hover {
+.view-link:hover {
   background-color: #0097a7;
   color: #ffffff;
 }
