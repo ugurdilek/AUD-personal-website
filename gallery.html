@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Gallery</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header>
+<nav class="navbar">
+  <ul>
+    <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+<li><a href="gallery.html" class="active"><i class="fa-solid fa-house"></i> Gallery</a></li>
+    <li><a href="cv.html"><i class="fa-solid fa-file-lines"></i> Resume</a></li>
+    <li><a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+  </ul>
+</nav>
+
+  </header>
+
+  <main class="gallery">
+    <img src="photos/photo1.png" alt="Photo 1">
+    <img src="photos/photo2.png" alt="Photo 2">
+    <img src="photos/test-image.png" alt="Photo 3">
+  </main>
+
+  <!-- Lightbox popup -->
+  <div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-img" src="" alt="Expanded image">
+  </div>
+
+  <script src="js/script.js"></script>
+
+</body>
+</html>
