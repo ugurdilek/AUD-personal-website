@@ -2,6 +2,8 @@ const images = document.querySelectorAll(".gallery img");
 const lightbox = document.getElementById("lightbox");
 const lightboxImg = document.querySelector(".lightbox-img");
 const closeBtn = document.querySelector(".close");
+const toggleBtn = document.querySelector(".menu-toggle");
+const navMenu = document.querySelector(".navbar ul");
 
 images.forEach(img => {
   img.addEventListener("click", () => {
@@ -18,4 +20,8 @@ lightbox.addEventListener("click", (e) => {
   if (e.target === lightbox) {
     lightbox.style.display = "none";
   }
+});
+
+toggleBtn.addEventListener("click", () => {
+  navMenu.classList.toggle("show");
 });
