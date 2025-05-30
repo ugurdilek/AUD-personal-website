@@ -3,7 +3,6 @@ const lightbox = document.getElementById("lightbox");
 const lightboxImg = document.querySelector(".lightbox-img");
 const closeBtn = document.querySelector(".close");
 
-// LIGHTBOX (sadece varsa uygula)
 if (images.length > 0 && lightbox && lightboxImg && closeBtn) {
   images.forEach(img => {
     img.addEventListener("click", () => {
