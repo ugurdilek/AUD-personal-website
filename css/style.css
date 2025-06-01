@@ -224,7 +224,7 @@ html, body {
     grid-template-columns: 300px 20px 300px 20px 180px;
 }
 
-/* MENU TOGGLE (Mobil ikon) */
+/* MENU TOGGLE */
 .menu-toggle {
     display: none;
     font-size: 2rem;
