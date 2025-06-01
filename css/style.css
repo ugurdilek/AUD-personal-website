@@ -12,7 +12,7 @@ html, body {
 
 /* NAVIGATION (All Pages) */
 .navbar ul {
-    display: none; /* Mobil için başlangıçta gizli */
+    display: flex; /* Mobil için başlangıçta gizli */
     list-style: none;
     justify-content: center;
     gap: 2rem;
