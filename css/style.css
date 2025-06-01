@@ -169,28 +169,6 @@ html, body {
   text-decoration: underline;
 }
 
-/* Responsive navbar */
-@media (max-width: 768px) {
-  .navbar {
-    position: relative;
-  }
-
-  .navbar ul {
-    display: flex !important;
-    flex-direction: column;
-    background-color: #2a2a2a;
-    position: static;
-    width: 100%;
-    padding: 1rem 0;
-    z-index: 1000;
-  }
-
-  .navbar ul li {
-    text-align: center;
-    padding: 1rem 0;
-  }
-}
-
 /* Resume Download Button */
 .view-link {
   display: inline-flex;
@@ -246,7 +224,60 @@ html, body {
   grid-template-columns: 300px 20px 300px 20px 180px;
 }
 
+/* MENU TOGGLE */
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  color: #f5f5f5;
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  z-index: 1100;
+  cursor: pointer;
+}
+
+.menu-toggle .icon-fallback {
+  display: inline-block;
+  font-size: 1.5rem;
+  color: #f5f5f5;
+}
+
+.menu-toggle i.fa-bars-staggered {
+  display: inline-block !important;
+}
+
+.menu-toggle i.fa-bars-staggered + .icon-fallback {
+  display: none;
+}
+
+/* MOBILE RESPONSIVE NAV */
 @media (max-width: 768px) {
+  .navbar {
+    position: relative;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    background-color: #2a2a2a;
+    padding: 1rem;
+    border-radius: 12px;
+    margin: 1rem;
+  }
+
+  .navbar ul.active {
+    display: flex;
+  }
+
+  .navbar ul li {
+    text-align: center;
+    padding: 1rem 0;
+  }
+
   .resume-page h1 {
     font-size: 1.4rem;
     font-weight: 700;
@@ -269,49 +300,3 @@ html, body {
     line-height: 1.5;
   }
 }
-
-.menu-toggle {
-  display: none;
-  font-size: 1.5rem;
-  color: #f5f5f5;
-  position: absolute;
-  top: 1rem;
-  right: 1.5rem;
-  z-index: 1100;
-  cursor: pointer;
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  .navbar ul {
-    display: none;
-    flex-direction: column;
-    background-color: #2a2a2a;
-    padding: 1rem;
-    border-radius: 12px;
-    margin: 1rem;
-  }
-
-  .navbar ul.active {
-    display: flex;
-  }
-}
-
-.menu-toggle .icon-fallback {
-  display: inline-block;
-  font-size: 1.5rem;
-  color: #f5f5f5;
-}
-
-.menu-toggle i.fa-bars-staggered {
-  display: inline-block !important;
-}
-
-.menu-toggle i.fa-bars-staggered + .icon-fallback {
-  display: none;
-}
-
