@@ -53,14 +53,14 @@
         });
     </script>
 
-    <!-- Content Security Policy -->
+    <!-- CSP -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com https://cdnjs.cloudflare.com;">
 </head>
 
 <body>
 
 <header>
-    <div class="menu-toggle" onclick="toggleMenu()">
+    <div class="menu-toggle">
         <span class="icon-fallback">☰</span>
         <i class="fa-solid fa-bars-staggered" style="display: none;"></i>
     </div>
@@ -79,12 +79,18 @@
     <p>Hi! I'm Uğur</p>
 </main>
 
-<!-- Menü Aç/Kapa JS -->
+<!-- JavaScript: Menü Aç/Kapa -->
 <script>
-    function toggleMenu() {
+    document.addEventListener('DOMContentLoaded', function () {
+        const toggleButton = document.querySelector('.menu-toggle');
         const navMenu = document.querySelector('.navbar ul');
-        navMenu.classList.toggle('active');
-    }
+
+        if (toggleButton && navMenu) {
+            toggleButton.addEventListener('click', function () {
+                navMenu.classList.toggle('active');
+            });
+        }
+    });
 </script>
 
 </body>
