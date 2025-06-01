@@ -10,14 +10,12 @@
     <meta name="robots" content="index, follow" />
     <meta name="author" content="Ahmet Uğur Dilek" />
 
-    <!-- Open Graph -->
+    <!-- OG / Twitter -->
     <meta property="og:title" content="Ahmet Uğur Dilek" />
     <meta property="og:description" content="Ahmet Uğur Dilek, Uğur Dilek, augurdilek, ugur.dilek, augur.dilek" />
     <meta property="og:url" content="https://www.ugurdilek.com" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://www.ugurdilek.com/images/og-image.jpg" />
-
-    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Ahmet Uğur Dilek" />
     <meta name="twitter:description" content="Ahmet Uğur Dilek, Uğur Dilek, augurdilek, ugur.dilek, augur.dilek" />
@@ -27,9 +25,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link rel="stylesheet" href="/css/style.css" />
 
-    <!-- Content Security Policy -->
-    <meta http-equiv="Content-Security-Policy"
-          content="default-src 'self'; script-src 'self' https://www.googletagmanager.com https://cdnjs.cloudflare.com;">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com https://cdnjs.cloudflare.com;">
 </head>
 
 <body>
@@ -54,7 +50,6 @@
 </main>
 
 <script>
-    // Menü aç/kapa fonksiyonu
     document.addEventListener('DOMContentLoaded', function () {
         const toggleButton = document.querySelector('.menu-toggle');
         const navMenu = document.querySelector('.navbar ul');
@@ -75,7 +70,6 @@
             document.head.appendChild(gtagScript);
 
             window.dataLayer = window.dataLayer || [];
-
             function gtag() { dataLayer.push(arguments); }
             gtag('js', new Date());
             gtag('config', 'G-9P7Z2XMBMH');
