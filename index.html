@@ -1,68 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>Ahmet Uğur Dilek</title>
-
-    <!-- SEO Meta -->
-    <meta name="description" content="Ahmet Uğur Dilek, Uğur Dilek, augurdilek, ugur.dilek, augur.dilek">
-    <meta name="robots" content="index, follow">
-    <meta name="author" content="Ahmet Uğur Dilek" />
+    <meta content="Ahmet Uğur Dilek, Uğur Dilek, augurdilek, ugur.dilek, augur.dilek" name="description"/>
+    <meta content="index, follow" name="robots"/>
+    <meta content="Ahmet Uğur Dilek" name="author"/>
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Ahmet Uğur Dilek">
-    <meta property="og:description" content="Ahmet Uğur Dilek, Uğur Dilek, augurdilek, ugur.dilek, augur.dilek">
-    <meta property="og:url" content="https://www.ugurdilek.com">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://www.ugurdilek.com/images/og-image.jpg">
+    <meta content="Ahmet Uğur Dilek" property="og:title"/>
+    <meta content="Ahmet Uğur Dilek, Uğur Dilek, augurdilek, ugur.dilek, augur.dilek" property="og:description"/>
+    <meta content="https://www.ugurdilek.com" property="og:url"/>
+    <meta content="website" property="og:type"/>
+    <meta content="https://www.ugurdilek.com/images/og-image.jpg" property="og:image"/>
 
     <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Ahmet Uğur Dilek">
-    <meta name="twitter:description" content="Ahmet Uğur Dilek, Uğur Dilek, augurdilek, ugur.dilek, augur.dilek">
-    <meta name="twitter:image" content="https://www.ugurdilek.com/images/og-image.jpg">
+    <meta content="summary_large_image" name="twitter:card"/>
+    <meta content="Ahmet Uğur Dilek" name="twitter:title"/>
+    <meta content="Ahmet Uğur Dilek, Uğur Dilek, augurdilek, ugur.dilek, augur.dilek" name="twitter:description"/>
+    <meta content="https://www.ugurdilek.com/images/og-image.jpg" name="twitter:image"/>
 
-    <!-- CSS -->
-    <link href="/css/style.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+    <link href="/css/style.css" rel="stylesheet"/>
 
-    <!-- Font Awesome -->
-    <script>
-        window.addEventListener('load', function () {
-            var fa = document.createElement('link');
-            fa.rel = 'stylesheet';
-            fa.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css';
-            document.head.appendChild(fa);
-        });
-    </script>
-
-    <!-- Google Analytics -->
-    <script>
-        window.addEventListener('DOMContentLoaded', function () {
-            setTimeout(function () {
-                var gtagScript = document.createElement('script');
-                gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-9P7Z2XMBMH";
-                gtagScript.async = true;
-                document.head.appendChild(gtagScript);
-
-                window.dataLayer = window.dataLayer || [];
-                function gtag() { dataLayer.push(arguments); }
-                gtag('js', new Date());
-                gtag('config', 'G-9P7Z2XMBMH');
-            }, 2000);
-        });
-    </script>
-
-    <!-- CSP -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com https://cdnjs.cloudflare.com;">
+    <meta content="default-src 'self'; script-src 'self' https://www.googletagmanager.com https://cdnjs.cloudflare.com;"
+          http-equiv="Content-Security-Policy">
 </head>
 
 <body>
 
 <header>
     <div class="menu-toggle">
-        <span class="icon-fallback">☰</span>
-        <i class="fa-solid fa-bars-staggered" style="display: none;"></i>
+        <i class="fa-solid fa-bars-staggered"></i>
     </div>
 
     <nav class="navbar">
@@ -79,7 +49,6 @@
     <p>Hi! I'm Uğur</p>
 </main>
 
-<!-- JavaScript: Menü Aç/Kapa -->
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         const toggleButton = document.querySelector('.menu-toggle');
@@ -90,6 +59,27 @@
                 navMenu.classList.toggle('active');
             });
         }
+    });
+</script>
+
+<!-- Google Analytics -->
+<script>
+    window.addEventListener('DOMContentLoaded', function () {
+        setTimeout(function () {
+            const gtagScript = document.createElement('script');
+            gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-9P7Z2XMBMH";
+            gtagScript.async = true;
+            document.head.appendChild(gtagScript);
+
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+
+            gtag('js', new Date());
+            gtag('config', 'G-9P7Z2XMBMH');
+        }, 2000);
     });
 </script>
 
