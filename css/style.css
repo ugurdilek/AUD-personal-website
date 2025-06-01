@@ -300,3 +300,38 @@ html, body {
     line-height: 1.5;
   }
 }
+
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  color: #fff;
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    background-color: #2a2a2a;
+    padding: 1rem;
+    border-radius: 12px;
+    margin: 1rem;
+  }
+
+  .navbar ul.active {
+    display: flex;
+  }
+
+  .navbar ul li {
+    text-align: center;
+    padding: 1rem 0;
+  }
+}
