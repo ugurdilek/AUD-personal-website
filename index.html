@@ -1,31 +1,35 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ahmet Uğur Dilek</title>
-    <meta content="Ahmet Uğur Dilek, Uğur Dilek, augurdilek, ugur.dilek, augur.dilek" name="description"/>
-    <meta content="index, follow" name="robots"/>
-    <meta content="Ahmet Uğur Dilek" name="author"/>
+
+    <!-- SEO -->
+    <meta name="description" content="Ahmet Uğur Dilek, Uğur Dilek, augurdilek, ugur.dilek, augur.dilek" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Ahmet Uğur Dilek" />
 
     <!-- Open Graph -->
-    <meta content="Ahmet Uğur Dilek" property="og:title"/>
-    <meta content="Ahmet Uğur Dilek, Uğur Dilek, augurdilek, ugur.dilek, augur.dilek" property="og:description"/>
-    <meta content="https://www.ugurdilek.com" property="og:url"/>
-    <meta content="website" property="og:type"/>
-    <meta content="https://www.ugurdilek.com/images/og-image.jpg" property="og:image"/>
+    <meta property="og:title" content="Ahmet Uğur Dilek" />
+    <meta property="og:description" content="Ahmet Uğur Dilek, Uğur Dilek, augurdilek, ugur.dilek, augur.dilek" />
+    <meta property="og:url" content="https://www.ugurdilek.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://www.ugurdilek.com/images/og-image.jpg" />
 
     <!-- Twitter -->
-    <meta content="summary_large_image" name="twitter:card"/>
-    <meta content="Ahmet Uğur Dilek" name="twitter:title"/>
-    <meta content="Ahmet Uğur Dilek, Uğur Dilek, augurdilek, ugur.dilek, augur.dilek" name="twitter:description"/>
-    <meta content="https://www.ugurdilek.com/images/og-image.jpg" name="twitter:image"/>
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Ahmet Uğur Dilek" />
+    <meta name="twitter:description" content="Ahmet Uğur Dilek, Uğur Dilek, augurdilek, ugur.dilek, augur.dilek" />
+    <meta name="twitter:image" content="https://www.ugurdilek.com/images/og-image.jpg" />
 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
-    <link href="/css/style.css" rel="stylesheet"/>
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="/css/style.css" />
 
-    <meta content="default-src 'self'; script-src 'self' https://www.googletagmanager.com https://cdnjs.cloudflare.com;"
-          http-equiv="Content-Security-Policy">
+    <!-- Content Security Policy -->
+    <meta http-equiv="Content-Security-Policy"
+          content="default-src 'self'; script-src 'self' https://www.googletagmanager.com https://cdnjs.cloudflare.com;">
 </head>
 
 <body>
@@ -50,15 +54,14 @@
 </main>
 
 <script>
+    // Menü aç/kapa fonksiyonu
     document.addEventListener('DOMContentLoaded', function () {
         const toggleButton = document.querySelector('.menu-toggle');
         const navMenu = document.querySelector('.navbar ul');
 
-        if (toggleButton && navMenu) {
-            toggleButton.addEventListener('click', function () {
-                navMenu.classList.toggle('active');
-            });
-        }
+        toggleButton.addEventListener('click', function () {
+            navMenu.classList.toggle('active');
+        });
     });
 </script>
 
@@ -73,10 +76,7 @@
 
             window.dataLayer = window.dataLayer || [];
 
-            function gtag() {
-                dataLayer.push(arguments);
-            }
-
+            function gtag() { dataLayer.push(arguments); }
             gtag('js', new Date());
             gtag('config', 'G-9P7Z2XMBMH');
         }, 2000);
