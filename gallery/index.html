@@ -1,42 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Gallery</title>
-  <link rel="stylesheet" href="/css/style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <meta charset="UTF-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Gallery</title>
+    <link href="/css/style.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
 </head>
 <body>
 
 <header>
-  <nav class="navbar">
-    <ul>
-      <li><a href="/"><i class="fa-solid fa-house"></i> Home</a></li>
-      <li><a href="/gallery" class="active"><i class="fa-solid fa-image"></i> Gallery</a></li>
-      <li><a href="/resume"><i class="fa-solid fa-file-lines"></i> Resume</a></li>
-      <li><a href="/contact"><i class="fa-solid fa-envelope"></i> Contact</a></li>
-    </ul>
-  </nav>
+    <nav class="navbar">
+        <ul>
+            <li><a href="/"><i class="fa-solid fa-house"></i> Home</a></li>
+            <li><a class="active" href="/gallery"><i class="fa-solid fa-image"></i> Gallery</a></li>
+            <li><a href="/resume"><i class="fa-solid fa-file-lines"></i> Resume</a></li>
+            <li><a href="/contact"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+        </ul>
+    </nav>
 </header>
 
 <main class="gallery">
-  <figure>
-    <img src="/photos/KarakoyIstanbulTurkey.png" alt="Karakoy, Istanbul, Turkey">
-    <figcaption>Karakoy, Istanbul, Turkey</figcaption>
-  </figure>
-  <figure>
-    <img src="/photos/CappadociaNevsehirTurkey.png" alt="Cappadocia, Nevşehir, Turkey">
-    <figcaption>Cappadocia, Nevsehir, Turkey</figcaption>
-  </figure>
-  <figure>
-    <img src="/photos/St.AnthonyPaduaChurch.png" alt="St. Anthony of Padua Church ,Istanbul, Turkey">
-    <figcaption>St. Anthony of Padua Church ,Istanbul, Turkey</figcaption>
-  </figure>
+    <figure>
+        <img alt="Karakoy, Istanbul, Turkey" src="/photos/KarakoyIstanbulTurkey.png">
+        <figcaption>Karakoy, Istanbul, Turkey</figcaption>
+    </figure>
+    <figure>
+        <img alt="Cappadocia, Nevşehir, Turkey" src="/photos/CappadociaNevsehirTurkey.png">
+        <figcaption>Cappadocia, Nevsehir, Turkey</figcaption>
+    </figure>
+    <figure>
+        <img alt="St. Anthony of Padua Church ,Istanbul, Turkey" src="/photos/St.AnthonyPaduaChurch.png">
+        <figcaption>St. Anthony of Padua Church ,Istanbul, Turkey</figcaption>
+    </figure>
 </main>
 
-<div id="lightbox" class="lightbox">
-  <span class="close">&times;</span>
-  <img class="lightbox-img" src="" alt="Expanded image" />
+<div class="lightbox" id="lightbox">
+    <span class="close">&times;</span>
+    <img alt="Expanded image" class="lightbox-img" src=""/>
 </div>
 
 <script src="/js/script.js"></script>
