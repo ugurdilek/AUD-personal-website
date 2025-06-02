@@ -10,7 +10,7 @@ html, body {
   overflow-x: hidden;
 }
 
-/* NAVIGATION (All Pages) */
+/* NAVIGATION */
 .navbar ul {
   list-style: none;
   display: flex;
@@ -70,30 +70,32 @@ html, body {
   transform: translateY(-17px) rotate(-45deg);
 }
 
-/* Responsive navbar ve burger menü */
+/* Mobil görünümde burger ortada */
 @media (max-width: 768px) {
   .burger-button {
     display: block;
     position: absolute;
-    right: 1rem;
     top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
-  nav.navbar ul {
+  .navbar ul {
     display: none;
     flex-direction: column;
-    background-color: #2a2a2a;
     position: absolute;
     top: 60px;
-    right: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #2a2a2a;
     padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    width: max-content;
     min-width: 180px;
+    align-items: center;
   }
 
-  nav.navbar ul.show {
+  .navbar ul.show {
     display: flex;
   }
 
@@ -135,7 +137,7 @@ html, body {
   transform: scale(1.03);
 }
 
-/* Lightbox for Gallery */
+/* Lightbox */
 .lightbox {
   display: none;
   position: fixed;
