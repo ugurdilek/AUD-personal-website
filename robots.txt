@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://ugurdilek.com/sitemap.xml
+Sitemap: https://www.ugurdilek.com/!sitemapacx27.xml
