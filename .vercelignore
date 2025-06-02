@@ -1,0 +1,32 @@
+# IDE/editor config dosyaları
+.vscode/
+.idea/
+*.code-workspace
+
+# Git dosyaları
+.git/
+.gitignore
+
+# Belgeler
+README.md
+LICENSE
+*.txt
+*.md
+
+# Geliştirme/deneme klasörleri
+drafts/
+test/
+tests/
+__tests__/
+node_modules/
+
+# Local ortam dosyaları
+.env
+.env.*
+.DS_Store
+Thumbs.db
+
+# Yedek klasörler
+bak/
+backup/
+old/
