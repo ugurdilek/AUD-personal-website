@@ -17,28 +17,28 @@
     <!-- Font Awesome (async load) -->
     <script>
         window.addEventListener('load', function() {
-            var fa = document.createElement('link');
-            fa.rel = 'stylesheet';
-            fa.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css';
-            fa.crossOrigin = 'anonymous';
-            document.head.appendChild(fa);
+          var fa = document.createElement('link');
+          fa.rel = 'stylesheet';
+          fa.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css';
+          fa.crossOrigin = 'anonymous';
+          document.head.appendChild(fa);
         });
     </script>
 
     <!-- Google Analytics -->
     <script>
         window.addEventListener('DOMContentLoaded', function () {
-            setTimeout(function () {
-                var gtagScript = document.createElement('script');
-                gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-9P7Z2XMBMH";
-                gtagScript.async = true;
-                document.head.appendChild(gtagScript);
+          setTimeout(function () {
+            var gtagScript = document.createElement('script');
+            gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-9P7Z2XMBMH";
+            gtagScript.async = true;
+            document.head.appendChild(gtagScript);
 
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', 'G-9P7Z2XMBMH');
-            }, 2000);
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-9P7Z2XMBMH');
+          }, 2000);
         });
     </script>
 
@@ -76,6 +76,7 @@
         </ul>
     </nav>
 
+    <!-- Burger Icon -->
     <button class="burger-button" aria-label="Menu">
         <svg viewBox="0 0 100 100" width="40">
             <path class="line top" d="M 30,33 H 70" />
@@ -88,5 +89,16 @@
 <main class="content">
     <p>Hi! I'm Uğur</p>
 </main>
+
+<!-- Burger Menu Script -->
+<script>
+    const burgerButton = document.querySelector('.burger-button');
+    const navList = document.querySelector('.navbar ul');
+
+    burgerButton.addEventListener('click', () => {
+      burgerButton.classList.toggle('active');
+      navList.classList.toggle('show');
+    });
+</script>
 </body>
 </html>
