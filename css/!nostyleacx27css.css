@@ -107,10 +107,10 @@ html, body {
 
 /* Mobilde içerikleri burger ikonun altına kaydır */
 @media (max-width: 768px) {
-  .home,
+  .content,
   .gallery,
-  .resume,
-  .contact {
+  .resume-page,
+  .contact-icons {
     margin-top: 5rem;
   }
 }
