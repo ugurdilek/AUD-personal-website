@@ -80,6 +80,15 @@ html, body {
     transform: translateX(-50%);
   }
 
+  @media (max-width: 768px) {
+    .content,
+    .gallery,
+    .resume-page,
+    .contact-icons {
+      margin-top: 5rem;
+    }
+  }
+
   .navbar ul {
     display: none;
     flex-direction: column;
