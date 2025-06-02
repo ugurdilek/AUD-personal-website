@@ -70,7 +70,7 @@ html, body {
   transform: translateY(-17px) rotate(-45deg);
 }
 
-/* Mobil görünümde burger ortada */
+/* Mobilde burger ikon ortalanır, menü aşağı açılır */
 @media (max-width: 768px) {
   .burger-button {
     display: block;
@@ -78,15 +78,6 @@ html, body {
     top: 1rem;
     left: 50%;
     transform: translateX(-50%);
-  }
-
-  @media (max-width: 768px) {
-    .content,
-    .gallery,
-    .resume-page,
-    .contact-icons {
-      margin-top: 5rem;
-    }
   }
 
   .navbar ul {
@@ -111,6 +102,16 @@ html, body {
   .navbar ul li {
     text-align: center;
     padding: 1rem 0;
+  }
+}
+
+/* Mobilde içerikleri burger ikonun altına kaydır */
+@media (max-width: 768px) {
+  .content,
+  .gallery,
+  .resume-page,
+  .contact-icons {
+    margin-top: 5rem;
   }
 }
 
