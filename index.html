@@ -3,80 +3,80 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Test Burger Menü</title>
-    <style>
-        body {
-          background: #1a1a1a;
-          color: white;
-          margin: 0;
-          font-family: sans-serif;
-        }
-        .navbar ul {
-          list-style: none;
-          margin: 0;
-          padding: 1rem;
-          display: flex;
-          gap: 1rem;
-          background: #2a2a2a;
-        }
-        .burger-button {
-          background: none;
-          border: none;
-          cursor: pointer;
-          padding: 1rem;
-          display: none;
-          position: absolute;
-          top: 1rem;
-          right: 1rem;
-          z-index: 1001;
-        }
-        .burger-button .line {
-          fill: none;
-          stroke: #fff;
-          stroke-width: 6;
-          stroke-linecap: round;
-          transition: all 0.3s ease;
-        }
-        .burger-button.active .top {
-          transform: translateY(17px) rotate(45deg);
-        }
-        .burger-button.active .middle {
-          opacity: 0;
-        }
-        .burger-button.active .bottom {
-          transform: translateY(-17px) rotate(-45deg);
-        }
 
-        @media (max-width: 768px) {
-          .burger-button {
-            display: block;
-          }
-          .navbar ul {
-            display: none;
-            flex-direction: column;
-            position: absolute;
-            top: 60px;
-            right: 1rem;
-            background: #2a2a2a;
-            padding: 1rem;
-            border-radius: 8px;
-          }
-          .navbar ul.show {
-            display: flex;
-          }
-        }
-    </style>
+    <title>Ahmet Uğur Dilek – Personal Website</title>
+    <meta name="description" content="Hi, I'm Uğur. This is my personal website including my portfolio, resume and contact information.">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://www.ugurdilek.com/" />
+
+    <!-- Preload CSS -->
+    <link rel="preload" href="/css/!nostyleacx27css.css" as="style" />
+    <link rel="stylesheet" href="/css/!nostyleacx27css.css" />
+
+    <!-- Font Awesome (async load) -->
+    <script>
+        window.addEventListener('load', function() {
+          var fa = document.createElement('link');
+          fa.rel = 'stylesheet';
+          fa.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css';
+          fa.crossOrigin = 'anonymous';
+          document.head.appendChild(fa);
+        });
+    </script>
+
+    <!-- Google Analytics -->
+    <script>
+        window.addEventListener('DOMContentLoaded', function () {
+          setTimeout(function () {
+            var gtagScript = document.createElement('script');
+            gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-9P7Z2XMBMH";
+            gtagScript.async = true;
+            document.head.appendChild(gtagScript);
+
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-9P7Z2XMBMH');
+          }, 2000);
+        });
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+    <!-- SEO Robots -->
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Ahmet Uğur Dilek – Personal Website" />
+    <meta property="og:description" content="Hi, I'm Uğur. This is my personal website with my portfolio, resume and contact information." />
+    <meta property="og:image" content="https://www.ugurdilek.com/photos/ahmetugurdilek.png" />
+    <meta property="og:url" content="https://www.ugurdilek.com/" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Ahmet Uğur Dilek" />
+    <meta name="twitter:description" content="Personal website of Ahmet Uğur Dilek." />
+    <meta name="twitter:image" content="https://www.ugurdilek.com/photos/ahmetugurdilek.png" />
+
+    <!-- Content Security Policy -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com https://cdnjs.cloudflare.com; style-src 'self' https://cdnjs.cloudflare.com; font-src https://cdnjs.cloudflare.com;">
 </head>
-<body>
 
+<body>
 <header>
     <nav class="navbar">
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Gallery</a></li>
+            <li><a class="active" href="/"><i class="fa-solid fa-house"></i> Home</a></li>
+            <li><a href="/gallery"><i class="fa-solid fa-image"></i> Gallery</a></li>
+            <li><a href="/resume"><i class="fa-solid fa-file-lines"></i> Resume</a></li>
+            <li><a href="/contact"><i class="fa-solid fa-envelope"></i> Contact</a></li>
         </ul>
     </nav>
 
+    <!-- Burger Icon -->
     <button class="burger-button" aria-label="Menu">
         <svg viewBox="0 0 100 100" width="40">
             <path class="line top" d="M 30,33 H 70" />
@@ -86,6 +86,11 @@
     </button>
 </header>
 
+<main class="content">
+    <p>Hi! I'm Uğur</p>
+</main>
+
+<!-- Burger Menu Script -->
 <script>
     const burgerButton = document.querySelector('.burger-button');
     const navList = document.querySelector('.navbar ul');
@@ -95,6 +100,5 @@
       navList.classList.toggle('show');
     });
 </script>
-
 </body>
 </html>
