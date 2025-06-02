@@ -1,40 +1,42 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ahmet Uğur Dilek</title>
+    <meta charset="UTF-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Home</title>
+    <link href="/css/style.css" rel="stylesheet"/>
 
-    <!-- SEO -->
-    <meta name="description" content="Ahmet Uğur Dilek, Uğur Dilek, augurdilek, ugur.dilek, augur.dilek" />
-    <meta name="robots" content="index, follow" />
-    <meta name="author" content="Ahmet Uğur Dilek" />
+    <script>
+        window.addEventListener('load', function() {
+            var fa = document.createElement('link');
+            fa.rel = 'stylesheet';
+            fa.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css';
+            document.head.appendChild(fa);
+        });
+    </script>
 
-    <!-- Twitter -->
-    <meta property="og:title" content="Ahmet Uğur Dilek" />
-    <meta property="og:description" content="Ahmet Uğur Dilek, Uğur Dilek, augurdilek, ugur.dilek, augur.dilek" />
-    <meta property="og:url" content="https://www.ugurdilek.com" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://www.ugurdilek.com/images/og-image.jpg" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Ahmet Uğur Dilek" />
-    <meta name="twitter:description" content="Ahmet Uğur Dilek, Uğur Dilek, augurdilek, ugur.dilek, augur.dilek" />
-    <meta name="twitter:image" content="https://www.ugurdilek.com/images/og-image.jpg" />
+    <script>
+        window.addEventListener('DOMContentLoaded', function () {
+            setTimeout(function () {
+                var gtagScript = document.createElement('script');
+                gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-9P7Z2XMBMH";
+                gtagScript.async = true;
+                document.head.appendChild(gtagScript);
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-    <link rel="stylesheet" href="/css/style.css" />
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-9P7Z2XMBMH');
+            }, 2000);
+        });
+    </script>
 
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com https://cdnjs.cloudflare.com;">
-</head>
 
+</head>
 <body>
 
 <header>
-    <div class="menu-toggle">
-        <i class="fa-solid fa-bars-staggered"></i>
-    </div>
-
     <nav class="navbar">
         <ul>
             <li><a class="active" href="/"><i class="fa-solid fa-house"></i> Home</a></li>
@@ -48,34 +50,6 @@
 <main class="content">
     <p>Hi! I'm Uğur</p>
 </main>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const toggleButton = document.querySelector('.menu-toggle');
-        const navMenu = document.querySelector('.navbar ul');
-
-        toggleButton.addEventListener('click', function () {
-            navMenu.classList.toggle('active');
-        });
-    });
-</script>
-
-<!-- Google Analytics -->
-<script>
-    window.addEventListener('DOMContentLoaded', function () {
-        setTimeout(function () {
-            const gtagScript = document.createElement('script');
-            gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-9P7Z2XMBMH";
-            gtagScript.async = true;
-            document.head.appendChild(gtagScript);
-
-            window.dataLayer = window.dataLayer || [];
-            function gtag() { dataLayer.push(arguments); }
-            gtag('js', new Date());
-            gtag('config', 'G-9P7Z2XMBMH');
-        }, 2000);
-    });
-</script>
 
 </body>
 </html>
