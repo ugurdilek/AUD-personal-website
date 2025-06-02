@@ -42,13 +42,12 @@ html, body {
 
 /* Burger Button Genel Stil */
 .burger-button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 1rem;
-  display: none;
-  z-index: 1001;
+  display: block;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
 }
+
 
 .burger-button .line {
   fill: none;
