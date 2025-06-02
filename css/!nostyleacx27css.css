@@ -45,10 +45,9 @@ html, body {
   background: none;
   border: none;
   cursor: pointer;
-  display: block;
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
+  padding: 0.05rem;
+  display: none;
+  z-index: 1001;
 }
 
 .burger-button .line {
@@ -112,7 +111,7 @@ html, body {
   .gallery,
   .resume-page,
   .contact-icons {
-    margin-top: 10rem;
+    margin-top: 1rem;
   }
 }
 
