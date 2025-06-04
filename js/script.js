@@ -1,3 +1,4 @@
+// Select elements used for the lightbox gallery and mobile navigation
 const images = document.querySelectorAll(".gallery img");
 const lightbox = document.getElementById("lightbox");
 const lightboxImg = document.querySelector(".lightbox-img");
@@ -5,7 +6,7 @@ const closeBtn = document.querySelector(".close");
 const burgerButton = document.querySelector('.burger-button');
 const navList = document.querySelector('.navbar ul');
 
-// LIGHTBOX - sadece varsa çalıştır
+// LIGHTBOX FUNCTIONALITY – Only initialize if lightbox elements are present
 if (images.length > 0 && lightbox && lightboxImg && closeBtn) {
   images.forEach(img => {
     img.addEventListener("click", () => {
@@ -25,7 +26,7 @@ if (images.length > 0 && lightbox && lightboxImg && closeBtn) {
   });
 }
 
-// BURGER MENU - her sayfada çalışmalı
+// BURGER MENU TOGGLE – Applies to all pages
 if (burgerButton && navList) {
   burgerButton.addEventListener('click', () => {
     burgerButton.classList.toggle('active');
