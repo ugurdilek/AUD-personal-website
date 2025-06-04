@@ -1,32 +1,39 @@
-# IDE/editor config dosyaları
+# IDE/editor config files
 .vscode/
 .idea/
 *.code-workspace
 
-# Git dosyaları
-.git/
-.gitignore
-
-# Belgeler
+# Documentation and meta files
 README.md
 LICENSE
 *.txt
 *.md
 
-# Geliştirme/deneme klasörleri
+# Tests and development
 drafts/
 test/
 tests/
 __tests__/
 node_modules/
-
-# Local ortam dosyaları
-.env
-.env.*
-.DS_Store
-Thumbs.db
-
-# Yedek klasörler
 bak/
 backup/
 old/
+
+# System/OS files
+.DS_Store
+Thumbs.db
+
+# Local environment files
+.env
+.env.*
+*.local
+
+# Git
+.git/
+.gitignore
+
+# Logs
+*.log
+
+# Vercel build output (not needed in deploy input)
+.vercel/output/

@@ -1,14 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Basic Meta Tags -->
     <meta charset="UTF-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Contact</title>
-    <link href="/css/!nostyleacx27css.css" rel="stylesheet"/>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Contact – Ahmet Uğur Dilek</title>
+    <meta name="description" content="Get in touch with Ahmet Uğur Dilek via email or LinkedIn.">
+
+    <!-- Stylesheets -->
+    <link rel="preload" href="/css/!nostyleacx27css.css" as="style"/>
+    <link rel="stylesheet" href="/css/!nostyleacx27css.css"/>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
+
+    <!-- Font Awesome (deferred load) -->
+    <script>
+        window.addEventListener('load', function () {
+            const fa = document.createElement('link');
+            fa.rel = 'stylesheet';
+            fa.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css';
+            fa.crossOrigin = 'anonymous';
+            document.head.appendChild(fa);
+        });
+    </script>
+
+    <!-- Google Analytics -->
+    <script>
+        window.addEventListener('DOMContentLoaded', function () {
+            setTimeout(function () {
+                const gtagScript = document.createElement('script');
+                gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-9P7Z2XMBMH";
+                gtagScript.async = true;
+                document.head.appendChild(gtagScript);
+
+                window.dataLayer = window.dataLayer || [];
+                function gtag() { dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-9P7Z2XMBMH');
+            }, 2000);
+        });
+    </script>
+
+    <!-- Disable Right Click and Dev Tools Shortcuts -->
+    <script>
+        document.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+        });
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'F12') e.preventDefault();
+            if ((e.ctrlKey && e.shiftKey && ['I', 'J'].includes(e.key)) ||
+                (e.ctrlKey && ['U', 'S'].includes(e.key.toUpperCase()))) {
+                e.preventDefault();
+            }
+        });
+    </script>
 </head>
+
 <body>
 
+<!-- Navigation Header -->
 <header>
     <nav class="navbar">
         <ul>
@@ -19,15 +68,17 @@
         </ul>
     </nav>
 
+    <!-- Mobile Burger Menu -->
     <button class="burger-button" aria-label="Menu">
         <svg viewBox="0 0 100 100" width="40">
-            <path class="line top" d="M 30,33 H 70" />
-            <path class="line middle" d="M 30,50 H 70" />
-            <path class="line bottom" d="M 30,67 H 70" />
+            <path class="line top" d="M 30,33 H 70"/>
+            <path class="line middle" d="M 30,50 H 70"/>
+            <path class="line bottom" d="M 30,67 H 70"/>
         </svg>
     </button>
 </header>
 
+<!-- Contact Content -->
 <main class="content">
     <h1>Contact Me</h1>
 
@@ -45,6 +96,7 @@
     </div>
 </main>
 
+<!-- JS Script -->
 <script src="/js/script.js"></script>
 </body>
 </html>
