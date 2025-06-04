@@ -40,7 +40,7 @@ html, body {
   color: #00bcd4;
 }
 
-/* Burger Button Genel Stil */
+/* Burger Button */
 .burger-button {
   background: none;
   border: none;
@@ -70,7 +70,7 @@ html, body {
   transform: translateY(-17px) rotate(-45deg);
 }
 
-/* Mobilde burger ikon ortalanır, menü aşağı açılır */
+/* Mobile */
 @media (max-width: 768px) {
   .burger-button {
     display: block;
@@ -105,7 +105,6 @@ html, body {
   }
 }
 
-/* Mobilde içerikleri burger ikonun altına kaydır */
 @media (max-width: 768px) {
   .content,
   .gallery,
