@@ -1,14 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Basic Meta Tags -->
     <meta charset="UTF-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Resume</title>
-    <link href="/css/!nostyleacx27css.css" rel="stylesheet"/>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Resume – Ahmet Uğur Dilek</title>
+    <meta name="description" content="Professional resume and qualifications of Ahmet Uğur Dilek.">
+
+    <!-- Styles -->
+    <link rel="preload" href="/css/!nostyleacx27css.css" as="style"/>
+    <link rel="stylesheet" href="/css/!nostyleacx27css.css"/>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
+
+    <!-- Font Awesome (asynchronous load for better performance) -->
+    <script>
+        window.addEventListener('load', function () {
+            const fa = document.createElement('link');
+            fa.rel = 'stylesheet';
+            fa.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css';
+            fa.crossOrigin = 'anonymous';
+            document.head.appendChild(fa);
+        });
+    </script>
+
+    <!-- Google Analytics -->
+    <script>
+        window.addEventListener('DOMContentLoaded', function () {
+            setTimeout(function () {
+                const gtagScript = document.createElement('script');
+                gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-9P7Z2XMBMH";
+                gtagScript.async = true;
+                document.head.appendChild(gtagScript);
+
+                window.dataLayer = window.dataLayer || [];
+                function gtag() { dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-9P7Z2XMBMH');
+            }, 2000);
+        });
+    </script>
+
+    <!-- Prevent Right Click and Dev Tools Shortcuts -->
+    <script>
+        document.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+        });
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'F12') e.preventDefault();
+            if ((e.ctrlKey && e.shiftKey && ['I', 'J'].includes(e.key)) ||
+                (e.ctrlKey && ['U', 'S'].includes(e.key.toUpperCase()))) {
+                e.preventDefault();
+            }
+        });
+    </script>
 </head>
+
 <body>
 
+<!-- Site Header -->
 <header>
     <nav class="navbar">
         <ul>
@@ -19,130 +68,72 @@
         </ul>
     </nav>
 
+    <!-- Mobile Burger Menu -->
     <button class="burger-button" aria-label="Menu">
         <svg viewBox="0 0 100 100" width="40">
-            <path class="line top" d="M 30,33 H 70" />
-            <path class="line middle" d="M 30,50 H 70" />
-            <path class="line bottom" d="M 30,67 H 70" />
+            <path class="line top" d="M 30,33 H 70"/>
+            <path class="line middle" d="M 30,50 H 70"/>
+            <path class="line bottom" d="M 30,67 H 70"/>
         </svg>
     </button>
 </header>
 
+<!-- Resume Content -->
 <main class="resume-page">
+
+    <!-- Work Experience Section -->
     <section>
         <h2>Work Experience</h2>
         <ul class="resume-table">
-            <li>
-                <span class="role">Experienced Software Test Engineer</span>
-                <span class="dash">–</span>
-                <span class="company">R&D Department, Siemens</span>
-                <span class="dash">–</span>
-                <span class="dates">Mar 2023 – Present</span>
-            </li>
-            <li>
-                <span class="role">Senior Software Test Engineer</span>
-                <span class="dash">–</span>
-                <span class="company">R&D Department, Arçelik</span>
-                <span class="dash">–</span>
-                <span class="dates">Dec 2021 – Mar 2023</span>
-            </li>
-            <li>
-                <span class="role">Software Test Engineer</span>
-                <span class="dash">–</span>
-                <span class="company">R&D Department, Panasonic</span>
-                <span class="dash">–</span>
-                <span class="dates">Jul 2019 – Dec 2021</span>
-            </li>
+            <li><span class="role">Experienced Software Test Engineer</span><span class="dash">–</span><span class="company">R&D Department, Siemens</span><span class="dash">–</span><span class="dates">Mar 2023 – Present</span></li>
+            <li><span class="role">Senior Software Test Engineer</span><span class="dash">–</span><span class="company">R&D Department, Arçelik</span><span class="dash">–</span><span class="dates">Dec 2021 – Mar 2023</span></li>
+            <li><span class="role">Software Test Engineer</span><span class="dash">–</span><span class="company">R&D Department, Panasonic</span><span class="dash">–</span><span class="dates">Jul 2019 – Dec 2021</span></li>
         </ul>
-
     </section>
 
+    <!-- Education Section -->
     <section>
         <h2>Education</h2>
-        <ul class="resume-table">
-            <li>
-                <span class="role">M.Sc. Electrical & Electronics Engineering</span>
-                <span class="dash">–</span>
-                <span class="company">Bilgi University</span>
-                <span class="dash">–</span>
-                <span class="dates">Sep 2015 – Jun 2017</span>
-            </li>
-            <li>
-                <span class="role">B.Sc. Electrical & Electronics Engineering</span>
-                <span class="dash">–</span>
-                <span class="company">Bilgi University</span>
-                <span class="dash">–</span>
-                <span class="dates">Oct 2010 – Jun 2015</span>
-            </li>
+        <ul class="resume-table education">
+            <li><span class="role">M.Sc. Electrical & Electronics Engineering</span><span class="dash">–</span><span class="company">Bilgi University</span><span class="dash">–</span><span class="dates">Sep 2015 – Jun 2017</span></li>
+            <li><span class="role">B.Sc. Electrical & Electronics Engineering</span><span class="dash">–</span><span class="company">Bilgi University</span><span class="dash">–</span><span class="dates">Oct 2010 – Jun 2015</span></li>
         </ul>
     </section>
 
+    <!-- Certificates Section -->
     <section>
         <h2>Certificates</h2>
         <ul class="resume-table">
-            <li>
-                <span class="role">ISTQB Certified Tester Foundation Level</span>
-                <span class="dash">–</span>
-                <span class="company">GASQ</span>
-            </li>
-            <li>
-                <span class="role">Switching, Routing, and Wireless Essentials</span>
-                <span class="dash">–</span>
-                <span class="company">Cisco CCNA</span>
-            </li>
-            <li>
-                <span class="role">Introduction to Networks</span>
-                <span class="dash">–</span>
-                <span class="company">Cisco CCNA</span>
-            </li>
-            <li>
-                <span class="role">KNX Advanced</span>
-                <span class="dash">–</span>
-                <span class="company">KNX Association</span>
-            </li>
-            <li>
-                <span class="role">Scrum: The Basics</span>
-                <span class="dash">–</span>
-                <span class="company">Linkedin</span>
-            </li>
+            <li><span class="role">ISTQB Certified Tester Foundation Level</span><span class="dash">–</span><span class="company">GASQ</span></li>
+            <li><span class="role">Switching, Routing, and Wireless Essentials</span><span class="dash">–</span><span class="company">Cisco CCNA</span></li>
+            <li><span class="role">Introduction to Networks</span><span class="dash">–</span><span class="company">Cisco CCNA</span></li>
+            <li><span class="role">KNX Advanced</span><span class="dash">–</span><span class="company">KNX Association</span></li>
+            <li><span class="role">Scrum: The Basics</span><span class="dash">–</span><span class="company">LinkedIn</span></li>
         </ul>
     </section>
 
+    <!-- Skills Section -->
     <section>
         <h2>Skills</h2>
         <ul class="resume-table">
-            <li>
-                <span class="role">Test Case Design & Execution</span>
-            </li>
-            <li>
-                <span class="role">Bug Tracking & Reporting</span>
-            </li>
-            <li>
-                <span class="role">Manual & Automation Testing</span>
-
-            </li>
-            <li>
-                <span class="role">Functional & Regression Testing</span>
-
-            </li>
-            <li>
-                <span class="role">Functional & Regression Testing</span>
-
-            </li>
-            <li>
-                <span class="role">JIRA, Azure DevOps</span>
-
-            </li>
+            <li><span class="role">Test Case Design & Execution</span></li>
+            <li><span class="role">Bug Tracking & Reporting</span></li>
+            <li><span class="role">Manual & Automation Testing</span></li>
+            <li><span class="role">Functional & Regression Testing</span></li>
+            <li><span class="role">JIRA, Azure DevOps</span></li>
         </ul>
     </section>
 
+    <!-- Resume Download Link -->
     <section>
         <a class="view-link" href="/resume/AUD_resume.pdf" target="_blank">
-            <i class="fa-solid fa-view"></i> View full PDF version
+            <i class="fa-solid fa-download"></i> View full PDF version
         </a>
     </section>
 </main>
 
+<!-- JavaScript -->
 <script src="/js/script.js"></script>
+
 </body>
 </html>
