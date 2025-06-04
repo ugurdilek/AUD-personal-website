@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Gallery</title>
-    <link href="/css/!nostyleacx27css.css" rel="stylesheet"/>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+    <!-- Basic Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery – Ahmet Uğur Dilek</title>
+    <meta name="description" content="A gallery showcasing photographs by Ahmet Uğur Dilek.">
 
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.ugurdilek.com/gallery" />
 
+    <!-- Styles -->
+    <link rel="preload" href="/css/!nostyleacx27css.css" as="style" />
+    <link rel="stylesheet" href="/css/!nostyleacx27css.css" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
-    <!-- Font Awesome -->
+    <!-- Font Awesome (loaded asynchronously for performance) -->
     <script>
         window.addEventListener('load', function() {
-            var fa = document.createElement('link');
+            const fa = document.createElement('link');
             fa.rel = 'stylesheet';
             fa.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css';
             fa.crossOrigin = 'anonymous';
@@ -20,47 +26,43 @@
         });
     </script>
 
-    <!-- Google Analytics -->
+    <!-- Google Analytics (deferred loading for performance) -->
     <script>
         window.addEventListener('DOMContentLoaded', function () {
             setTimeout(function () {
-                var gtagScript = document.createElement('script');
+                const gtagScript = document.createElement('script');
                 gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-9P7Z2XMBMH";
                 gtagScript.async = true;
                 document.head.appendChild(gtagScript);
 
                 window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
+                function gtag() { dataLayer.push(arguments); }
                 gtag('js', new Date());
                 gtag('config', 'G-9P7Z2XMBMH');
             }, 2000);
         });
     </script>
 
+    <!-- Disable right click -->
     <script>
-        document.addEventListener('contextmenu', function (e) {
-            e.preventDefault();
-        });
+        document.addEventListener('contextmenu', e => e.preventDefault());
     </script>
 
+    <!-- Block some keyboard shortcuts (F12, Ctrl+U etc.) -->
     <script>
         document.addEventListener('keydown', function (e) {
-            // F12
             if (e.key === 'F12') e.preventDefault();
-
-            // Ctrl+Shift+I / Ctrl+Shift+J / Ctrl+U / Ctrl+S
             if ((e.ctrlKey && e.shiftKey && ['I', 'J'].includes(e.key)) ||
                 (e.ctrlKey && ['U', 'S'].includes(e.key.toUpperCase()))) {
                 e.preventDefault();
             }
         });
     </script>
-
-    <!-- Favicon -->
-    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 </head>
+
 <body>
 
+<!-- Site Header with Navigation -->
 <header>
     <nav class="navbar">
         <ul>
@@ -71,6 +73,7 @@
         </ul>
     </nav>
 
+    <!-- Mobile Burger Menu Button -->
     <button class="burger-button" aria-label="Menu">
         <svg viewBox="0 0 100 100" width="40">
             <path class="line top" d="M 30,33 H 70" />
@@ -80,26 +83,30 @@
     </button>
 </header>
 
+<!-- Gallery Section -->
 <main class="gallery">
     <figure>
-        <img alt="Karakoy, Istanbul, Turkey" src="/photos/KarakoyIstanbulTurkey.png">
+        <img src="/photos/KarakoyIstanbulTurkey.png" alt="Karakoy, Istanbul, Turkey">
         <figcaption>Karakoy, Istanbul, Turkey</figcaption>
     </figure>
     <figure>
-        <img alt="Cappadocia, Nevşehir, Turkey" src="/photos/CappadociaNevsehirTurkey.png">
-        <figcaption>Cappadocia, Nevsehir, Turkey</figcaption>
+        <img src="/photos/CappadociaNevsehirTurkey.png" alt="Cappadocia, Nevşehir, Turkey">
+        <figcaption>Cappadocia, Nevşehir, Turkey</figcaption>
     </figure>
     <figure>
-        <img alt="St. Anthony of Padua Church ,Istanbul, Turkey" src="/photos/St.AnthonyPaduaChurch.png">
-        <figcaption>St. Anthony of Padua Church ,Istanbul, Turkey</figcaption>
+        <img src="/photos/St.AnthonyPaduaChurch.png" alt="St. Anthony of Padua Church, Istanbul, Turkey">
+        <figcaption>St. Anthony of Padua Church, Istanbul, Turkey</figcaption>
     </figure>
 </main>
 
+<!-- Lightbox Modal for Expanded Image View -->
 <div class="lightbox" id="lightbox">
     <span class="close">&times;</span>
-    <img alt="Expanded image" class="lightbox-img" src=""/>
+    <img src="" alt="Expanded image" class="lightbox-img"/>
 </div>
 
+<!-- External JavaScript -->
 <script src="/js/script.js"></script>
+
 </body>
 </html>

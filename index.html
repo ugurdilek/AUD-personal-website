@@ -6,53 +6,47 @@
     <title>Ahmet Uğur Dilek – Personal Website</title>
     <meta name="description" content="Hi, I'm Uğur. This is my personal website including my portfolio, resume and contact information.">
 
+    <!-- Canonical link for SEO -->
     <link rel="canonical" href="https://www.ugurdilek.com/" />
+
+    <!-- CSS Styles -->
     <link rel="preload" href="css/!nostyleacx27css.css" as="style" />
     <link rel="stylesheet" href="css/!nostyleacx27css.css" />
 
-
-    <!-- Font Awesome -->
+    <!-- Font Awesome Icons -->
     <script>
-        window.addEventListener('load', function() {
-          var fa = document.createElement('link');
-          fa.rel = 'stylesheet';
-          fa.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css';
-          fa.crossOrigin = 'anonymous';
-          document.head.appendChild(fa);
+        window.addEventListener('load', function () {
+            const fa = document.createElement('link');
+            fa.rel = 'stylesheet';
+            fa.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css';
+            fa.crossOrigin = 'anonymous';
+            document.head.appendChild(fa);
         });
     </script>
 
-    <!-- Google Analytics -->
+    <!-- Google Analytics Tracking -->
     <script>
         window.addEventListener('DOMContentLoaded', function () {
-          setTimeout(function () {
-            var gtagScript = document.createElement('script');
-            gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-9P7Z2XMBMH";
-            gtagScript.async = true;
-            document.head.appendChild(gtagScript);
+            setTimeout(function () {
+                const gtagScript = document.createElement('script');
+                gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-9P7Z2XMBMH";
+                gtagScript.async = true;
+                document.head.appendChild(gtagScript);
 
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-9P7Z2XMBMH');
-          }, 2000);
+                window.dataLayer = window.dataLayer || [];
+                function gtag() { dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-9P7Z2XMBMH');
+            }, 2000);
         });
     </script>
 
+    <!-- Basic Security: Disable right click & developer shortcuts -->
     <script>
-        document.addEventListener('contextmenu', function (e) {
-            e.preventDefault();
-        });
-    </script>
-
-    <script>
-        document.addEventListener('keydown', function (e) {
-            // F12
-            if (e.key === 'F12') e.preventDefault();
-
-            // Ctrl+Shift+I / Ctrl+Shift+J / Ctrl+U / Ctrl+S
-            if ((e.ctrlKey && e.shiftKey && ['I', 'J'].includes(e.key)) ||
-                (e.ctrlKey && ['U', 'S'].includes(e.key.toUpperCase()))) {
+        document.addEventListener('contextmenu', e => e.preventDefault());
+        document.addEventListener('keydown', e => {
+            const keys = ['F12', 'U', 'S', 'I', 'J'];
+            if ((e.key === 'F12') || (e.ctrlKey && (keys.includes(e.key.toUpperCase()) || (e.shiftKey && ['I', 'J'].includes(e.key))))) {
                 e.preventDefault();
             }
         });
@@ -63,6 +57,7 @@
 </head>
 
 <body>
+<!-- Navigation Header -->
 <header>
     <nav class="navbar">
         <ul>
@@ -73,6 +68,7 @@
         </ul>
     </nav>
 
+    <!-- Mobile Burger Button -->
     <button class="burger-button" aria-label="Menu">
         <svg viewBox="0 0 100 100" width="40">
             <path class="line top" d="M 30,33 H 70" />
@@ -82,10 +78,12 @@
     </button>
 </header>
 
+<!-- Main Content -->
 <main class="content">
     <p>Hi! I'm Uğur</p>
 </main>
 
+<!-- Scripts -->
 <script src="/js/script.js"></script>
 </body>
 </html>
