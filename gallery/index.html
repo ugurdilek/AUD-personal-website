@@ -6,6 +6,58 @@
     <title>Gallery</title>
     <link href="/css/!nostyleacx27css.css" rel="stylesheet"/>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+
+
+
+    <!-- Font Awesome -->
+    <script>
+        window.addEventListener('load', function() {
+            var fa = document.createElement('link');
+            fa.rel = 'stylesheet';
+            fa.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css';
+            fa.crossOrigin = 'anonymous';
+            document.head.appendChild(fa);
+        });
+    </script>
+
+    <!-- Google Analytics -->
+    <script>
+        window.addEventListener('DOMContentLoaded', function () {
+            setTimeout(function () {
+                var gtagScript = document.createElement('script');
+                gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-9P7Z2XMBMH";
+                gtagScript.async = true;
+                document.head.appendChild(gtagScript);
+
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-9P7Z2XMBMH');
+            }, 2000);
+        });
+    </script>
+
+    <script>
+        document.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+        });
+    </script>
+
+    <script>
+        document.addEventListener('keydown', function (e) {
+            // F12
+            if (e.key === 'F12') e.preventDefault();
+
+            // Ctrl+Shift+I / Ctrl+Shift+J / Ctrl+U / Ctrl+S
+            if ((e.ctrlKey && e.shiftKey && ['I', 'J'].includes(e.key)) ||
+                (e.ctrlKey && ['U', 'S'].includes(e.key.toUpperCase()))) {
+                e.preventDefault();
+            }
+        });
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 </head>
 <body>
 
