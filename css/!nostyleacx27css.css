@@ -2,38 +2,64 @@
    GLOBAL STYLES & DARK THEME
 ======================================= */
 
+/* Base styles for body and html */
 body {
   font-family: sans-serif;
   margin: 0;
   background-color: #1a1a1a; /* Dark background */
   color: #f5f5f5;            /* Light text */
-  user-select: none;
+  user-select: none;         /* Disable text selection */
 }
 
 html, body {
-  overflow-x: hidden;
+  overflow-x: hidden;        /* Prevent horizontal scroll */
 }
 
+/* Hide text cursor in main container elements */
 main, section, div, header, footer {
   caret-color: transparent;
 }
 
-/* Container for top bar - flex layout */
+/* Container for top bar with burger and page title */
 .top-bar {
   display: flex;
   align-items: center;
-  justify-content: center; /* Center the title horizontally */
+  justify-content: center;   /* Center content horizontally */
   gap: 1rem;
   padding: 1rem 0;
   background-color: #2a2a2a;
   position: relative;
 }
 
-/* Burger button style */
+/* Burger menu button styling */
 .burger-button {
-  position: relative; /* Keep normal flow */
+  position: relative;
   z-index: 1001;
   cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0.05rem;
+  display: none;             /* Hidden by default, shown on mobile */
+}
+
+/* Burger menu lines style */
+.burger-button .line {
+  fill: none;
+  stroke: #f5f5f5;
+  stroke-width: 6;
+  stroke-linecap: round;
+  transition: all 0.3s ease;
+}
+
+/* Transform burger lines when active (open) */
+.burger-button.active .top {
+  transform: translateY(17px) rotate(45deg);
+}
+.burger-button.active .middle {
+  opacity: 0;
+}
+.burger-button.active .bottom {
+  transform: translateY(-17px) rotate(-45deg);
 }
 
 /* Page title style */
@@ -43,30 +69,22 @@ main, section, div, header, footer {
   color: #f5f5f5;
 }
 
-/* Responsive: center top bar content on mobile */
-@media (max-width: 768px) {
-  .top-bar {
-    justify-content: center;
-  }
-}
-
-
 /* =======================================
    NAVIGATION BAR
 ======================================= */
 
-/* Navigation container */
+/* Navigation list container */
 .navbar ul {
   list-style: none;
   display: flex;
-  justify-content: center;
+  justify-content: center;   /* Center nav items horizontally */
   gap: 2rem;
   padding: 1rem 0;
   margin: 0;
   background-color: #2a2a2a;
 }
 
-/* Navigation links */
+/* Navigation links styling */
 .navbar ul li a {
   text-decoration: none;
   color: #f5f5f5;
@@ -78,56 +96,20 @@ main, section, div, header, footer {
 }
 
 .navbar ul li a:hover {
-  color: #00bcd4;
+  color: #00bcd4;            /* Hover color */
 }
 
 .navbar ul li a.active {
   font-weight: bold;
-  color: #00bcd4;
+  color: #00bcd4;            /* Active link color */
 }
-
-
-/* =======================================
-   BURGER MENU (Mobile Only)
-======================================= */
-
-/* Burger button default style */
-.burger-button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0.05rem;
-  display: none;
-  z-index: 1001;
-}
-
-/* Burger button lines */
-.burger-button .line {
-  fill: none;
-  stroke: #f5f5f5;
-  stroke-width: 6;
-  stroke-linecap: round;
-  transition: all 0.3s ease;
-}
-
-/* Burger button transformation on open */
-.burger-button.active .top {
-  transform: translateY(17px) rotate(45deg);
-}
-.burger-button.active .middle {
-  opacity: 0;
-}
-.burger-button.active .bottom {
-  transform: translateY(-17px) rotate(-45deg);
-}
-
 
 /* =======================================
    RESPONSIVE - MOBILE NAVIGATION
 ======================================= */
 
 @media (max-width: 768px) {
-  /* Show burger button */
+  /* Show burger button on mobile */
   .burger-button {
     display: block;
     position: absolute;
@@ -136,7 +118,7 @@ main, section, div, header, footer {
     transform: translateX(-50%);
   }
 
-  /* Hide nav by default */
+  /* Hide nav by default on mobile */
   .navbar ul {
     display: none;
     flex-direction: column;
@@ -152,17 +134,18 @@ main, section, div, header, footer {
     align-items: center;
   }
 
-  /* Show nav on toggle */
+  /* Show nav when toggled */
   .navbar ul.show {
     display: flex;
   }
 
+  /* Nav item styling on mobile */
   .navbar ul li {
     text-align: center;
     padding: 1rem 0;
   }
 
-  /* Add spacing below header for all sections */
+  /* Add margin top below header for main sections on mobile */
   .content,
   .gallery,
   .resume-page,
@@ -170,7 +153,6 @@ main, section, div, header, footer {
     margin-top: 1rem;
   }
 }
-
 
 /* =======================================
    HOMEPAGE STYLE
@@ -186,7 +168,6 @@ main, section, div, header, footer {
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
 }
 
-
 /* =======================================
    GALLERY PAGE
 ======================================= */
@@ -198,6 +179,7 @@ main, section, div, header, footer {
   padding: 2rem;
 }
 
+/* Gallery images styling */
 .gallery img {
   width: 100%;
   aspect-ratio: 4 / 3;
@@ -207,11 +189,12 @@ main, section, div, header, footer {
   transition: transform 0.3s;
 }
 
+/* Scale effect on hover */
 .gallery img:hover {
   transform: scale(1.03);
 }
 
-/* Lightbox styles */
+/* Lightbox styling */
 .lightbox {
   display: none;
   position: fixed;
@@ -225,12 +208,14 @@ main, section, div, header, footer {
   align-items: center;
 }
 
+/* Lightbox image style */
 .lightbox-img {
   max-width: 90%;
   max-height: 90%;
   border-radius: 8px;
 }
 
+/* Close button on lightbox */
 .lightbox .close {
   position: absolute;
   top: 20px;
@@ -239,7 +224,6 @@ main, section, div, header, footer {
   color: white;
   cursor: pointer;
 }
-
 
 /* =======================================
    RESUME PAGE
@@ -256,10 +240,12 @@ main, section, div, header, footer {
   font-size: 0.95rem;
 }
 
+/* Resume sections spacing */
 .resume-page section {
   margin-bottom: 2rem;
 }
 
+/* Headings style in resume */
 .resume-page h1,
 .resume-page h2 {
   color: #9e9e9e;
@@ -267,11 +253,13 @@ main, section, div, header, footer {
   margin-bottom: 0.5rem;
 }
 
+/* Resume lists style */
 .resume-page ul {
   padding-left: 1.2rem;
   margin: 0;
 }
 
+/* Resume list items */
 .resume-page li {
   margin-bottom: 0.4rem;
   font-size: 0.95rem;
@@ -296,13 +284,14 @@ main, section, div, header, footer {
   color: #ffffff;
 }
 
-/* Resume table layout */
+/* Resume table style */
 .resume-table {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
+/* Resume table rows layout */
 .resume-table li {
   display: grid;
   grid-template-columns: 350px 20px 280px 20px 200px;
@@ -311,32 +300,37 @@ main, section, div, header, footer {
   margin-bottom: 1rem;
 }
 
+/* Education section uses a different grid */
 .resume-table.education li {
   grid-template-columns: 300px 20px 300px 20px 180px;
 }
 
+/* Resume role styling */
 .resume-table .role {
   font-weight: 600;
   color: #f5f5f5;
 }
 
+/* Resume company styling */
 .resume-table .company {
   color: #cccccc;
 }
 
+/* Resume dates styling */
 .resume-table .dates {
   color: #999999;
 }
 
+/* Resume dash styling */
 .resume-table .dash {
   color: #666;
 }
-
 
 /* =======================================
    CONTACT PAGE
 ======================================= */
 
+/* Contact links styling */
 .content a {
   color: #00bcd4;
   text-decoration: none;
@@ -348,6 +342,7 @@ main, section, div, header, footer {
   text-decoration: underline;
 }
 
+/* Contact icons container */
 .contact-icons {
   margin-top: 2rem;
   display: flex;
@@ -356,6 +351,7 @@ main, section, div, header, footer {
   gap: 1rem;
 }
 
+/* Contact links with icons */
 .contact-icons a {
   color: #00bcd4;
   text-decoration: none;
