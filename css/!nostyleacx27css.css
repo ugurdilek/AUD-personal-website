@@ -44,6 +44,7 @@ main, section, div, header, footer {
     padding: 5rem 0;
     background-color: transparent;
     position: relative;
+    height: 80px;
 }
 
 
@@ -69,7 +70,7 @@ main, section, div, header, footer {
     stroke-linecap: round;
     #transition: all 0.3s ease;
     transform-origin: 50px 50px;
-    transition: transform 0.4s cubic-bezier(.68,-0.6,.32,1.6), opacity 0.3s;
+    transition: transform 0.1s, opacity 0.1s;
 }
 
 .line.top    { transform-origin: 35px 50px; }
@@ -194,6 +195,7 @@ main, section, div, header, footer {
         top: 1rem;
         left: 50%;
         transform: translateX(-50%);
+        margin: 0 auto;
     }
 
     /* Fullscreen mobile navigation menu */
