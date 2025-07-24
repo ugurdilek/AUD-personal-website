@@ -77,7 +77,7 @@ main, section, div, header, footer {
 .line.bottom { transform-origin: 35px 50px; }
 
 .burger-button.active .line {
-    stroke: #fbbf24;
+    stroke: var(--color-active);
 }
 
 /* Transform burger lines when active (open) */
@@ -96,7 +96,7 @@ main, section, div, header, footer {
 
 .circle-bg {
     fill: transparent;
-    stroke: #fbbf24;
+    stroke: var(--color-active);
     stroke-width: 5;
     opacity: 0;
     transform: scale(0.4);
@@ -141,7 +141,7 @@ main, section, div, header, footer {
     font-style: italic;
     display: flex;
     color: var(--color-text);
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
     pointer-events: none;
     user-select: none;
     justify-content: right;
@@ -171,6 +171,9 @@ main, section, div, header, footer {
     gap: 0.5rem; /* Space between icon and text */
     text-decoration: none; /* Remove underline */
     transition: color 0.3s; /* Smooth color change on hover */
+    font-size: 1.2rem;
+    padding: 1.2rem 0;
+    width: 100%;
 }
 
 .navbar ul li a.active {
@@ -213,9 +216,16 @@ main, section, div, header, footer {
         top: 0;                                  /* Align to the top edge */
         width: 100vw;                            /* Full viewport width */
         z-index: 1000;                           /* Ensure menu is on top */
-        font-size: 1.2rem;
     }
 
+    .navbar ul li a {
+        font-size: 1.2rem;
+        font-weight: 500;
+        padding: 1.2rem 0;
+        display: block;
+        width: 100%;
+        transition: background 0.2s, color 0.2s;
+    }
 
     /* Show nav when toggled */
     .navbar ul.show {
@@ -237,6 +247,22 @@ main, section, div, header, footer {
     }
 }
 
+
+/* =======================================
+   FOOTER
+======================================= */
+
+.bottom-bar {
+    width: 100%;
+    padding: 2rem 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    font-size: 1.2rem;
+}
+
+
 /* =======================================
    HOMEPAGE STYLE
 ======================================= */
@@ -245,7 +271,7 @@ main, section, div, header, footer {
     width: fit-content;
     max-width: 100%;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 0.1rem;
     text-align: center;
 }
 
@@ -301,7 +327,7 @@ main, section, div, header, footer {
     position: absolute;
     top: 20px;
     right: 30px;
-    font-size: 2rem;
+    font-size: 1.2rem;
     color: white;
     cursor: pointer;
 }
@@ -318,7 +344,7 @@ main, section, div, header, footer {
     box-shadow: 0 4px 16px rgba(255, 255, 255, 0.05);
     border-radius: 12px;
     line-height: 1.6;
-    font-size: 0.95rem;
+    font-size: 1.2rem;
 }
 
 /* Resume sections spacing */
@@ -330,7 +356,7 @@ main, section, div, header, footer {
 .resume-page h1,
 .resume-page h2 {
     color: #9e9e9e;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     margin-bottom: 0.5rem;
 }
 
@@ -343,7 +369,7 @@ main, section, div, header, footer {
 /* Resume list items */
 .resume-page li {
     margin-bottom: 0.4rem;
-    font-size: 0.95rem;
+    font-size: 1.2rem;
 }
 
 /* Resume download button */
@@ -437,7 +463,7 @@ main, section, div, header, footer {
     color: #00bcd4;
     text-decoration: none;
     font-weight: 500;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
