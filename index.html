@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ahmet Uğur Dilek – Personal Website</title>
-    <meta name="description" content="Hi, I'm Uğur. This is my personal website including my portfolio, resume and contact information.">
+    <!-- Basic Meta Tags -->
+    <meta charset="UTF-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Home - Ahmet Uğur Dilek</title>
+    <meta content="Hi, I'm Uğur." name="description">
 
     <!-- Canonical link for SEO -->
-    <link rel="canonical" href="https://www.ugurdilek.com/" />
+    <link href="https://www.ugurdilek.com/" rel="canonical"/>
 
     <!-- CSS Styles -->
-    <link rel="preload" href="css/!nostyleacx27css.css" as="style" />
-    <link rel="stylesheet" href="css/!nostyleacx27css.css" />
+    <link as="style" href="css/!nostyleacx27css.css" rel="preload"/>
+    <link href="css/!nostyleacx27css.css" rel="stylesheet"/>
 
     <!-- Font Awesome Icons -->
     <script>
@@ -34,7 +35,11 @@
                 document.head.appendChild(gtagScript);
 
                 window.dataLayer = window.dataLayer || [];
-                function gtag() { dataLayer.push(arguments); }
+
+                function gtag() {
+                    dataLayer.push(arguments);
+                }
+
                 gtag('js', new Date());
                 gtag('config', 'G-9P7Z2XMBMH');
             }, 2000);
@@ -53,21 +58,13 @@
     </script>
 
     <!-- Favicon -->
-    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link href="/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
 
 <body>
-<!-- Navigation Header -->
+
+<!-- Site Header with Navigation -->
 <header>
-    <div class="top-bar">
-        <button class="burger-button" aria-label="Menu">
-            <svg viewBox="0 0 100 100" width="40">
-                <path class="line top" d="M 30,33 H 70" />
-                <path class="line middle" d="M 30,50 H 70" />
-                <path class="line bottom" d="M 30,67 H 70" />
-            </svg>
-        </button>
-    </div>
     <nav class="navbar">
         <ul>
             <li><a class="active" href="/"><i class="fa-solid fa-house"></i> Home</a></li>
@@ -76,7 +73,25 @@
             <li><a href="/contact"><i class="fa-solid fa-envelope"></i> Contact</a></li>
         </ul>
     </nav>
+
+    <!-- Mobile Burger Menu Button -->
+    <div class="top-bar">
+        <button aria-label="Menu" class="burger-button">
+            <svg viewBox="0 0 100 100" width="40">
+                <path class="line top" d="M 30,33 H 70"/>
+                <path class="line middle" d="M 30,50 H 70"/>
+                <path class="line bottom" d="M 30,67 H 70"/>
+            </svg>
+        </button>
+        <span class="motto"><em>İyilik, iyidir.</em></span>
+    </div>
 </header>
+
+<!-- Scripts -->
+<script src="/js/script.js"></script>
+</body>
+</html>
+
 
 
 <!-- Main Content -->
@@ -85,10 +100,5 @@
     <p> Welcome to my personal website </p>
     <p> Here you can find photos from my travels, my resume and my contact information. </p>
     <p> I am an electrical and electronics engineer and currently work as a software test engineer. </p>
-    <p> "İyilik, iyidir" </p>
 </main>
 
-<!-- Scripts -->
-<script src="/js/script.js"></script>
-</body>
-</html>

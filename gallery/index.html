@@ -2,22 +2,21 @@
 <html lang="en">
 <head>
     <!-- Basic Meta Tags -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>Gallery – Ahmet Uğur Dilek</title>
-    <meta name="description" content="A gallery showcasing photographs by Ahmet Uğur Dilek.">
+    <meta content="A gallery showcasing photographs by Ahmet Uğur Dilek." name="description">
 
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://www.ugurdilek.com/gallery" />
+    <link href="https://www.ugurdilek.com/gallery" rel="canonical"/>
 
-    <!-- Styles -->
-    <link rel="preload" href="/css/!nostyleacx27css.css" as="style" />
-    <link rel="stylesheet" href="/css/!nostyleacx27css.css" />
-    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <!-- CSS Styles -->
+    <link as="style" href="/css/!nostyleacx27css.css" rel="preload"/>
+    <link href="/css/!nostyleacx27css.css" rel="stylesheet"/>
 
-    <!-- Font Awesome (loaded asynchronously for performance) -->
+    <!-- Font Awesome Icons -->
     <script>
-        window.addEventListener('load', function() {
+        window.addEventListener('load', function () {
             const fa = document.createElement('link');
             fa.rel = 'stylesheet';
             fa.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css';
@@ -26,7 +25,7 @@
         });
     </script>
 
-    <!-- Google Analytics (deferred loading for performance) -->
+    <!-- Google Analytics Tracking -->
     <script>
         window.addEventListener('DOMContentLoaded', function () {
             setTimeout(function () {
@@ -36,28 +35,30 @@
                 document.head.appendChild(gtagScript);
 
                 window.dataLayer = window.dataLayer || [];
-                function gtag() { dataLayer.push(arguments); }
+
+                function gtag() {
+                    dataLayer.push(arguments);
+                }
+
                 gtag('js', new Date());
                 gtag('config', 'G-9P7Z2XMBMH');
             }, 2000);
         });
     </script>
 
-    <!-- Disable right click -->
+    <!-- Basic Security: Disable right click & developer shortcuts -->
     <script>
         document.addEventListener('contextmenu', e => e.preventDefault());
-    </script>
-
-    <!-- Block some keyboard shortcuts (F12, Ctrl+U etc.) -->
-    <script>
-        document.addEventListener('keydown', function (e) {
-            if (e.key === 'F12') e.preventDefault();
-            if ((e.ctrlKey && e.shiftKey && ['I', 'J'].includes(e.key)) ||
-                (e.ctrlKey && ['U', 'S'].includes(e.key.toUpperCase()))) {
+        document.addEventListener('keydown', e => {
+            const keys = ['F12', 'U', 'S', 'I', 'J'];
+            if ((e.key === 'F12') || (e.ctrlKey && (keys.includes(e.key.toUpperCase()) || (e.shiftKey && ['I', 'J'].includes(e.key))))) {
                 e.preventDefault();
             }
         });
     </script>
+
+    <!-- Favicon -->
+    <link href="/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
 
 <body>
@@ -74,27 +75,35 @@
     </nav>
 
     <!-- Mobile Burger Menu Button -->
-    <button class="burger-button" aria-label="Menu">
-        <svg viewBox="0 0 100 100" width="40">
-            <path class="line top" d="M 30,33 H 70" />
-            <path class="line middle" d="M 30,50 H 70" />
-            <path class="line bottom" d="M 30,67 H 70" />
-        </svg>
-    </button>
+    <div class="top-bar">
+        <button aria-label="Menu" class="burger-button">
+            <svg viewBox="0 0 100 100" width="40">
+                <path class="line top" d="M 30,33 H 70"/>
+                <path class="line middle" d="M 30,50 H 70"/>
+                <path class="line bottom" d="M 30,67 H 70"/>
+            </svg>
+        </button>
+        <span class="motto"><em>İyilik, iyidir.</em></span>
+    </div>
 </header>
+
+<!-- Scripts -->
+<script src="/js/script.js"></script>
+</body>
+</html>
 
 <!-- Gallery Section -->
 <main class="gallery">
     <figure>
-        <img src="/photos/KarakoyIstanbulTurkey.png" alt="Karakoy, Istanbul, Turkey">
+        <img alt="Karakoy, Istanbul, Turkey" src="/photos/KarakoyIstanbulTurkey.png">
         <figcaption>Karakoy, Istanbul, Turkey</figcaption>
     </figure>
     <figure>
-        <img src="/photos/CappadociaNevsehirTurkey.png" alt="Cappadocia, Nevşehir, Turkey">
+        <img alt="Cappadocia, Nevşehir, Turkey" src="/photos/CappadociaNevsehirTurkey.png">
         <figcaption>Cappadocia, Nevşehir, Turkey</figcaption>
     </figure>
     <figure>
-        <img src="/photos/St.AnthonyPaduaChurch.png" alt="St. Anthony of Padua Church, Istanbul, Turkey">
+        <img alt="St. Anthony of Padua Church, Istanbul, Turkey" src="/photos/St.AnthonyPaduaChurch.png">
         <figcaption>St. Anthony of Padua Church, Istanbul, Turkey</figcaption>
     </figure>
 </main>
@@ -102,11 +111,7 @@
 <!-- Lightbox Modal for Expanded Image View -->
 <div class="lightbox" id="lightbox">
     <span class="close">&times;</span>
-    <img src="" alt="Expanded image" class="lightbox-img"/>
+    <img alt="Expanded image" class="lightbox-img" src=""/>
 </div>
 
-<!-- External JavaScript -->
-<script src="/js/script.js"></script>
 
-</body>
-</html>
