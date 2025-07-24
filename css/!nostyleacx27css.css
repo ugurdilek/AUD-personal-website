@@ -3,8 +3,7 @@
   --color-bg:        #a89c94;
   --color-content:   #ede2d3;
   --color-text:      #4a635d;
-  --color-text-dark: #31463a;
-  --color-motto:     #7c9473;
+  --color-nav-top-bar: #31463a;
   --color-hover-bg:  #bcb8ae;
 }
 
@@ -46,6 +45,9 @@ main, section, div, header, footer {
   position: relative;
 }
 
+
+/* Burger Style  */
+
 /* Burger menu button styling */
 .burger-button {
   position: relative;
@@ -60,7 +62,7 @@ main, section, div, header, footer {
 /* Burger menu lines style */
 .burger-button .line {
   fill: none;
-  stroke: #f5f5f5;
+  stroke: var(--color-nav-top-bar);
   stroke-width: 6;
   stroke-linecap: round;
   transition: all 0.3s ease;
@@ -98,16 +100,21 @@ main, section, div, header, footer {
   color: #31463a;
 }
 
+/* Motto */
+
 .motto {
   position: absolute;
   top: 12px;
   right: 32px;
+  list-style: none;
   font-style: italic;
-  font-size: 1.1rem;
-  color: #4a635d;
-  letter-spacing: 1px;
+  display: flex;
+  color: var(--color-text);
+  letter-spacing: 0.5px;
   pointer-events: none;
   user-select: none;
+  justify-content: right;
+  padding: 0.5rem 0;
 }
 
 
