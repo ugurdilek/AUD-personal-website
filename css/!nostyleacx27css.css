@@ -69,6 +69,20 @@ main, section, div, header, footer {
   color: #f5f5f5;
 }
 
+.site-name {
+  position: absolute;
+  left: 32px;
+  top: 12px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #eee;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.site-name:hover {
+  color: #ffd700;
+}
+
 .motto {
   position: absolute;
   top: 12px;
