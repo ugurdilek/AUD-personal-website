@@ -214,7 +214,6 @@ main, section, div, header, footer {
         width: 100vw;                            /* Full viewport width */
         z-index: 1000;                           /* Ensure menu is on top */
         font-size: 1.2rem;
-
     }
 
 
@@ -226,7 +225,7 @@ main, section, div, header, footer {
     /* Nav item styling on mobile */
     .navbar ul li {
         text-align: center;
-        padding: 1rem 0;
+        padding: 0.3rem 0;
     }
 
     /* Add margin top below header for main sections on mobile */
@@ -243,12 +242,11 @@ main, section, div, header, footer {
 ======================================= */
 
 .content {
-    max-width: 800px;
+    width: fit-content;
+    max-width: 100%;
     margin: 0 auto;
-    padding: 10rem;
+    padding: 2rem;
     text-align: center;
-    background-color: transparent;
-    border-radius: 12px;
 }
 
 /* =======================================
