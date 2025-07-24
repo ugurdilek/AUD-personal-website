@@ -351,6 +351,10 @@ main, section, div, header, footer {
     .gallery figcaption {
     }
 
+    .arrow {
+        display: none !important;
+    }
+
     .resume-page {
         max-width: 100%;
         margin: 0;
