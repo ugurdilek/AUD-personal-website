@@ -120,14 +120,13 @@ main, section, div, header, footer {
     max-width: 90vw;
     max-height: 85vh;
     border-radius: 12px;
-    box-shadow: 0 6px 32px rgba(50,50,50,0.2);
 }
 
 .lightbox .close {
     position: absolute;
-    top: 24px; right: 36px;
-    font-size: 2.4rem;
-    color: #fff;
+    top: 30px; right: 30px;
+    font-size: 2rem;
+    color: var(--color-hover-bg);
     cursor: pointer;
     z-index: 1001;
 }
@@ -135,20 +134,26 @@ main, section, div, header, footer {
 .arrow {
     position: absolute;
     top: 50%;
-    font-size: 2.5rem;
-    color: #fff;
+    width: 20px;
+    left: 20px;
+    right: 20px;
+    height: 20px;
+    font-size: 3rem;
+    color: var(--color-hover-bg);
     cursor: pointer;
     user-select: none;
-    z-index: 1002;
-    padding: 0.5rem 1rem;
-    background: rgba(0,0,0,0.2);
-    border-radius: 50%;
-    transform: translateY(-50%);
+    padding: 1rem 1rem;
+    border: 2px solid var(--color-active);
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
 }
 
-.arrow.left  { left: 32px; }
-.arrow.right { right: 32px; }
-.arrow:hover { background: rgba(0,0,0,0.4); }
+.arrow.left  { left: 30px; right: auto; }
+.arrow.right { left: auto; right: 30px; }
+.arrow:hover { background: transparent; }
 
 .resume-page {
 }
