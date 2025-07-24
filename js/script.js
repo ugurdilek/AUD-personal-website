@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+  // ========== LIGHTBOX GALLERY ==========
   const images = Array.from(document.querySelectorAll('.gallery img'));
   const lightbox = document.getElementById('lightbox');
   const lightboxImg = document.getElementById('lightboxImg');
@@ -54,34 +55,33 @@ document.addEventListener('DOMContentLoaded', function() {
       lightboxImg.src = "";
     }
   });
-});
 
+  // ========== SWIPE (TOUCH) FOR LIGHTBOX ==========
+  let touchStartX = 0;
+  let touchEndX = 0;
 
-let touchStartX = 0;
-let touchEndX = 0;
-
-lightboxImg.addEventListener('touchstart', function(e) {
-  touchStartX = e.changedTouches[0].screenX;
-});
-
-lightboxImg.addEventListener('touchend', function(e) {
-  touchEndX = e.changedTouches[0].screenX;
-  handleGesture();
-});
-
-function handleGesture() {
-  if (touchEndX < touchStartX - 40) { // sola kaydırınca sonraki fotoğraf
-    showNext();
-  }
-  if (touchEndX > touchStartX + 40) { // sağa kaydırınca önceki fotoğraf
-    showPrev();
-  }
-}
-
-// BURGER MENU TOGGLE
-if (burgerButton && navList) {
-  burgerButton.addEventListener('click', () => {
-    burgerButton.classList.toggle('active');
-    navList.classList.toggle('show');
+  lightboxImg.addEventListener('touchstart', function(e) {
+    touchStartX = e.changedTouches[0].screenX;
   });
-}
+
+  lightboxImg.addEventListener('touchend', function(e) {
+    touchEndX = e.changedTouches[0].screenX;
+    handleGesture();
+  });
+
+  function handleGesture() {
+    if (touchEndX < touchStartX - 40) showNext();
+    if (touchEndX > touchStartX + 40) showPrev();
+  }
+
+  // ========== BURGER MENU TOGGLE ==========
+  const burgerButton = document.querySelector('.burger-button');
+  const navList = document.querySelector('.navbar ul');
+
+  if (burgerButton && navList) {
+    burgerButton.addEventListener('click', () => {
+      burgerButton.classList.toggle('active');
+      navList.classList.toggle('show');
+    });
+  }
+});
