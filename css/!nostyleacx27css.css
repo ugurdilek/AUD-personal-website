@@ -166,8 +166,24 @@ main, section, div, header, footer {
     height: 40px;
 }
 
+/* ========== RESUME PAGE ========== */
 
-.resume-page {
+.resume {
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 2rem !important;
+}
+
+/* Resume download button */
+.view-link {
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.view-link:hover {
+    color: var(--color-hover-bg);
 }
 
 /* ========== CONTACT PAGE ========== */
@@ -175,15 +191,7 @@ main, section, div, header, footer {
 .contact {
     margin: 0 auto;
     text-align: center;
-}
-
-.content.contact {
     padding-top: 1.2rem !important;
-}
-
-.contact-title h1 {
-    color: var(--color-content);
-    font-size: 1.5rem;
 }
 
 .contact-icons a {
@@ -193,12 +201,12 @@ main, section, div, header, footer {
     font-weight: 500;
 }
 
-.contact-icons a:hover {
-    color: var(--color-active);
+.contact-icons i {
+    font-size: 1.2rem;
 }
 
-.contact-icons i {
-    font-size: 1.2em;
+.contact-icons a:hover {
+    color: var(--color-hover-bg);
 }
 
 /* ========== FOOTER ========== */
@@ -393,11 +401,11 @@ main, section, div, header, footer {
         display: none !important;
     }
 
-    .resume-page {
-        max-width: 100%;
-        margin: 0;
-        padding: 1rem;
-        font-size: 1rem;
+    /* ========== RESUME PAGE ========== */
+
+    .resume {
+        margin: 0 auto;
+        text-align: center;
     }
 
     /* ========== CONTACT PAGE ========== */

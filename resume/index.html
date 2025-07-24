@@ -3,16 +3,18 @@
 <head>
     <!-- Basic Meta Tags -->
     <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Resume – Ahmet Uğur Dilek</title>
-    <meta name="description" content="Professional resume and qualifications of Ahmet Uğur Dilek.">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Resume – Uğur Dilek</title>
+    <meta name="description" content="Professional resume of Uğur Dilek.">
 
-    <!-- Styles -->
-    <link rel="preload" href="/css/!nostyleacx27css.css" as="style"/>
-    <link rel="stylesheet" href="/css/!nostyleacx27css.css"/>
-    <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
+    <!-- Canonical link for SEO -->
+    <link href="https://www.ugurdilek.com/gallery" rel="canonical"/>
 
-    <!-- Font Awesome (asynchronous load for better performance) -->
+    <!-- CSS Styles -->
+    <link as="style" href="/css/!nostyleacx27css.css" rel="preload"/>
+    <link href="/css/!nostyleacx27css.css" rel="stylesheet"/>
+
+    <!-- Font Awesome Icons -->
     <script>
         window.addEventListener('load', function () {
             const fa = document.createElement('link');
@@ -23,7 +25,7 @@
         });
     </script>
 
-    <!-- Google Analytics -->
+    <!-- Google Analytics Tracking -->
     <script>
         window.addEventListener('DOMContentLoaded', function () {
             setTimeout(function () {
@@ -33,31 +35,35 @@
                 document.head.appendChild(gtagScript);
 
                 window.dataLayer = window.dataLayer || [];
-                function gtag() { dataLayer.push(arguments); }
+
+                function gtag() {
+                    dataLayer.push(arguments);
+                }
+
                 gtag('js', new Date());
                 gtag('config', 'G-9P7Z2XMBMH');
             }, 2000);
         });
     </script>
 
-    <!-- Prevent Right Click and Dev Tools Shortcuts -->
+    <!-- Basic Security: Disable right click & developer shortcuts -->
     <script>
-        document.addEventListener('contextmenu', function (e) {
-            e.preventDefault();
-        });
-        document.addEventListener('keydown', function (e) {
-            if (e.key === 'F12') e.preventDefault();
-            if ((e.ctrlKey && e.shiftKey && ['I', 'J'].includes(e.key)) ||
-                (e.ctrlKey && ['U', 'S'].includes(e.key.toUpperCase()))) {
+        document.addEventListener('contextmenu', e => e.preventDefault());
+        document.addEventListener('keydown', e => {
+            const keys = ['F12', 'U', 'S', 'I', 'J'];
+            if ((e.key === 'F12') || (e.ctrlKey && (keys.includes(e.key.toUpperCase()) || (e.shiftKey && ['I', 'J'].includes(e.key))))) {
                 e.preventDefault();
             }
         });
     </script>
+
+    <!-- Favicon -->
+    <link href="/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
 
 <body>
 
-<!-- Site Header -->
+<!-- Site Header with Navigation -->
 <header>
     <nav class="navbar">
         <ul>
@@ -68,62 +74,28 @@
         </ul>
     </nav>
 
-    <!-- Mobile Burger Menu -->
-    <button class="burger-button" aria-label="Menu">
-        <svg viewBox="0 0 100 100" width="40">
-            <path class="line top" d="M 30,33 H 70"/>
-            <path class="line middle" d="M 30,50 H 70"/>
-            <path class="line bottom" d="M 30,67 H 70"/>
-        </svg>
-    </button>
+    <!-- Mobile Burger Menu Button -->
+    <div class="top-bar">
+        <button aria-label="Menu" class="burger-button">
+            <svg viewBox="0 0 100 100" width="40">
+                <circle class="circle-bg" cx="52" cy="48" r="45"/>
+                <path class="line top"      d="M 10,35 H 70"/>
+                <path class="line middle"   d="M 20,50 H 60"/>
+                <path class="line bottom"   d="M 10,65 H 70"/>
+            </svg>
+        </button>
+    </div>
 </header>
 
-<!-- Resume Content -->
-<main class="resume-page">
+<!-- Site Footer with Navigation -->
+<footer class="bottom-bar">
+    <div class="footer-content">
+        <span class="motto"><em>İyilik, iyidir.</em></span>
+    </div>
+</footer>
 
-    <!-- Work Experience Section -->
-    <section>
-        <h2>Work Experience</h2>
-        <ul class="resume-table">
-            <li><span class="role">Experienced Software Test Engineer</span><span class="dash">–</span><span class="company">R&D Department, Siemens</span><span class="dash">–</span><span class="dates">Mar 2023 – Present</span></li>
-            <li><span class="role">Senior Software Test Engineer</span><span class="dash">–</span><span class="company">R&D Department, Arçelik</span><span class="dash">–</span><span class="dates">Dec 2021 – Mar 2023</span></li>
-            <li><span class="role">Software Test Engineer</span><span class="dash">–</span><span class="company">R&D Department, Panasonic</span><span class="dash">–</span><span class="dates">Jul 2019 – Dec 2021</span></li>
-        </ul>
-    </section>
-
-    <!-- Education Section -->
-    <section>
-        <h2>Education</h2>
-        <ul class="resume-table education">
-            <li><span class="role">M.Sc. Electrical & Electronics Engineering</span><span class="dash">–</span><span class="company">Bilgi University</span><span class="dash">–</span><span class="dates">Sep 2015 – Jun 2017</span></li>
-            <li><span class="role">B.Sc. Electrical & Electronics Engineering</span><span class="dash">–</span><span class="company">Bilgi University</span><span class="dash">–</span><span class="dates">Oct 2010 – Jun 2015</span></li>
-        </ul>
-    </section>
-
-    <!-- Certificates Section -->
-    <section>
-        <h2>Certificates</h2>
-        <ul class="resume-table">
-            <li><span class="role">ISTQB Certified Tester Foundation Level</span><span class="dash">–</span><span class="company">GASQ</span></li>
-            <li><span class="role">Switching, Routing, and Wireless Essentials</span><span class="dash">–</span><span class="company">Cisco CCNA</span></li>
-            <li><span class="role">Introduction to Networks</span><span class="dash">–</span><span class="company">Cisco CCNA</span></li>
-            <li><span class="role">KNX Advanced</span><span class="dash">–</span><span class="company">KNX Association</span></li>
-            <li><span class="role">Scrum: The Basics</span><span class="dash">–</span><span class="company">LinkedIn</span></li>
-        </ul>
-    </section>
-
-    <!-- Skills Section -->
-    <section>
-        <h2>Skills</h2>
-        <ul class="resume-table">
-            <li><span class="role">Test Case Design & Execution</span></li>
-            <li><span class="role">Bug Tracking & Reporting</span></li>
-            <li><span class="role">Manual & Automation Testing</span></li>
-            <li><span class="role">Functional & Regression Testing</span></li>
-            <li><span class="role">JIRA, Azure DevOps</span></li>
-        </ul>
-    </section>
-
+<!-- Resume -->
+<main class="resume">
     <!-- Resume Download Link -->
     <section>
         <a class="view-link" href="/resume/AUD_resume.pdf" target="_blank">
@@ -132,8 +104,7 @@
     </section>
 </main>
 
-<!-- JavaScript -->
+<!-- JS Script -->
 <script src="/js/script.js"></script>
-
 </body>
 </html>
