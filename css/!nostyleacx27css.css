@@ -1,15 +1,29 @@
-/* =======================================
-   GLOBAL STYLES & DARK THEME
-======================================= */
+:root {
+  /* Colors */
+  --color-bg:        #a89c94;
+  --color-content:   #ede2d3;
+  --color-text:      #4a635d;
+  --color-text-dark: #31463a;
+  --color-motto:     #7c9473;
+  --color-hover-bg:  #bcb8ae;
+}
+
+/*
+@mixin shared-base {
+  user-select: none;
+  min-height: 100vh;
+}
+@include shared-base;
+*/
+
 
 /* Base styles for body and html */
 body {
   font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
   margin: 0;
-  background-color: #f5ebe0;
-  color: #7c5e3c;
+  background-color: var(--color-bg);
+  color: var(--color-content);
   user-select: none;         /* Disable text selection */
-  min-height: 100vh;
 }
 
 html, body {
@@ -81,7 +95,7 @@ main, section, div, header, footer {
   transition: color 0.2s;
 }
 .site-name:hover {
-  color: #ffd700;
+  color: #31463a;
 }
 
 .motto {
@@ -90,7 +104,7 @@ main, section, div, header, footer {
   right: 32px;
   font-style: italic;
   font-size: 1.1rem;
-  color: #bbb;
+  color: #4a635d;
   letter-spacing: 1px;
   pointer-events: none;
   user-select: none;
@@ -115,7 +129,7 @@ main, section, div, header, footer {
 /* Navigation links styling */
 .navbar ul li a {
   text-decoration: none;
-  color: #f5f5f5;
+  color: #4a635d;
   font-weight: normal;
   transition: color 0.3s;
   display: flex;
@@ -124,12 +138,12 @@ main, section, div, header, footer {
 }
 
 .navbar ul li a:hover {
-  color: #00bcd4;            /* Hover color */
+  color: #31463a;            /* Hover color */
 }
 
 .navbar ul li a.active {
   font-weight: bold;
-  color: #00bcd4;            /* Active link color */
+  color: #4a635d;            /* Active link color */
 }
 
 /* =======================================
@@ -189,11 +203,10 @@ main, section, div, header, footer {
 .content {
   max-width: 800px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 10rem;
   text-align: center;
   background-color: transparent;
   border-radius: 12px;
-  #box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
 }
 
 /* =======================================
