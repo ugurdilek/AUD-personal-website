@@ -13,6 +13,9 @@
 /* ====================  BASE STYLES ==================== */
 body, html {
     font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1;
     margin: 0;
     background-color: var(--color-bg);
     color: var(--color-content);
