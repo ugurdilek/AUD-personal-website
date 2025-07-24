@@ -4,11 +4,12 @@
 
 /* Base styles for body and html */
 body {
-  font-family: sans-serif;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
   margin: 0;
-  background-color: #1a1a1a; /* Dark background */
-  color: #f5f5f5;            /* Light text */
+  background-color: #f5ebe0;
+  color: #7c5e3c;
   user-select: none;         /* Disable text selection */
+  min-height: 100vh;
 }
 
 html, body {
