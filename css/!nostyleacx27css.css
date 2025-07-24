@@ -27,7 +27,7 @@ main, section, div, header, footer {
   justify-content: center;   /* Center content horizontally */
   gap: 1rem;
   padding: 1rem 0;
-  background-color: #2a2a2a;
+  background-color: transparent;
   position: relative;
 }
 
