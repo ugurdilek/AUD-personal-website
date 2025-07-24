@@ -5,9 +5,9 @@
     <meta charset="UTF-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>Gallery – Ahmet Uğur Dilek</title>
-    <meta content="A gallery showcasing photographs by Ahmet Uğur Dilek." name="description">
+    <meta content="A gallery showcasing photographs" name="description">
 
-    <!-- Canonical URL -->
+    <!-- Canonical link for SEO -->
     <link href="https://www.ugurdilek.com/gallery" rel="canonical"/>
 
     <!-- CSS Styles -->
@@ -78,14 +78,22 @@
     <div class="top-bar">
         <button aria-label="Menu" class="burger-button">
             <svg viewBox="0 0 100 100" width="40">
-                <path class="line top" d="M 30,33 H 70"/>
-                <path class="line middle" d="M 30,50 H 70"/>
-                <path class="line bottom" d="M 30,67 H 70"/>
+                <circle class="circle-bg" cx="52" cy="48" r="45"/>
+                <path class="line top"      d="M 10,35 H 70"/>
+                <path class="line middle"   d="M 20,50 H 60"/>
+                <path class="line bottom"   d="M 10,65 H 70"/>
             </svg>
         </button>
-        <!--  <span class="motto"><em>İyilik, iyidir.</em></span> -->
     </div>
 </header>
+
+<!-- Site Footer with Navigation -->
+<footer class="bottom-bar">
+    <div class="footer-content">
+        <span class="motto"><em>İyilik, iyidir.</em></span>
+    </div>
+</footer>
+
 
 <!-- Scripts -->
 <script src="/js/script.js"></script>
@@ -108,10 +116,10 @@
     </figure>
 </main>
 
-<!-- Lightbox Modal for Expanded Image View -->
+<!-- Lightbox container -->
 <div class="lightbox" id="lightbox">
-    <span class="close">&times;</span>
-    <img alt="Expanded image" class="lightbox-img" src=""/>
+    <span class="close" id="closeLightbox">&times;</span>
+    <span class="arrow left" id="lightboxPrev">&#8592;</span>
+    <img class="lightbox-img" id="lightboxImg" src="" alt="">
+    <span class="arrow right" id="lightboxNext">&#8594;</span>
 </div>
-
-

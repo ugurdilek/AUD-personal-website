@@ -73,8 +73,82 @@ main, section, div, header, footer {
     text-align: center;
 }
 
+/* ========== GALLERY PAGE ========== */
+
 .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.2rem;
+    padding: 2rem 0;
 }
+
+.gallery img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(50,50,50,0.09);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.gallery img:hover {
+    transform: scale(1.04) rotate(-1deg);
+    box-shadow: 0 8px 32px rgba(50,50,50,0.14);
+}
+
+/* Lightbox */
+
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.85);
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.2s;
+}
+
+.lightbox.open {
+    display: flex;
+}
+
+.lightbox-img {
+    max-width: 90vw;
+    max-height: 85vh;
+    border-radius: 12px;
+    box-shadow: 0 6px 32px rgba(50,50,50,0.2);
+}
+
+.lightbox .close {
+    position: absolute;
+    top: 24px; right: 36px;
+    font-size: 2.4rem;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    font-size: 2.5rem;
+    color: #fff;
+    cursor: pointer;
+    user-select: none;
+    z-index: 1002;
+    padding: 0.5rem 1rem;
+    background: rgba(0,0,0,0.2);
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+.arrow.left  { left: 32px; }
+.arrow.right { right: 32px; }
+.arrow:hover { background: rgba(0,0,0,0.4); }
 
 .resume-page {
 }
@@ -175,6 +249,16 @@ main, section, div, header, footer {
     padding: 0.8rem 0;
 }
 
+
+
+
+
+
+
+
+
+
+
 /* ==================== MOBILE STYLES ==================== */
 
 @media (max-width: 768px) {
@@ -243,8 +327,8 @@ main, section, div, header, footer {
 
     .gallery {
         grid-template-columns: 1fr;
-        padding: 1rem;
-        gap: 0.5rem;
+        gap: 0.7rem;
+        padding: 1rem 0;
     }
 
     .resume-page {
