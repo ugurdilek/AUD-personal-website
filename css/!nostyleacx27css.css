@@ -42,7 +42,7 @@ main, section, div, header, footer {
 .navbar ul li a {
     align-items: center; /* Vertically center content */
     color: var(--color-nav-top-bar); /* Link color */
-    display: flex; /* Allow icon and text side by side */
+    #display: flex; /* Allow icon and text side by side */
     font-weight: normal; /* Normal font weight */
     gap: 0.5rem; /* Space between icon and text */
     text-decoration: none; /* Remove underline */
@@ -234,6 +234,8 @@ main, section, div, header, footer {
         padding: 3rem 1rem 1rem 1rem;
         margin: 0;
         text-align: center;
+        box-sizing: border-box;
+        overflow-x: hidden;
     }
 
     .gallery {
