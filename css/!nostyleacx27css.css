@@ -177,17 +177,13 @@ main, section, div, header, footer {
     text-align: center;
 }
 
-.contact-title h1 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--color-content);
-    margin-top: 0.5rem;
+.content.contact {
+    padding-top: 1.2rem !important;
 }
 
-.contact-icons {
-    flex-direction: column;
-    gap: 1.2rem;
-    align-items: center;
+.contact-title h1 {
+    color: var(--color-content);
+    font-size: 1.5rem;
 }
 
 .contact-icons a {
@@ -314,7 +310,7 @@ main, section, div, header, footer {
 @media (max-width: 768px) {
 
     .top-bar {
-        height: 64px;
+        height: 20px;
         padding: 1rem 0;
         gap: 2rem;
     }
@@ -376,9 +372,8 @@ main, section, div, header, footer {
     }
 
     .gallery {
-        grid-template-columns: 1fr;
-        gap: 0.7rem;
-        padding: 1rem 0;
+        margin: 0 auto;
+        text-align: center;
     }
 
     .gallery figcaption {
@@ -405,11 +400,35 @@ main, section, div, header, footer {
         font-size: 1rem;
     }
 
+    /* ========== CONTACT PAGE ========== */
+
     .contact {
-        max-width: 100%;
-        margin: 0;
-        padding: 1rem;
-        font-size: 1rem;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .content.contact {
+        padding-top: 1.2rem !important;
+    }
+
+    .contact-title h1 {
+        color: var(--color-content);
+        font-size: 1.5rem;
+    }
+
+    .contact-icons a {
+        font-size: 1.2rem;
+        color: var(--color-text);
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    .contact-icons a:hover {
+        color: var(--color-active);
+    }
+
+    .contact-icons i {
+        font-size: 1.2em;
     }
 
     .bottom-bar {
