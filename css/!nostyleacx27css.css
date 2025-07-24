@@ -134,26 +134,21 @@ main, section, div, header, footer {
 .arrow {
     position: absolute;
     top: 50%;
-    width: 20px;
-    left: 20px;
-    right: 20px;
-    height: 20px;
-    font-size: 3rem;
-    color: var(--color-hover-bg);
+    transform: translateY(-50%);
+    z-index: 1002;
     cursor: pointer;
     user-select: none;
-    padding: 1rem 1rem;
-    border: 2px solid var(--color-active);
-    border-radius: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    line-height: 1;
+    background: none;
+}
+.arrow.left  { left: 50px; }
+.arrow.right { right: 50px; }
+
+.arrow svg {
+    display: block;
+    width: 40px;
+    height: 40px;
 }
 
-.arrow.left  { left: 30px; right: auto; }
-.arrow.right { left: auto; right: 30px; }
-.arrow:hover { background: transparent; }
 
 .resume-page {
 }
