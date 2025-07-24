@@ -57,7 +57,7 @@ main, section, div, header, footer {
     cursor: pointer;
     background: none;
     border: none;
-    padding: 0;
+    padding: 5px;
     display: none;
     outline: none;
 }
@@ -160,6 +160,7 @@ main, section, div, header, footer {
     list-style: none; /* Remove default bullet points */
     margin: 0; /* Remove default margin */
     padding: 1rem 0; /* Vertical padding */
+    width: 100%;
 }
 
 /* Navigation links styling */
@@ -172,7 +173,7 @@ main, section, div, header, footer {
     text-decoration: none; /* Remove underline */
     transition: color 0.3s; /* Smooth color change on hover */
     font-size: 1.2rem;
-    padding: 1.2rem 0;
+    padding: 1rem 0;
     width: 100%;
 }
 
@@ -221,8 +222,8 @@ main, section, div, header, footer {
     .navbar ul li a {
         font-size: 1.2rem;
         font-weight: 500;
-        padding: 1.2rem 0;
-        display: block;
+        padding: 1rem 0;
+        display: flex;
         width: 100%;
         transition: background 0.2s, color 0.2s;
     }
@@ -234,16 +235,7 @@ main, section, div, header, footer {
 
     /* Nav item styling on mobile */
     .navbar ul li {
-        text-align: left;
-        padding-left: 1.5rem;
-    }
-
-    /* Add margin top below header for main sections on mobile */
-    .content,
-    .gallery,
-    .resume-page,
-    .contact-icons {
-        margin-top: 1rem;
+        text-align: center;
     }
 }
 
