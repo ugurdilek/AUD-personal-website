@@ -254,12 +254,11 @@ main, section, div, header, footer {
 
 .bottom-bar {
     width: 100%;
-    padding: 2rem 0;
+    padding: 1.5rem 0;
     position: fixed;
     bottom: 0;
     left: 0;
-    z-index: 999;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 
