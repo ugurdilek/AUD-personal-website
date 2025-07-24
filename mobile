@@ -1,0 +1,258 @@
+:root {
+    /* ====================  COLORS ==================== */
+    --color-bg: #a89c94;
+    --color-content: #ede2d3;
+    --color-text: #4a635d;
+    --color-nav-top-bar: #31463a;
+    --color-hover-bg: #bcb8ae;
+    --color-active: #c68642;
+}
+
+/* ====================  BASE STYLES FOR BODY AND HTML ==================== */
+body {
+    font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    background-color: var(--color-bg);
+    color: var(--color-content);
+    user-select: none; /* Disable text selection */
+}
+
+/* ====================  Prevent horizontal scroll ==================== */
+html, body {
+    overflow-x: hidden;
+}
+
+/* ====================  Hide text cursor in main container elements ==================== */
+main, section, div, header, footer {
+    caret-color: transparent;
+}
+
+/* ====================  Container for top bar with burger and page title ==================== */
+
+
+
+/* Burger Style  */
+
+/* Burger menu button styling */
+.burger-button {
+    position: relative;
+    z-index: 1001;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 5px;
+    display: none;
+    outline: none;
+}
+
+/* Burger menu lines style */
+.burger-button .line {
+    fill: none;
+    stroke: var(--color-nav-top-bar);
+    stroke-width: 6;
+    stroke-linecap: round;
+    #transition: all 0.3s ease;
+    transform-origin: 50px 50px;
+    transition: transform 0.1s, opacity 0.1s;
+}
+
+.line.top    { transform-origin: 35px 50px; }
+.line.bottom { transform-origin: 35px 50px; }
+
+.burger-button.active .line {
+    stroke: var(--color-active);
+}
+
+/* Transform burger lines when active (open) */
+.burger-button.active .top {
+    transform: rotate(45deg) translateX(5px);
+}
+
+.burger-button.active .middle {
+    opacity: 0;
+    transition: opacity 0.25s, transform 0.3s;
+}
+
+.burger-button.active .bottom {
+    transform: rotate(-45deg) translateX(10px) translateY(-5px);
+}
+
+.circle-bg {
+    fill: transparent;
+    stroke: var(--color-active);
+    stroke-width: 5;
+    opacity: 0;
+    transform: scale(0.4);
+    transform-origin: 50% 50%;
+    transition: opacity 0.35s, transform 0.35s;
+}
+
+.burger-button.active .circle-bg {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Page title style */
+.page-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #f5f5f5;
+}
+
+.site-name {
+    position: absolute;
+    left: 32px;
+    top: 12px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #eee;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.site-name:hover {
+    color: #31463a;
+}
+
+/* Motto */
+
+.motto {
+    position: absolute;
+    top: 12px;
+    right: 32px;
+    list-style: none;
+    font-style: italic;
+    display: flex;
+    color: var(--color-text);
+    letter-spacing: 1px;
+    pointer-events: none;
+    user-select: none;
+    justify-content: right;
+    padding: 0.8rem 0;
+}
+
+
+/* ====================  NAVIGATION BAR ==================== */
+
+/* Navigation list container */
+.navbar ul {
+    background: none; /* No background color */
+    display: flex; /* Display items in a row */
+    gap: 2rem; /* Space between menu items */
+    justify-content: center; /* Center menu items horizontally */
+    list-style: none; /* Remove default bullet points */
+    margin: 0; /* Remove default margin */
+    padding: 1rem 0; /* Vertical padding */
+    width: 100%;
+}
+
+/* Navigation links styling */
+.navbar ul li a {
+    align-items: center; /* Vertically center content */
+    color: var(--color-nav-top-bar); /* Link color */
+    display: flex; /* Allow icon and text side by side */
+    font-weight: normal; /* Normal font weight */
+    gap: 0.5rem; /* Space between icon and text */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Smooth color change on hover */
+    font-size: 1.2rem;
+    padding: 1rem 0;
+    width: 100%;
+}
+
+.navbar ul li a.active {
+    color: var(--color-active); /* Active link color */
+    font-weight: bold; /* Bold for active link */
+}
+
+.navbar ul li a:hover {
+    color: var(--color-hover-bg); /* Hover color */
+}
+
+
+/* =======================================
+   RESPONSIVE - MOBILE NAVIGATION
+======================================= */
+
+@media (max-width: 768px) {
+
+    .content {
+        width: 100%;
+        max-width: 100%;
+        padding: 100rem 1rem 1rem 1rem;    /* üst, sağ, alt, sol */
+        margin-top: 100rem;
+        text-align: left;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    /* Show burger button on mobile */
+    .burger-button {
+        display: block;
+        position: absolute;
+        top: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 0 auto;
+    }
+
+    /* Fullscreen mobile navigation menu */
+    .navbar ul {
+        align-items: center;                     /* Center items horizontally */
+        background-color: #2a2a2a;               /* Dark overlay */
+        display: none;                           /* Hide menu by default */
+        flex-direction: column;                  /* Stack items vertically */
+        gap: 0.1rem;                           /*  space between menu items */
+        height: 100vh;                           /* Full viewport height */
+        justify-content: flex-start;             /* Align items to the top */
+        left: 0;                                 /* Align to the left edge */
+        padding: 5rem 0;                          /* padding for spacing */
+        position: fixed;                         /* Overlay the whole page */
+        top: 0;                                  /* Align to the top edge */
+        width: 100vw;                            /* Full viewport width */
+        z-index: 1000;                           /* Ensure menu is on top */
+    }
+
+    .navbar ul li a {
+        font-size: 1.2rem;
+        font-weight: 500;
+        padding: 1rem 0;
+        display: flex;
+        width: 100%;
+        transition: background 0.2s, color 0.2s;
+    }
+
+    /* Show nav when toggled */
+    .navbar ul.show {
+        display: flex;
+    }
+
+    /* Nav item styling on mobile */
+    .navbar ul li {
+        text-align: center;
+    }
+}
+
+
+/*  ==================== FOOTER ==================== */
+
+.bottom-bar {
+    width: 100%;
+    padding: 1.5rem 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    font-size: 1rem;
+}
+
+/* ==================== */
+
+.content {
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 5rem;
+    text-align: center;
+}
+
+
