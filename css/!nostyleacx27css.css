@@ -204,16 +204,19 @@ main, section, div, header, footer {
         background-color: #2a2a2a;               /* Dark overlay */
         display: none;                           /* Hide menu by default */
         flex-direction: column;                  /* Stack items vertically */
-        gap: 0.1rem;                            /*  space between menu items */
+        gap: 0.1rem;                           /*  space between menu items */
         height: 100vh;                           /* Full viewport height */
         justify-content: flex-start;             /* Align items to the top */
         left: 0;                                 /* Align to the left edge */
-        padding-top: 5rem;                       /* Top padding for spacing */
+        padding: 5rem 0;                          /* padding for spacing */
         position: fixed;                         /* Overlay the whole page */
         top: 0;                                  /* Align to the top edge */
         width: 100vw;                            /* Full viewport width */
         z-index: 1000;                           /* Ensure menu is on top */
+        font-size: 1.2rem;
+
     }
+
 
     /* Show nav when toggled */
     .navbar ul.show {
