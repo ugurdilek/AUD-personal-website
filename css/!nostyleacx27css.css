@@ -73,7 +73,7 @@ main, section, div, header, footer {
 }
 
 .line.top    { transform-origin: 35px 50px; }
-.line.bottom { transform-origin: 45px 60px; }
+.line.bottom { transform-origin: 35px 50px; }
 
 .burger-button.active .line {
     stroke: #fbbf24;
@@ -90,7 +90,7 @@ main, section, div, header, footer {
 }
 
 .burger-button.active .bottom {
-    transform: rotate(135deg) translateX(-5px);
+    transform: rotate(-45deg) translateX(10px) translateY(-5px);
 }
 
 .circle-bg {
