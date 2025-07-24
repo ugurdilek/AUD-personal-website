@@ -237,6 +237,10 @@ main, section, div, header, footer {
     .navbar ul li {
         text-align: center;
     }
+
+    .content {
+        padding-top: 1000rem;
+    }
 }
 
 
@@ -253,11 +257,6 @@ main, section, div, header, footer {
     font-size: 1rem;
 }
 
-
-/* =======================================
-   HOMEPAGE STYLE
-======================================= */
-
 .content {
     width: fit-content;
     max-width: 100%;
@@ -265,6 +264,7 @@ main, section, div, header, footer {
     padding: 0.1rem;
     text-align: center;
 }
+
 
 /* =======================================
    GALLERY PAGE
