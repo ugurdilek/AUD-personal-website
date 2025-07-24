@@ -87,15 +87,32 @@ main, section, div, header, footer {
     aspect-ratio: 4 / 3;
     object-fit: cover;
     border-radius: 12px;
-    box-shadow: 0 4px 16px rgba(50,50,50,0.09);
+    box-shadow: none;
     transition: transform 0.3s, box-shadow 0.3s;
     cursor: pointer;
 }
 
 .gallery img:hover {
     transform: scale(1.04) rotate(-1deg);
-    box-shadow: 0 8px 32px rgba(50,50,50,0.14);
+    box-shadow: none;
 }
+
+.gallery figure {
+    margin: 0;
+    padding: 0;
+    background: none;
+    text-align: center;
+}
+
+.gallery figcaption {
+    font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+    font-size: 1rem;
+    color: var(--color-text);
+    margin-top: 0.5em;
+    font-weight: 500;
+    letter-spacing: 0.1px;
+}
+
 
 /* Lightbox */
 
@@ -329,6 +346,9 @@ main, section, div, header, footer {
         grid-template-columns: 1fr;
         gap: 0.7rem;
         padding: 1rem 0;
+    }
+
+    .gallery figcaption {
     }
 
     .resume-page {
