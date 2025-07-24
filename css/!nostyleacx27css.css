@@ -177,6 +177,13 @@ main, section, div, header, footer {
     text-align: center;
 }
 
+.contact-title h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-content);
+    margin-top: 0.5rem;
+}
+
 .contact-icons {
     flex-direction: column;
     gap: 1.2rem;
