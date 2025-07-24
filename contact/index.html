@@ -4,25 +4,28 @@
     <!-- Basic Meta Tags -->
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Contact – Ahmet Uğur Dilek</title>
-    <meta name="description" content="Get in touch with Ahmet Uğur Dilek via email or LinkedIn.">
+    <title>Contact – Uğur Dilek</title>
+    <meta name="description" content="Get in touch with Uğur Dilek via email or LinkedIn.">
 
+    <!-- Canonical link for SEO -->
+    <link href="https://www.ugurdilek.com/contact" rel="canonical"/>
 
-    <!-- Stylesheets -->
-    <link rel="preload" href="/css/!nostyleacx27css.css" as="style"/>
-    <link rel="stylesheet" href="/css/!nostyleacx27css.css"/>
-    <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
+    <!-- CSS Styles -->
+    <link as="style" href="/css/!nostyleacx27css.css" rel="preload"/>
+    <link href="/css/!nostyleacx27css.css" rel="stylesheet"/>
 
-    <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-            integrity="sha512-2rwzKncslD3wXkKGiW8IOXYMYog+0GH9lm6SkpA1ujpYcYJduBzZX3wMB5kzEvUwUyBiFQEz4x95yCOU4+rgYg=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
-    />
+    <!-- Font Awesome Icons -->
+    <script>
+        window.addEventListener('load', function () {
+            const fa = document.createElement('link');
+            fa.rel = 'stylesheet';
+            fa.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css';
+            fa.crossOrigin = 'anonymous';
+            document.head.appendChild(fa);
+        });
+    </script>
 
-
-    <!-- Google Analytics -->
+    <!-- Google Analytics Tracking -->
     <script>
         window.addEventListener('DOMContentLoaded', function () {
             setTimeout(function () {
@@ -32,31 +35,35 @@
                 document.head.appendChild(gtagScript);
 
                 window.dataLayer = window.dataLayer || [];
-                function gtag() { dataLayer.push(arguments); }
+
+                function gtag() {
+                    dataLayer.push(arguments);
+                }
+
                 gtag('js', new Date());
                 gtag('config', 'G-9P7Z2XMBMH');
             }, 2000);
         });
     </script>
 
-    <!-- Disable Right Click and Dev Tools Shortcuts -->
+    <!-- Basic Security: Disable right click & developer shortcuts -->
     <script>
-        document.addEventListener('contextmenu', function (e) {
-            e.preventDefault();
-        });
-        document.addEventListener('keydown', function (e) {
-            if (e.key === 'F12') e.preventDefault();
-            if ((e.ctrlKey && e.shiftKey && ['I', 'J'].includes(e.key)) ||
-                (e.ctrlKey && ['U', 'S'].includes(e.key.toUpperCase()))) {
+        document.addEventListener('contextmenu', e => e.preventDefault());
+        document.addEventListener('keydown', e => {
+            const keys = ['F12', 'U', 'S', 'I', 'J'];
+            if ((e.key === 'F12') || (e.ctrlKey && (keys.includes(e.key.toUpperCase()) || (e.shiftKey && ['I', 'J'].includes(e.key))))) {
                 e.preventDefault();
             }
         });
     </script>
+
+    <!-- Favicon -->
+    <link href="/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
 
 <body>
 
-<!-- Navigation Header -->
+<!-- Site Header with Navigation -->
 <header>
     <nav class="navbar">
         <ul>
@@ -67,17 +74,33 @@
         </ul>
     </nav>
 
-    <!-- Mobile Burger Menu -->
-    <button class="burger-button" aria-label="Menu">
-        <svg viewBox="0 0 100 100" width="40">
-            <path class="line top" d="M 30,33 H 70"/>
-            <path class="line middle" d="M 30,50 H 70"/>
-            <path class="line bottom" d="M 30,67 H 70"/>
-        </svg>
-    </button>
+    <!-- Mobile Burger Menu Button -->
+    <div class="top-bar">
+        <button aria-label="Menu" class="burger-button">
+            <svg viewBox="0 0 100 100" width="40">
+                <circle class="circle-bg" cx="52" cy="48" r="45"/>
+                <path class="line top"      d="M 10,35 H 70"/>
+                <path class="line middle"   d="M 20,50 H 60"/>
+                <path class="line bottom"   d="M 10,65 H 70"/>
+            </svg>
+        </button>
+    </div>
 </header>
 
-<!-- Contact Content -->
+<!-- Site Footer with Navigation -->
+<footer class="bottom-bar">
+    <div class="footer-content">
+        <span class="motto"><em>İyilik, iyidir.</em></span>
+    </div>
+</footer>
+
+
+<!-- JS Script -->
+<script src="/js/script.js"></script>
+</body>
+</html>
+
+<!-- Contact -->
 <main class="content">
     <h1>Contact Me</h1>
 
@@ -94,8 +117,3 @@
         </p>
     </div>
 </main>
-
-<!-- JS Script -->
-<script src="/js/script.js"></script>
-</body>
-</html>
