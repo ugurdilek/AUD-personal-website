@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // --- Burger Menu Toggle ---
+    // --- Burger Menu ---
     const burgerButton = document.querySelector('.burger-button');
     const navList = document.querySelector('.navbar ul');
 
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // --- Google Drive API ile Dinamik Galeri ---
-    const API_KEY = "AIzaSyD0hMC24h_zqak9jmy9hUmv28DarYpr_9U";
+    const API_KEY = "AIzaSyAZZKHOql248kLSfVWXdMGRwDgw6gsCu0w";
     const FOLDER_ID = "1DUyfrnibIxHfoMy-Gd3t_0d_G_9syGE0";
     const gallery = document.getElementById("gallery");
     const lightbox = document.getElementById("lightbox");
@@ -40,7 +40,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 caption.textContent = file.name.replace(/\.[^/.]+$/, "");
 
                 imagesArray.push(imgUrl);
-
                 img.addEventListener("click", () => openLightbox(index));
 
                 figure.appendChild(img);
@@ -52,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function openLightbox(index) {
         currentIndex = index;
-        lightbox.classList.add('open');
+        lightbox.classList.add("open");
         lightboxImg.src = imagesArray[currentIndex];
     }
 
@@ -66,46 +65,29 @@ document.addEventListener('DOMContentLoaded', function () {
         lightboxImg.src = imagesArray[currentIndex];
     }
 
-    if (prevBtn) prevBtn.addEventListener('click', showPrev);
-    if (nextBtn) nextBtn.addEventListener('click', showNext);
-
-    if (closeBtn) closeBtn.addEventListener('click', () => {
-        lightbox.classList.remove('open');
+    if (prevBtn) prevBtn.addEventListener("click", showPrev);
+    if (nextBtn) nextBtn.addEventListener("click", showNext);
+    if (closeBtn) closeBtn.addEventListener("click", () => {
+        lightbox.classList.remove("open");
         lightboxImg.src = "";
     });
 
-    lightbox.addEventListener('click', (e) => {
+    lightbox.addEventListener("click", (e) => {
         if (e.target === lightbox) {
-            lightbox.classList.remove('open');
+            lightbox.classList.remove("open");
             lightboxImg.src = "";
         }
     });
 
-    // Klavye Kısayolları
-    document.addEventListener('keydown', function (e) {
-        if (!lightbox.classList.contains('open')) return;
-        if (e.key === 'ArrowLeft') showPrev();
-        if (e.key === 'ArrowRight') showNext();
-        if (e.key === 'Escape') {
-            lightbox.classList.remove('open');
+    document.addEventListener("keydown", (e) => {
+        if (!lightbox.classList.contains("open")) return;
+        if (e.key === "ArrowLeft") showPrev();
+        if (e.key === "ArrowRight") showNext();
+        if (e.key === "Escape") {
+            lightbox.classList.remove("open");
             lightboxImg.src = "";
         }
     });
 
-    // Swipe Desteği
-    let touchStartX = 0;
-    let touchEndX = 0;
-
-    lightbox.addEventListener('touchstart', function (e) {
-        touchStartX = e.changedTouches[0].screenX;
-    });
-
-    lightbox.addEventListener('touchend', function (e) {
-        touchEndX = e.changedTouches[0].screenX;
-        if (touchEndX < touchStartX - 40) showNext();
-        if (touchEndX > touchStartX + 40) showPrev();
-    });
-
-    // Fotoğrafları yükle
     loadImages();
 });
