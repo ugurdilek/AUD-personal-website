@@ -1,0 +1,62 @@
+<html>
+<head>
+<title>vercel.json</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #bcbec4;}
+.s1 { color: #bcbec4;}
+.s2 { color: #6aab73;}
+.s3 { color: #cf8e6d;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+vercel.json</font>
+</center></td></tr></table>
+<pre><span class="s0">{</span>
+  <span class="s2">&quot;cleanUrls&quot;</span><span class="s0">: </span><span class="s3">true</span><span class="s0">,</span>
+  <span class="s2">&quot;trailingSlash&quot;</span><span class="s0">: </span><span class="s3">false</span><span class="s0">,</span>
+  <span class="s2">&quot;headers&quot;</span><span class="s0">: [</span>
+    <span class="s0">{</span>
+      <span class="s2">&quot;source&quot;</span><span class="s0">: </span><span class="s2">&quot;/!sitemapacx27.xml&quot;</span><span class="s0">,</span>
+      <span class="s2">&quot;headers&quot;</span><span class="s0">: [</span>
+        <span class="s0">{ </span><span class="s2">&quot;key&quot;</span><span class="s0">: </span><span class="s2">&quot;X-Content-Type-Options&quot;</span><span class="s0">, </span><span class="s2">&quot;value&quot;</span><span class="s0">: </span><span class="s2">&quot;nosniff&quot; </span><span class="s0">},</span>
+        <span class="s0">{ </span><span class="s2">&quot;key&quot;</span><span class="s0">: </span><span class="s2">&quot;X-Frame-Options&quot;</span><span class="s0">, </span><span class="s2">&quot;value&quot;</span><span class="s0">: </span><span class="s2">&quot;DENY&quot; </span><span class="s0">},</span>
+        <span class="s0">{ </span><span class="s2">&quot;key&quot;</span><span class="s0">: </span><span class="s2">&quot;X-XSS-Protection&quot;</span><span class="s0">, </span><span class="s2">&quot;value&quot;</span><span class="s0">: </span><span class="s2">&quot;1; mode=block&quot; </span><span class="s0">},</span>
+        <span class="s0">{ </span><span class="s2">&quot;key&quot;</span><span class="s0">: </span><span class="s2">&quot;Strict-Transport-Security&quot;</span><span class="s0">, </span><span class="s2">&quot;value&quot;</span><span class="s0">: </span><span class="s2">&quot;max-age=63072000; includeSubDomains; preload&quot; </span><span class="s0">},</span>
+        <span class="s0">{ </span><span class="s2">&quot;key&quot;</span><span class="s0">: </span><span class="s2">&quot;Referrer-Policy&quot;</span><span class="s0">, </span><span class="s2">&quot;value&quot;</span><span class="s0">: </span><span class="s2">&quot;no-referrer-when-downgrade&quot; </span><span class="s0">},</span>
+        <span class="s0">{ </span><span class="s2">&quot;key&quot;</span><span class="s0">: </span><span class="s2">&quot;Permissions-Policy&quot;</span><span class="s0">, </span><span class="s2">&quot;value&quot;</span><span class="s0">: </span><span class="s2">&quot;camera=(), microphone=(), geolocation=()&quot; </span><span class="s0">},</span>
+        <span class="s0">{ </span><span class="s2">&quot;key&quot;</span><span class="s0">: </span><span class="s2">&quot;Content-Security-Policy&quot;</span><span class="s0">, </span><span class="s2">&quot;value&quot;</span><span class="s0">: </span><span class="s2">&quot;default-src 'self'; script-src 'none'; style-src 'none'; font-src 'none';&quot; </span><span class="s0">}</span>
+      <span class="s0">]</span>
+    <span class="s0">},</span>
+    <span class="s0">{</span>
+      <span class="s2">&quot;source&quot;</span><span class="s0">: </span><span class="s2">&quot;/assets/(.*)&quot;</span><span class="s0">,</span>
+      <span class="s2">&quot;headers&quot;</span><span class="s0">: [</span>
+        <span class="s0">{ </span><span class="s2">&quot;key&quot;</span><span class="s0">: </span><span class="s2">&quot;X-Robots-Tag&quot;</span><span class="s0">, </span><span class="s2">&quot;value&quot;</span><span class="s0">: </span><span class="s2">&quot;noindex, nofollow&quot; </span><span class="s0">}</span>
+      <span class="s0">]</span>
+    <span class="s0">},</span>
+    <span class="s0">{</span>
+      <span class="s2">&quot;source&quot;</span><span class="s0">: </span><span class="s2">&quot;/(.*)</span><span class="s3">\\</span><span class="s2">.(js|css|html)$&quot;</span><span class="s0">,</span>
+      <span class="s2">&quot;headers&quot;</span><span class="s0">: [</span>
+        <span class="s0">{ </span><span class="s2">&quot;key&quot;</span><span class="s0">: </span><span class="s2">&quot;Cache-Control&quot;</span><span class="s0">, </span><span class="s2">&quot;value&quot;</span><span class="s0">: </span><span class="s2">&quot;public, max-age=604800, immutable&quot; </span><span class="s0">}</span>
+      <span class="s0">]</span>
+    <span class="s0">},</span>
+    <span class="s0">{</span>
+      <span class="s2">&quot;source&quot;</span><span class="s0">: </span><span class="s2">&quot;/(.*)&quot;</span><span class="s0">,</span>
+      <span class="s2">&quot;headers&quot;</span><span class="s0">: [</span>
+        <span class="s0">{ </span><span class="s2">&quot;key&quot;</span><span class="s0">: </span><span class="s2">&quot;X-Content-Type-Options&quot;</span><span class="s0">, </span><span class="s2">&quot;value&quot;</span><span class="s0">: </span><span class="s2">&quot;nosniff&quot; </span><span class="s0">},</span>
+        <span class="s0">{ </span><span class="s2">&quot;key&quot;</span><span class="s0">: </span><span class="s2">&quot;X-Frame-Options&quot;</span><span class="s0">, </span><span class="s2">&quot;value&quot;</span><span class="s0">: </span><span class="s2">&quot;DENY&quot; </span><span class="s0">},</span>
+        <span class="s0">{ </span><span class="s2">&quot;key&quot;</span><span class="s0">: </span><span class="s2">&quot;X-XSS-Protection&quot;</span><span class="s0">, </span><span class="s2">&quot;value&quot;</span><span class="s0">: </span><span class="s2">&quot;1; mode=block&quot; </span><span class="s0">},</span>
+        <span class="s0">{ </span><span class="s2">&quot;key&quot;</span><span class="s0">: </span><span class="s2">&quot;Strict-Transport-Security&quot;</span><span class="s0">, </span><span class="s2">&quot;value&quot;</span><span class="s0">: </span><span class="s2">&quot;max-age=63072000; includeSubDomains; preload&quot; </span><span class="s0">},</span>
+        <span class="s0">{ </span><span class="s2">&quot;key&quot;</span><span class="s0">: </span><span class="s2">&quot;Referrer-Policy&quot;</span><span class="s0">, </span><span class="s2">&quot;value&quot;</span><span class="s0">: </span><span class="s2">&quot;no-referrer-when-downgrade&quot; </span><span class="s0">},</span>
+        <span class="s0">{ </span><span class="s2">&quot;key&quot;</span><span class="s0">: </span><span class="s2">&quot;Permissions-Policy&quot;</span><span class="s0">, </span><span class="s2">&quot;value&quot;</span><span class="s0">: </span><span class="s2">&quot;camera=(), microphone=(), geolocation=()&quot; </span><span class="s0">},</span>
+        <span class="s0">{ </span><span class="s2">&quot;key&quot;</span><span class="s0">: </span><span class="s2">&quot;Content-Security-Policy&quot;</span><span class="s0">, </span><span class="s2">&quot;value&quot;</span><span class="s0">: </span><span class="s2">&quot;default-src 'self'; script-src 'self' https://www.googletagmanager.com https://cdnjs.cloudflare.com; style-src 'self' https://cdnjs.cloudflare.com; font-src https://cdnjs.cloudflare.com;&quot; </span><span class="s0">}</span>
+      <span class="s0">]</span>
+    <span class="s0">}</span>
+  <span class="s0">]</span>
+<span class="s0">}</span>
+</pre>
+</body>
+</html>

@@ -1,0 +1,275 @@
+<html>
+<head>
+<title>mobile</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #bcbec4;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+mobile</font>
+</center></td></tr></table>
+<pre><span class="s0">:root {</span>
+    <span class="s0">/* ====================  COLORS ==================== */</span>
+    <span class="s0">--color-bg: #a89c94;</span>
+    <span class="s0">--color-content: #ede2d3;</span>
+    <span class="s0">--color-text: #4a635d;</span>
+    <span class="s0">--color-nav-top-bar: #31463a;</span>
+    <span class="s0">--color-hover-bg: #bcb8ae;</span>
+    <span class="s0">--color-active: #c68642;</span>
+<span class="s0">}</span>
+
+<span class="s0">/* ====================  BASE STYLES FOR BODY AND HTML ==================== */</span>
+<span class="s0">body {</span>
+    <span class="s0">font-family: 'Inter', 'Segoe UI', Arial, sans-serif;</span>
+    <span class="s0">margin: 0;</span>
+    <span class="s0">background-color: var(--color-bg);</span>
+    <span class="s0">color: var(--color-content);</span>
+    <span class="s0">user-select: none; /* Disable text selection */</span>
+<span class="s0">}</span>
+
+<span class="s0">/* ====================  Prevent horizontal scroll ==================== */</span>
+<span class="s0">html, body {</span>
+    <span class="s0">overflow-x: hidden;</span>
+<span class="s0">}</span>
+
+<span class="s0">/* ====================  Hide text cursor in main container elements ==================== */</span>
+<span class="s0">main, section, div, header, footer {</span>
+    <span class="s0">caret-color: transparent;</span>
+<span class="s0">}</span>
+
+<span class="s0">/* ====================  Container for top bar with burger and page title ==================== */</span>
+
+
+
+<span class="s0">/* Burger Style  */</span>
+
+<span class="s0">/* Burger menu button styling */</span>
+<span class="s0">.burger-button {</span>
+    <span class="s0">position: relative;</span>
+    <span class="s0">z-index: 1001;</span>
+    <span class="s0">cursor: pointer;</span>
+    <span class="s0">background: none;</span>
+    <span class="s0">border: none;</span>
+    <span class="s0">padding: 5px;</span>
+    <span class="s0">display: none;</span>
+    <span class="s0">outline: none;</span>
+<span class="s0">}</span>
+
+<span class="s0">/* Burger menu lines style */</span>
+<span class="s0">.burger-button .line {</span>
+    <span class="s0">fill: none;</span>
+    <span class="s0">stroke: var(--color-nav-top-bar);</span>
+    <span class="s0">stroke-width: 6;</span>
+    <span class="s0">stroke-linecap: round;</span>
+    <span class="s0">#transition: all 0.3s ease;</span>
+    <span class="s0">transform-origin: 50px 50px;</span>
+    <span class="s0">transition: transform 0.1s, opacity 0.1s;</span>
+<span class="s0">}</span>
+
+<span class="s0">.line.top    { transform-origin: 35px 50px; }</span>
+<span class="s0">.line.bottom { transform-origin: 35px 50px; }</span>
+
+<span class="s0">.burger-button.active .line {</span>
+    <span class="s0">stroke: var(--color-active);</span>
+<span class="s0">}</span>
+
+<span class="s0">/* Transform burger lines when active (open) */</span>
+<span class="s0">.burger-button.active .top {</span>
+    <span class="s0">transform: rotate(45deg) translateX(5px);</span>
+<span class="s0">}</span>
+
+<span class="s0">.burger-button.active .middle {</span>
+    <span class="s0">opacity: 0;</span>
+    <span class="s0">transition: opacity 0.25s, transform 0.3s;</span>
+<span class="s0">}</span>
+
+<span class="s0">.burger-button.active .bottom {</span>
+    <span class="s0">transform: rotate(-45deg) translateX(10px) translateY(-5px);</span>
+<span class="s0">}</span>
+
+<span class="s0">.circle-bg {</span>
+    <span class="s0">fill: transparent;</span>
+    <span class="s0">stroke: var(--color-active);</span>
+    <span class="s0">stroke-width: 5;</span>
+    <span class="s0">opacity: 0;</span>
+    <span class="s0">transform: scale(0.4);</span>
+    <span class="s0">transform-origin: 50% 50%;</span>
+    <span class="s0">transition: opacity 0.35s, transform 0.35s;</span>
+<span class="s0">}</span>
+
+<span class="s0">.burger-button.active .circle-bg {</span>
+    <span class="s0">opacity: 1;</span>
+    <span class="s0">transform: scale(1);</span>
+<span class="s0">}</span>
+
+<span class="s0">/* Page title style */</span>
+<span class="s0">.page-title {</span>
+    <span class="s0">font-size: 1.2rem;</span>
+    <span class="s0">font-weight: 600;</span>
+    <span class="s0">color: #f5f5f5;</span>
+<span class="s0">}</span>
+
+<span class="s0">.site-name {</span>
+    <span class="s0">position: absolute;</span>
+    <span class="s0">left: 32px;</span>
+    <span class="s0">top: 12px;</span>
+    <span class="s0">font-weight: bold;</span>
+    <span class="s0">font-size: 1.2rem;</span>
+    <span class="s0">color: #eee;</span>
+    <span class="s0">text-decoration: none;</span>
+    <span class="s0">transition: color 0.2s;</span>
+<span class="s0">}</span>
+
+<span class="s0">.site-name:hover {</span>
+    <span class="s0">color: #31463a;</span>
+<span class="s0">}</span>
+
+<span class="s0">/* Motto */</span>
+
+<span class="s0">.motto {</span>
+    <span class="s0">position: absolute;</span>
+    <span class="s0">top: 12px;</span>
+    <span class="s0">right: 32px;</span>
+    <span class="s0">list-style: none;</span>
+    <span class="s0">font-style: italic;</span>
+    <span class="s0">display: flex;</span>
+    <span class="s0">color: var(--color-text);</span>
+    <span class="s0">letter-spacing: 1px;</span>
+    <span class="s0">pointer-events: none;</span>
+    <span class="s0">user-select: none;</span>
+    <span class="s0">justify-content: right;</span>
+    <span class="s0">padding: 0.8rem 0;</span>
+<span class="s0">}</span>
+
+
+<span class="s0">/* ====================  NAVIGATION BAR ==================== */</span>
+
+<span class="s0">/* Navigation list container */</span>
+<span class="s0">.navbar ul {</span>
+    <span class="s0">background: none; /* No background color */</span>
+    <span class="s0">display: flex; /* Display items in a row */</span>
+    <span class="s0">gap: 2rem; /* Space between menu items */</span>
+    <span class="s0">justify-content: center; /* Center menu items horizontally */</span>
+    <span class="s0">list-style: none; /* Remove default bullet points */</span>
+    <span class="s0">margin: 0; /* Remove default margin */</span>
+    <span class="s0">padding: 1rem 0; /* Vertical padding */</span>
+    <span class="s0">width: 100%;</span>
+<span class="s0">}</span>
+
+<span class="s0">/* Navigation links styling */</span>
+<span class="s0">.navbar ul li a {</span>
+    <span class="s0">align-items: center; /* Vertically center content */</span>
+    <span class="s0">color: var(--color-nav-top-bar); /* Link color */</span>
+    <span class="s0">display: flex; /* Allow icon and text side by side */</span>
+    <span class="s0">font-weight: normal; /* Normal font weight */</span>
+    <span class="s0">gap: 0.5rem; /* Space between icon and text */</span>
+    <span class="s0">text-decoration: none; /* Remove underline */</span>
+    <span class="s0">transition: color 0.3s; /* Smooth color change on hover */</span>
+    <span class="s0">font-size: 1.2rem;</span>
+    <span class="s0">padding: 1rem 0;</span>
+    <span class="s0">width: 100%;</span>
+<span class="s0">}</span>
+
+<span class="s0">.navbar ul li a.active {</span>
+    <span class="s0">color: var(--color-active); /* Active link color */</span>
+    <span class="s0">font-weight: bold; /* Bold for active link */</span>
+<span class="s0">}</span>
+
+<span class="s0">.navbar ul li a:hover {</span>
+    <span class="s0">color: var(--color-hover-bg); /* Hover color */</span>
+<span class="s0">}</span>
+
+
+<span class="s0">/* =======================================</span>
+   <span class="s0">RESPONSIVE - MOBILE NAVIGATION</span>
+<span class="s0">======================================= */</span>
+
+<span class="s0">@media (max-width: 768px) {</span>
+
+    <span class="s0">.content {</span>
+        <span class="s0">width: 100%;</span>
+        <span class="s0">max-width: 100%;</span>
+        <span class="s0">padding: 100rem 1rem 1rem 1rem;    /* üst, sağ, alt, sol */</span>
+        <span class="s0">margin-top: 100rem;</span>
+        <span class="s0">text-align: left;</span>
+        <span class="s0">margin-left: 0;</span>
+        <span class="s0">margin-right: 0;</span>
+    <span class="s0">}</span>
+
+    <span class="s0">/* Show burger button on mobile */</span>
+    <span class="s0">.burger-button {</span>
+        <span class="s0">display: block;</span>
+        <span class="s0">position: absolute;</span>
+        <span class="s0">top: 1rem;</span>
+        <span class="s0">left: 50%;</span>
+        <span class="s0">transform: translateX(-50%);</span>
+        <span class="s0">margin: 0 auto;</span>
+    <span class="s0">}</span>
+
+    <span class="s0">/* Fullscreen mobile navigation menu */</span>
+    <span class="s0">.navbar ul {</span>
+        <span class="s0">align-items: center;                     /* Center items horizontally */</span>
+        <span class="s0">background-color: #2a2a2a;               /* Dark overlay */</span>
+        <span class="s0">display: none;                           /* Hide menu by default */</span>
+        <span class="s0">flex-direction: column;                  /* Stack items vertically */</span>
+        <span class="s0">gap: 0.1rem;                           /*  space between menu items */</span>
+        <span class="s0">height: 100vh;                           /* Full viewport height */</span>
+        <span class="s0">justify-content: flex-start;             /* Align items to the top */</span>
+        <span class="s0">left: 0;                                 /* Align to the left edge */</span>
+        <span class="s0">padding: 5rem 0;                          /* padding for spacing */</span>
+        <span class="s0">position: fixed;                         /* Overlay the whole page */</span>
+        <span class="s0">top: 0;                                  /* Align to the top edge */</span>
+        <span class="s0">width: 100vw;                            /* Full viewport width */</span>
+        <span class="s0">z-index: 1000;                           /* Ensure menu is on top */</span>
+    <span class="s0">}</span>
+
+    <span class="s0">.navbar ul li a {</span>
+        <span class="s0">font-size: 1.2rem;</span>
+        <span class="s0">font-weight: 500;</span>
+        <span class="s0">padding: 1rem 0;</span>
+        <span class="s0">display: flex;</span>
+        <span class="s0">width: 100%;</span>
+        <span class="s0">transition: background 0.2s, color 0.2s;</span>
+    <span class="s0">}</span>
+
+    <span class="s0">/* Show nav when toggled */</span>
+    <span class="s0">.navbar ul.show {</span>
+        <span class="s0">display: flex;</span>
+    <span class="s0">}</span>
+
+    <span class="s0">/* Nav item styling on mobile */</span>
+    <span class="s0">.navbar ul li {</span>
+        <span class="s0">text-align: center;</span>
+    <span class="s0">}</span>
+<span class="s0">}</span>
+
+
+<span class="s0">/*  ==================== FOOTER ==================== */</span>
+
+<span class="s0">.bottom-bar {</span>
+    <span class="s0">width: 100%;</span>
+    <span class="s0">padding: 1.5rem 0;</span>
+    <span class="s0">position: fixed;</span>
+    <span class="s0">bottom: 0;</span>
+    <span class="s0">left: 0;</span>
+    <span class="s0">font-size: 1rem;</span>
+<span class="s0">}</span>
+
+<span class="s0">/* ==================== */</span>
+
+<span class="s0">.content {</span>
+    <span class="s0">width: fit-content;</span>
+    <span class="s0">max-width: 100%;</span>
+    <span class="s0">margin: 0 auto;</span>
+    <span class="s0">padding: 5rem;</span>
+    <span class="s0">text-align: center;</span>
+<span class="s0">}</span>
+
+
+</pre>
+</body>
+</html>

@@ -1,0 +1,479 @@
+<html>
+<head>
+<title>!nostyleacx27css.css</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #7a7e85;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #d5b778;}
+.s4 { color: #bcbec4;}
+.s5 { color: #bababa;}
+.s6 { color: #56a8f5;}
+.s7 { color: #6aab73;}
+.s8 { color: #2aacb8;}
+.s9 { color: #cf8e6d; font-weight: bold;}
+.s10 { color: #cf8e6d;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+!nostyleacx27css.css</font>
+</center></td></tr></table>
+<pre><span class="s0">/* ====================  WEB STYLES - DEFAULT ==================== */</span>
+
+<span class="s2">:</span><span class="s3">root </span><span class="s4">{</span>
+    <span class="s0">/* ====================  COLORS ==================== */</span>
+    <span class="s5">--color-bg</span><span class="s2">: </span><span class="s6">#a89c94</span><span class="s4">;</span>
+    <span class="s5">--color-content</span><span class="s2">: </span><span class="s6">#ede2d3</span><span class="s4">;</span>
+    <span class="s5">--color-text</span><span class="s2">: </span><span class="s6">#4a635d</span><span class="s4">;</span>
+    <span class="s5">--color-nav-top-bar</span><span class="s2">: </span><span class="s6">#31463a</span><span class="s4">;</span>
+    <span class="s5">--color-hover-bg</span><span class="s2">: </span><span class="s6">#bcb8ae</span><span class="s4">;</span>
+    <span class="s5">--color-active</span><span class="s2">: </span><span class="s6">#c68642</span><span class="s4">;</span>
+<span class="s4">}</span>
+
+<span class="s0">/* ====================  BASE STYLES ==================== */</span>
+<span class="s3">body</span><span class="s4">, </span><span class="s3">html </span><span class="s4">{</span>
+    <span class="s5">font-family</span><span class="s2">: </span><span class="s7">'Inter'</span><span class="s4">, </span><span class="s7">'Segoe UI'</span><span class="s4">, </span><span class="s3">Arial</span><span class="s4">, </span><span class="s7">sans-serif</span><span class="s4">;</span>
+    <span class="s5">font-size</span><span class="s2">: </span><span class="s8">16</span><span class="s7">px</span><span class="s4">;</span>
+    <span class="s5">font-weight</span><span class="s2">: </span><span class="s8">400</span><span class="s4">;</span>
+    <span class="s5">line-height</span><span class="s2">: </span><span class="s8">1</span><span class="s4">;</span>
+    <span class="s5">margin</span><span class="s2">: </span><span class="s8">0</span><span class="s4">;</span>
+    <span class="s5">background-color</span><span class="s2">: </span><span class="s3">var</span><span class="s4">(</span><span class="s3">--color-bg</span><span class="s4">);</span>
+    <span class="s5">color</span><span class="s2">: </span><span class="s3">var</span><span class="s4">(</span><span class="s3">--color-content</span><span class="s4">);</span>
+    <span class="s5">user-select</span><span class="s2">: </span><span class="s7">none</span><span class="s4">; </span><span class="s0">/* Disable text selection */</span>
+    <span class="s5">overflow-x</span><span class="s2">: </span><span class="s7">hidden</span><span class="s4">; </span><span class="s0">/* Prevent horizontal scroll */</span>
+<span class="s4">}</span>
+
+<span class="s3">main</span><span class="s4">, </span><span class="s3">section</span><span class="s4">, </span><span class="s3">div</span><span class="s4">, </span><span class="s3">header</span><span class="s4">, </span><span class="s3">footer </span><span class="s4">{</span>
+    <span class="s5">caret-color</span><span class="s2">: </span><span class="s7">transparent</span><span class="s4">; </span><span class="s0">/* Hide text cursor in main containers */</span>
+<span class="s4">}</span>
+
+<span class="s0">/* ====================  NAVIGATION BAR ==================== */</span>
+
+<span class="s0">/* Navigation list container */</span>
+<span class="s4">.</span><span class="s3">navbar ul </span><span class="s4">{</span>
+    <span class="s5">background</span><span class="s2">: </span><span class="s7">none</span><span class="s4">; </span><span class="s0">/* No background color */</span>
+    <span class="s5">display</span><span class="s2">: </span><span class="s7">flex</span><span class="s4">; </span><span class="s0">/* Display items in a row */</span>
+    <span class="s5">gap</span><span class="s2">: </span><span class="s8">2</span><span class="s7">rem</span><span class="s4">; </span><span class="s0">/* Space between menu items */</span>
+    <span class="s5">justify-content</span><span class="s2">: </span><span class="s7">center</span><span class="s4">; </span><span class="s0">/* Center menu items horizontally */</span>
+    <span class="s5">list-style</span><span class="s2">: </span><span class="s7">none</span><span class="s4">; </span><span class="s0">/* Remove default bullet points */</span>
+    <span class="s5">margin</span><span class="s2">: </span><span class="s8">0</span><span class="s4">; </span><span class="s0">/* Remove default margin */</span>
+    <span class="s5">padding</span><span class="s2">: </span><span class="s8">1</span><span class="s7">rem </span><span class="s8">0</span><span class="s4">; </span><span class="s0">/* Vertical padding */</span>
+    <span class="s5">width</span><span class="s2">: </span><span class="s8">100</span><span class="s4">%;</span>
+<span class="s4">}</span>
+
+<span class="s0">/* Navigation links styling */</span>
+<span class="s4">.</span><span class="s3">navbar ul li a </span><span class="s4">{</span>
+    <span class="s5">align-items</span><span class="s2">: </span><span class="s7">center</span><span class="s4">; </span><span class="s0">/* Vertically center content */</span>
+    <span class="s5">color</span><span class="s2">: </span><span class="s3">var</span><span class="s4">(</span><span class="s3">--color-nav-top-bar</span><span class="s4">); </span><span class="s0">/* Link color */</span>
+    <span class="s3">#display</span><span class="s2">: </span><span class="s3">flex</span><span class="s4">; </span><span class="s0">/* Allow icon and text side by side */</span>
+    <span class="s5">font-weight</span><span class="s2">: </span><span class="s7">normal</span><span class="s4">; </span><span class="s0">/* Normal font weight */</span>
+    <span class="s5">gap</span><span class="s2">: </span><span class="s8">0.5</span><span class="s7">rem</span><span class="s4">; </span><span class="s0">/* Space between icon and text */</span>
+    <span class="s5">text-decoration</span><span class="s2">: </span><span class="s7">none</span><span class="s4">; </span><span class="s0">/* Remove underline */</span>
+    <span class="s5">transition</span><span class="s2">: </span><span class="s7">color </span><span class="s8">0.3</span><span class="s7">s</span><span class="s4">; </span><span class="s0">/* Smooth color change on hover */</span>
+    <span class="s5">font-size</span><span class="s2">: </span><span class="s8">1.2</span><span class="s7">rem</span><span class="s4">;</span>
+    <span class="s5">padding</span><span class="s2">: </span><span class="s8">1</span><span class="s7">rem </span><span class="s8">0</span><span class="s4">;</span>
+    <span class="s5">width</span><span class="s2">: </span><span class="s8">100</span><span class="s4">%;</span>
+<span class="s4">}</span>
+
+<span class="s4">.</span><span class="s3">navbar ul li a</span><span class="s4">.</span><span class="s3">active </span><span class="s4">{</span>
+    <span class="s5">color</span><span class="s2">: </span><span class="s3">var</span><span class="s4">(</span><span class="s3">--color-active</span><span class="s4">); </span><span class="s0">/* Active link color */</span>
+    <span class="s5">font-weight</span><span class="s2">: </span><span class="s7">bold</span><span class="s4">; </span><span class="s0">/* Bold for active link */</span>
+<span class="s4">}</span>
+
+<span class="s4">.</span><span class="s3">navbar ul li a</span><span class="s2">:</span><span class="s3">hover </span><span class="s4">{</span>
+    <span class="s5">color</span><span class="s2">: </span><span class="s3">var</span><span class="s4">(</span><span class="s3">--color-hover-bg</span><span class="s4">); </span><span class="s0">/* Hover color */</span>
+<span class="s4">}</span>
+
+<span class="s0">/* content */</span>
+<span class="s4">.</span><span class="s3">content </span><span class="s4">{</span>
+    <span class="s5">width</span><span class="s2">: </span><span class="s7">fit-content</span><span class="s4">;</span>
+    <span class="s5">max-width</span><span class="s2">: </span><span class="s8">100</span><span class="s4">%;</span>
+    <span class="s5">margin</span><span class="s2">: </span><span class="s8">0 </span><span class="s7">auto</span><span class="s4">;</span>
+    <span class="s5">padding</span><span class="s2">: </span><span class="s8">5</span><span class="s7">rem</span><span class="s4">;</span>
+    <span class="s5">text-align</span><span class="s2">: </span><span class="s7">center</span><span class="s4">;</span>
+<span class="s4">}</span>
+
+<span class="s0">/* ========== GALLERY PAGE ========== */</span>
+
+<span class="s4">.</span><span class="s3">gallery </span><span class="s4">{</span>
+    <span class="s5">display</span><span class="s2">: </span><span class="s7">grid</span><span class="s4">;</span>
+    <span class="s5">grid-template-columns</span><span class="s2">: </span><span class="s3">repeat</span><span class="s4">(</span><span class="s7">auto-fit</span><span class="s4">, </span><span class="s3">minmax</span><span class="s4">(</span><span class="s8">200</span><span class="s7">px</span><span class="s4">, </span><span class="s8">1</span><span class="s7">fr</span><span class="s4">));</span>
+    <span class="s5">gap</span><span class="s2">: </span><span class="s8">1.2</span><span class="s7">rem</span><span class="s4">;</span>
+    <span class="s5">padding</span><span class="s2">: </span><span class="s8">2</span><span class="s7">rem </span><span class="s8">0</span><span class="s4">;</span>
+<span class="s4">}</span>
+
+<span class="s4">.</span><span class="s3">gallery img </span><span class="s4">{</span>
+    <span class="s5">width</span><span class="s2">: </span><span class="s8">100</span><span class="s4">%;</span>
+    <span class="s5">aspect-ratio</span><span class="s2">: </span><span class="s8">4 </span><span class="s4">/ </span><span class="s8">3</span><span class="s4">;</span>
+    <span class="s5">object-fit</span><span class="s2">: </span><span class="s7">cover</span><span class="s4">;</span>
+    <span class="s5">border-radius</span><span class="s2">: </span><span class="s8">12</span><span class="s7">px</span><span class="s4">;</span>
+    <span class="s5">box-shadow</span><span class="s2">: </span><span class="s7">none</span><span class="s4">;</span>
+    <span class="s5">transition</span><span class="s2">: </span><span class="s3">transform </span><span class="s8">0.3</span><span class="s7">s</span><span class="s4">, </span><span class="s3">box-shadow </span><span class="s8">0.3</span><span class="s7">s</span><span class="s4">;</span>
+    <span class="s5">cursor</span><span class="s2">: </span><span class="s7">pointer</span><span class="s4">;</span>
+<span class="s4">}</span>
+
+<span class="s4">.</span><span class="s3">gallery img</span><span class="s2">:</span><span class="s3">hover </span><span class="s4">{</span>
+    <span class="s5">transform</span><span class="s2">: </span><span class="s3">scale</span><span class="s4">(</span><span class="s8">1.04</span><span class="s4">) </span><span class="s3">rotate</span><span class="s4">(-</span><span class="s8">1</span><span class="s7">deg</span><span class="s4">);</span>
+    <span class="s5">box-shadow</span><span class="s2">: </span><span class="s7">none</span><span class="s4">;</span>
+<span class="s4">}</span>
+
+<span class="s4">.</span><span class="s3">gallery figure </span><span class="s4">{</span>
+    <span class="s5">margin</span><span class="s2">: </span><span class="s8">0</span><span class="s4">;</span>
+    <span class="s5">padding</span><span class="s2">: </span><span class="s8">0</span><span class="s4">;</span>
+    <span class="s5">background</span><span class="s2">: </span><span class="s7">none</span><span class="s4">;</span>
+    <span class="s5">text-align</span><span class="s2">: </span><span class="s7">center</span><span class="s4">;</span>
+<span class="s4">}</span>
+
+<span class="s4">.</span><span class="s3">gallery figcaption </span><span class="s4">{</span>
+    <span class="s5">font-family</span><span class="s2">: </span><span class="s7">'Inter'</span><span class="s4">, </span><span class="s7">'Segoe UI'</span><span class="s4">, </span><span class="s3">Arial</span><span class="s4">, </span><span class="s7">sans-serif</span><span class="s4">;</span>
+    <span class="s5">font-size</span><span class="s2">: </span><span class="s8">1</span><span class="s7">rem</span><span class="s4">;</span>
+    <span class="s5">color</span><span class="s2">: </span><span class="s3">var</span><span class="s4">(</span><span class="s3">--color-text</span><span class="s4">);</span>
+    <span class="s5">margin-top</span><span class="s2">: </span><span class="s8">0.5</span><span class="s7">em</span><span class="s4">;</span>
+    <span class="s5">font-weight</span><span class="s2">: </span><span class="s8">500</span><span class="s4">;</span>
+    <span class="s5">letter-spacing</span><span class="s2">: </span><span class="s8">0.1</span><span class="s7">px</span><span class="s4">;</span>
+<span class="s4">}</span>
+
+
+<span class="s0">/* Lightbox */</span>
+
+<span class="s4">.</span><span class="s3">lightbox </span><span class="s4">{</span>
+    <span class="s5">display</span><span class="s2">: </span><span class="s7">none</span><span class="s4">;</span>
+    <span class="s5">position</span><span class="s2">: </span><span class="s7">fixed</span><span class="s4">;</span>
+    <span class="s5">z-index</span><span class="s2">: </span><span class="s8">999</span><span class="s4">;</span>
+    <span class="s5">top</span><span class="s2">: </span><span class="s8">0</span><span class="s4">; </span><span class="s5">left</span><span class="s2">: </span><span class="s8">0</span><span class="s4">;</span>
+    <span class="s5">width</span><span class="s2">: </span><span class="s8">100</span><span class="s7">vw</span><span class="s4">;</span>
+    <span class="s5">height</span><span class="s2">: </span><span class="s8">100</span><span class="s7">vh</span><span class="s4">;</span>
+    <span class="s5">background</span><span class="s2">: </span><span class="s3">rgba</span><span class="s4">(</span><span class="s8">0</span><span class="s4">,</span><span class="s8">0</span><span class="s4">,</span><span class="s8">0</span><span class="s4">,</span><span class="s8">0.85</span><span class="s4">);</span>
+    <span class="s5">justify-content</span><span class="s2">: </span><span class="s7">center</span><span class="s4">;</span>
+    <span class="s5">align-items</span><span class="s2">: </span><span class="s7">center</span><span class="s4">;</span>
+    <span class="s5">transition</span><span class="s2">: </span><span class="s7">opacity </span><span class="s8">0.2</span><span class="s7">s</span><span class="s4">;</span>
+<span class="s4">}</span>
+
+<span class="s4">.</span><span class="s3">lightbox</span><span class="s4">.</span><span class="s3">open </span><span class="s4">{</span>
+    <span class="s5">display</span><span class="s2">: </span><span class="s7">flex</span><span class="s4">;</span>
+<span class="s4">}</span>
+
+<span class="s4">.</span><span class="s3">lightbox-img </span><span class="s4">{</span>
+    <span class="s5">max-width</span><span class="s2">: </span><span class="s8">90</span><span class="s7">vw</span><span class="s4">;</span>
+    <span class="s5">max-height</span><span class="s2">: </span><span class="s8">85</span><span class="s7">vh</span><span class="s4">;</span>
+    <span class="s5">border-radius</span><span class="s2">: </span><span class="s8">12</span><span class="s7">px</span><span class="s4">;</span>
+<span class="s4">}</span>
+
+<span class="s4">.</span><span class="s3">lightbox </span><span class="s4">.</span><span class="s3">close </span><span class="s4">{</span>
+    <span class="s5">position</span><span class="s2">: </span><span class="s7">absolute</span><span class="s4">;</span>
+    <span class="s5">top</span><span class="s2">: </span><span class="s8">30</span><span class="s7">px</span><span class="s4">; </span><span class="s5">right</span><span class="s2">: </span><span class="s8">30</span><span class="s7">px</span><span class="s4">;</span>
+    <span class="s5">font-size</span><span class="s2">: </span><span class="s8">2</span><span class="s7">rem</span><span class="s4">;</span>
+    <span class="s5">color</span><span class="s2">: </span><span class="s3">var</span><span class="s4">(</span><span class="s3">--color-hover-bg</span><span class="s4">);</span>
+    <span class="s5">cursor</span><span class="s2">: </span><span class="s7">pointer</span><span class="s4">;</span>
+    <span class="s5">z-index</span><span class="s2">: </span><span class="s8">1001</span><span class="s4">;</span>
+<span class="s4">}</span>
+
+<span class="s4">.</span><span class="s3">arrow </span><span class="s4">{</span>
+    <span class="s5">position</span><span class="s2">: </span><span class="s7">absolute</span><span class="s4">;</span>
+    <span class="s5">top</span><span class="s2">: </span><span class="s8">50</span><span class="s4">%;</span>
+    <span class="s5">transform</span><span class="s2">: </span><span class="s3">translateY</span><span class="s4">(-</span><span class="s8">50</span><span class="s4">%);</span>
+    <span class="s5">z-index</span><span class="s2">: </span><span class="s8">1002</span><span class="s4">;</span>
+    <span class="s5">cursor</span><span class="s2">: </span><span class="s7">pointer</span><span class="s4">;</span>
+    <span class="s5">user-select</span><span class="s2">: </span><span class="s7">none</span><span class="s4">;</span>
+    <span class="s5">background</span><span class="s2">: </span><span class="s7">none</span><span class="s4">;</span>
+<span class="s4">}</span>
+<span class="s4">.</span><span class="s3">arrow</span><span class="s4">.</span><span class="s3">left  </span><span class="s4">{ </span><span class="s5">left</span><span class="s2">: </span><span class="s8">50</span><span class="s7">px</span><span class="s4">; }</span>
+<span class="s4">.</span><span class="s3">arrow</span><span class="s4">.</span><span class="s3">right </span><span class="s4">{ </span><span class="s5">right</span><span class="s2">: </span><span class="s8">50</span><span class="s7">px</span><span class="s4">; }</span>
+
+<span class="s4">.</span><span class="s3">arrow svg </span><span class="s4">{</span>
+    <span class="s5">display</span><span class="s2">: </span><span class="s7">block</span><span class="s4">;</span>
+    <span class="s5">width</span><span class="s2">: </span><span class="s8">40</span><span class="s7">px</span><span class="s4">;</span>
+    <span class="s5">height</span><span class="s2">: </span><span class="s8">40</span><span class="s7">px</span><span class="s4">;</span>
+<span class="s4">}</span>
+
+<span class="s0">/* ========== RESUME PAGE ========== */</span>
+
+<span class="s4">.</span><span class="s3">resume </span><span class="s4">{</span>
+    <span class="s5">margin</span><span class="s2">: </span><span class="s8">0 </span><span class="s7">auto</span><span class="s4">;</span>
+    <span class="s5">text-align</span><span class="s2">: </span><span class="s7">center</span><span class="s4">;</span>
+    <span class="s5">padding-top</span><span class="s2">: </span><span class="s8">2</span><span class="s7">rem </span><span class="s9">!important</span><span class="s4">;</span>
+<span class="s4">}</span>
+
+<span class="s0">/* Resume download button */</span>
+<span class="s4">.</span><span class="s3">view-link </span><span class="s4">{</span>
+    <span class="s5">color</span><span class="s2">: </span><span class="s3">var</span><span class="s4">(</span><span class="s3">--color-text</span><span class="s4">);</span>
+    <span class="s5">text-decoration</span><span class="s2">: </span><span class="s7">none</span><span class="s4">;</span>
+    <span class="s5">font-size</span><span class="s2">: </span><span class="s8">1.2</span><span class="s7">rem</span><span class="s4">;</span>
+    <span class="s5">font-weight</span><span class="s2">: </span><span class="s8">500</span><span class="s4">;</span>
+<span class="s4">}</span>
+
+<span class="s4">.</span><span class="s3">view-link</span><span class="s2">:</span><span class="s3">hover </span><span class="s4">{</span>
+    <span class="s5">color</span><span class="s2">: </span><span class="s3">var</span><span class="s4">(</span><span class="s3">--color-hover-bg</span><span class="s4">);</span>
+<span class="s4">}</span>
+
+<span class="s0">/* ========== CONTACT PAGE ========== */</span>
+
+<span class="s4">.</span><span class="s3">contact </span><span class="s4">{</span>
+    <span class="s5">margin</span><span class="s2">: </span><span class="s8">0 </span><span class="s7">auto</span><span class="s4">;</span>
+    <span class="s5">text-align</span><span class="s2">: </span><span class="s7">center</span><span class="s4">;</span>
+    <span class="s5">padding-top</span><span class="s2">: </span><span class="s8">1.2</span><span class="s7">rem </span><span class="s9">!important</span><span class="s4">;</span>
+<span class="s4">}</span>
+
+<span class="s4">.</span><span class="s3">contact-icons a </span><span class="s4">{</span>
+    <span class="s5">font-size</span><span class="s2">: </span><span class="s8">1.2</span><span class="s7">rem</span><span class="s4">;</span>
+    <span class="s5">color</span><span class="s2">: </span><span class="s3">var</span><span class="s4">(</span><span class="s3">--color-text</span><span class="s4">);</span>
+    <span class="s5">text-decoration</span><span class="s2">: </span><span class="s7">none</span><span class="s4">;</span>
+    <span class="s5">font-weight</span><span class="s2">: </span><span class="s8">500</span><span class="s4">;</span>
+    <span class="s5">display</span><span class="s2">: </span><span class="s7">flex</span><span class="s4">;</span>
+    <span class="s5">align-items</span><span class="s2">: </span><span class="s7">center</span><span class="s4">;</span>
+    <span class="s5">gap</span><span class="s2">:</span><span class="s8">0.5</span><span class="s7">rem</span><span class="s4">;</span>
+    <span class="s5">padding</span><span class="s2">: </span><span class="s8">1</span><span class="s7">rem </span><span class="s8">50</span><span class="s4">%;</span>
+    <span class="s5">flex-direction</span><span class="s2">: </span><span class="s7">column</span><span class="s4">;</span>
+    <span class="s5">text-align</span><span class="s2">: </span><span class="s7">center</span><span class="s4">;</span>
+    <span class="s5">margin</span><span class="s2">: </span><span class="s8">0</span><span class="s4">;</span>
+<span class="s4">}</span>
+
+<span class="s4">.</span><span class="s3">contact-icons i </span><span class="s4">{</span>
+    <span class="s5">font-size</span><span class="s2">: </span><span class="s8">1.2</span><span class="s7">rem</span><span class="s4">;</span>
+<span class="s4">}</span>
+
+<span class="s4">.</span><span class="s3">contact-icons a</span><span class="s2">:</span><span class="s3">hover </span><span class="s4">{</span>
+    <span class="s5">color</span><span class="s2">: </span><span class="s3">var</span><span class="s4">(</span><span class="s3">--color-hover-bg</span><span class="s4">);</span>
+<span class="s4">}</span>
+
+<span class="s0">/* ========== FOOTER ========== */</span>
+
+<span class="s4">.</span><span class="s3">bottom-bar </span><span class="s4">{</span>
+    <span class="s5">width</span><span class="s2">: </span><span class="s8">100</span><span class="s4">%;</span>
+    <span class="s5">padding</span><span class="s2">: </span><span class="s8">1.5</span><span class="s7">rem </span><span class="s8">0</span><span class="s4">;</span>
+    <span class="s5">position</span><span class="s2">: </span><span class="s7">fixed</span><span class="s4">;</span>
+    <span class="s5">bottom</span><span class="s2">: </span><span class="s8">0</span><span class="s4">;</span>
+    <span class="s5">left</span><span class="s2">: </span><span class="s8">0</span><span class="s4">;</span>
+    <span class="s5">font-size</span><span class="s2">: </span><span class="s8">1</span><span class="s7">rem</span><span class="s4">;</span>
+<span class="s4">}</span>
+
+<span class="s0">/* ==================== BURGER ICON STYLE ==================== */</span>
+
+<span class="s0">/* Burger menu button styling */</span>
+<span class="s4">.</span><span class="s3">burger-button </span><span class="s4">{</span>
+    <span class="s5">position</span><span class="s2">: </span><span class="s7">relative</span><span class="s4">;</span>
+    <span class="s5">z-index</span><span class="s2">: </span><span class="s8">1001</span><span class="s4">;</span>
+    <span class="s5">cursor</span><span class="s2">: </span><span class="s7">pointer</span><span class="s4">;</span>
+    <span class="s5">background</span><span class="s2">: </span><span class="s7">none</span><span class="s4">;</span>
+    <span class="s5">border</span><span class="s2">: </span><span class="s7">none</span><span class="s4">;</span>
+    <span class="s5">padding</span><span class="s2">: </span><span class="s8">5</span><span class="s7">px</span><span class="s4">;</span>
+    <span class="s5">display</span><span class="s2">: </span><span class="s7">none</span><span class="s4">;</span>
+    <span class="s5">outline</span><span class="s2">: </span><span class="s7">none</span><span class="s4">;</span>
+<span class="s4">}</span>
+
+<span class="s0">/* Burger menu lines style */</span>
+<span class="s4">.</span><span class="s3">burger-button </span><span class="s4">.</span><span class="s3">line </span><span class="s4">{</span>
+    <span class="s5">fill</span><span class="s2">: </span><span class="s7">none</span><span class="s4">;</span>
+    <span class="s5">stroke</span><span class="s2">: </span><span class="s3">var</span><span class="s4">(</span><span class="s3">--color-nav-top-bar</span><span class="s4">);</span>
+    <span class="s5">stroke-width</span><span class="s2">: </span><span class="s8">6</span><span class="s4">;</span>
+    <span class="s5">stroke-linecap</span><span class="s2">: </span><span class="s7">round</span><span class="s4">;</span>
+    <span class="s3">#transition</span><span class="s2">: </span><span class="s3">all </span><span class="s8">0.3</span><span class="s3">s ease</span><span class="s4">;</span>
+    <span class="s5">transform-origin</span><span class="s2">: </span><span class="s8">50</span><span class="s7">px </span><span class="s8">50</span><span class="s7">px</span><span class="s4">;</span>
+    <span class="s5">transition</span><span class="s2">: </span><span class="s3">transform </span><span class="s8">0.1</span><span class="s7">s</span><span class="s4">, </span><span class="s7">opacity </span><span class="s8">0.1</span><span class="s7">s</span><span class="s4">;</span>
+<span class="s4">}</span>
+
+<span class="s4">.</span><span class="s3">line</span><span class="s4">.</span><span class="s3">top </span><span class="s4">{</span>
+    <span class="s5">transform-origin</span><span class="s2">: </span><span class="s8">35</span><span class="s7">px </span><span class="s8">50</span><span class="s7">px</span><span class="s4">;</span>
+<span class="s4">}</span>
+
+<span class="s4">.</span><span class="s3">line</span><span class="s4">.</span><span class="s3">bottom </span><span class="s4">{</span>
+    <span class="s5">transform-origin</span><span class="s2">: </span><span class="s8">35</span><span class="s7">px </span><span class="s8">50</span><span class="s7">px</span><span class="s4">;</span>
+<span class="s4">}</span>
+
+<span class="s4">.</span><span class="s3">burger-button</span><span class="s4">.</span><span class="s3">active </span><span class="s4">.</span><span class="s3">line </span><span class="s4">{</span>
+    <span class="s5">stroke</span><span class="s2">: </span><span class="s3">var</span><span class="s4">(</span><span class="s3">--color-active</span><span class="s4">);</span>
+<span class="s4">}</span>
+
+<span class="s0">/* Transform burger lines when active (open) */</span>
+<span class="s4">.</span><span class="s3">burger-button</span><span class="s4">.</span><span class="s3">active </span><span class="s4">.</span><span class="s3">top </span><span class="s4">{</span>
+    <span class="s5">transform</span><span class="s2">: </span><span class="s3">rotate</span><span class="s4">(</span><span class="s8">45</span><span class="s7">deg</span><span class="s4">) </span><span class="s3">translateX</span><span class="s4">(</span><span class="s8">5</span><span class="s7">px</span><span class="s4">);</span>
+<span class="s4">}</span>
+
+<span class="s4">.</span><span class="s3">burger-button</span><span class="s4">.</span><span class="s3">active </span><span class="s4">.</span><span class="s3">middle </span><span class="s4">{</span>
+    <span class="s5">opacity</span><span class="s2">: </span><span class="s8">0</span><span class="s4">;</span>
+    <span class="s5">transition</span><span class="s2">: </span><span class="s7">opacity </span><span class="s8">0.25</span><span class="s7">s</span><span class="s4">, </span><span class="s3">transform </span><span class="s8">0.3</span><span class="s7">s</span><span class="s4">;</span>
+<span class="s4">}</span>
+
+<span class="s4">.</span><span class="s3">burger-button</span><span class="s4">.</span><span class="s3">active </span><span class="s4">.</span><span class="s3">bottom </span><span class="s4">{</span>
+    <span class="s5">transform</span><span class="s2">: </span><span class="s3">rotate</span><span class="s4">(-</span><span class="s8">45</span><span class="s7">deg</span><span class="s4">) </span><span class="s3">translateX</span><span class="s4">(</span><span class="s8">10</span><span class="s7">px</span><span class="s4">) </span><span class="s3">translateY</span><span class="s4">(-</span><span class="s8">5</span><span class="s7">px</span><span class="s4">);</span>
+<span class="s4">}</span>
+
+<span class="s4">.</span><span class="s3">circle-bg </span><span class="s4">{</span>
+    <span class="s5">fill</span><span class="s2">: </span><span class="s7">transparent</span><span class="s4">;</span>
+    <span class="s5">stroke</span><span class="s2">: </span><span class="s3">var</span><span class="s4">(</span><span class="s3">--color-active</span><span class="s4">);</span>
+    <span class="s5">stroke-width</span><span class="s2">: </span><span class="s8">5</span><span class="s4">;</span>
+    <span class="s5">opacity</span><span class="s2">: </span><span class="s8">0</span><span class="s4">;</span>
+    <span class="s5">transform</span><span class="s2">: </span><span class="s3">scale</span><span class="s4">(</span><span class="s8">0.4</span><span class="s4">);</span>
+    <span class="s5">transform-origin</span><span class="s2">: </span><span class="s8">50</span><span class="s4">% </span><span class="s8">50</span><span class="s4">%;</span>
+    <span class="s5">transition</span><span class="s2">: </span><span class="s7">opacity </span><span class="s8">0.35</span><span class="s7">s</span><span class="s4">, </span><span class="s3">transform </span><span class="s8">0.35</span><span class="s7">s</span><span class="s4">;</span>
+<span class="s4">}</span>
+
+<span class="s4">.</span><span class="s3">burger-button</span><span class="s4">.</span><span class="s3">active </span><span class="s4">.</span><span class="s3">circle-bg </span><span class="s4">{</span>
+    <span class="s5">opacity</span><span class="s2">: </span><span class="s8">1</span><span class="s4">;</span>
+    <span class="s5">transform</span><span class="s2">: </span><span class="s3">scale</span><span class="s4">(</span><span class="s8">1</span><span class="s4">);</span>
+<span class="s4">}</span>
+
+<span class="s0">/* ==================== MOTTO ==================== */</span>
+
+<span class="s4">.</span><span class="s3">motto </span><span class="s4">{</span>
+    <span class="s5">position</span><span class="s2">: </span><span class="s7">absolute</span><span class="s4">;</span>
+    <span class="s5">top</span><span class="s2">: </span><span class="s8">12</span><span class="s7">px</span><span class="s4">;</span>
+    <span class="s5">right</span><span class="s2">: </span><span class="s8">32</span><span class="s7">px</span><span class="s4">;</span>
+    <span class="s5">list-style</span><span class="s2">: </span><span class="s7">none</span><span class="s4">;</span>
+    <span class="s5">font-style</span><span class="s2">: </span><span class="s7">italic</span><span class="s4">;</span>
+    <span class="s5">display</span><span class="s2">: </span><span class="s7">flex</span><span class="s4">;</span>
+    <span class="s5">color</span><span class="s2">: </span><span class="s3">var</span><span class="s4">(</span><span class="s3">--color-text</span><span class="s4">);</span>
+    <span class="s5">letter-spacing</span><span class="s2">: </span><span class="s8">1</span><span class="s7">px</span><span class="s4">;</span>
+    <span class="s5">pointer-events</span><span class="s2">: </span><span class="s7">none</span><span class="s4">;</span>
+    <span class="s5">user-select</span><span class="s2">: </span><span class="s7">none</span><span class="s4">;</span>
+    <span class="s5">justify-content</span><span class="s2">: </span><span class="s7">right</span><span class="s4">;</span>
+    <span class="s5">padding</span><span class="s2">: </span><span class="s8">0.8</span><span class="s7">rem </span><span class="s8">0</span><span class="s4">;</span>
+<span class="s4">}</span>
+
+
+
+
+
+
+
+
+
+
+
+<span class="s0">/* ==================== MOBILE STYLES ==================== */</span>
+
+<span class="s10">@media </span><span class="s4">(</span><span class="s5">max-width</span><span class="s2">: </span><span class="s8">768</span><span class="s7">px</span><span class="s4">) {</span>
+
+    <span class="s4">.</span><span class="s3">top-bar </span><span class="s4">{</span>
+        <span class="s5">height</span><span class="s2">: </span><span class="s8">20</span><span class="s7">px</span><span class="s4">;</span>
+        <span class="s5">padding</span><span class="s2">: </span><span class="s8">1</span><span class="s7">rem </span><span class="s8">0</span><span class="s4">;</span>
+        <span class="s5">gap</span><span class="s2">: </span><span class="s8">2</span><span class="s7">rem</span><span class="s4">;</span>
+    <span class="s4">}</span>
+
+    <span class="s0">/* Show burger button on mobile */</span>
+    <span class="s4">.</span><span class="s3">burger-button </span><span class="s4">{</span>
+        <span class="s5">display</span><span class="s2">: </span><span class="s7">block</span><span class="s4">;</span>
+        <span class="s5">position</span><span class="s2">: </span><span class="s7">absolute</span><span class="s4">;</span>
+        <span class="s5">top</span><span class="s2">: </span><span class="s8">1</span><span class="s7">rem</span><span class="s4">;</span>
+        <span class="s5">left</span><span class="s2">: </span><span class="s8">50</span><span class="s4">%;</span>
+        <span class="s5">transform</span><span class="s2">: </span><span class="s3">translateX</span><span class="s4">(-</span><span class="s8">50</span><span class="s4">%);</span>
+        <span class="s5">margin</span><span class="s2">: </span><span class="s8">0 </span><span class="s7">auto</span><span class="s4">;</span>
+    <span class="s4">}</span>
+
+    <span class="s0">/* Fullscreen mobile navigation menu */</span>
+    <span class="s4">.</span><span class="s3">navbar ul </span><span class="s4">{</span>
+        <span class="s5">align-items</span><span class="s2">: </span><span class="s7">center</span><span class="s4">; </span><span class="s0">/* Center items horizontally */</span>
+        <span class="s5">background-color</span><span class="s2">: </span><span class="s6">#2a2a2a</span><span class="s4">; </span><span class="s0">/* Dark overlay */</span>
+        <span class="s5">display</span><span class="s2">: </span><span class="s7">none</span><span class="s4">; </span><span class="s0">/* Hide menu by default */</span>
+        <span class="s5">flex-direction</span><span class="s2">: </span><span class="s7">column</span><span class="s4">; </span><span class="s0">/* Stack items vertically */</span>
+        <span class="s5">gap</span><span class="s2">: </span><span class="s8">0.1</span><span class="s7">rem</span><span class="s4">; </span><span class="s0">/*  space between menu items */</span>
+        <span class="s5">height</span><span class="s2">: </span><span class="s8">100</span><span class="s7">vh</span><span class="s4">; </span><span class="s0">/* Full viewport height */</span>
+        <span class="s5">justify-content</span><span class="s2">: </span><span class="s7">flex-start</span><span class="s4">; </span><span class="s0">/* Align items to the top */</span>
+        <span class="s5">left</span><span class="s2">: </span><span class="s8">0</span><span class="s4">; </span><span class="s0">/* Align to the left edge */</span>
+        <span class="s5">padding</span><span class="s2">: </span><span class="s8">5</span><span class="s7">rem </span><span class="s8">0</span><span class="s4">; </span><span class="s0">/* padding for spacing */</span>
+        <span class="s5">position</span><span class="s2">: </span><span class="s7">fixed</span><span class="s4">; </span><span class="s0">/* Overlay the whole page */</span>
+        <span class="s5">top</span><span class="s2">: </span><span class="s8">0</span><span class="s4">; </span><span class="s0">/* Align to the top edge */</span>
+        <span class="s5">width</span><span class="s2">: </span><span class="s8">100</span><span class="s7">vw</span><span class="s4">; </span><span class="s0">/* Full viewport width */</span>
+        <span class="s5">z-index</span><span class="s2">: </span><span class="s8">1000</span><span class="s4">; </span><span class="s0">/* Ensure menu is on top */</span>
+    <span class="s4">}</span>
+
+    <span class="s0">/* Show nav when toggled */</span>
+    <span class="s4">.</span><span class="s3">navbar ul</span><span class="s4">.</span><span class="s3">show </span><span class="s4">{</span>
+        <span class="s5">display</span><span class="s2">: </span><span class="s7">flex</span><span class="s4">;</span>
+    <span class="s4">}</span>
+
+    <span class="s0">/* Nav item styling on mobile */</span>
+    <span class="s4">.</span><span class="s3">navbar ul li </span><span class="s4">{</span>
+        <span class="s5">text-align</span><span class="s2">: </span><span class="s7">center</span><span class="s4">;</span>
+    <span class="s4">}</span>
+
+    <span class="s4">.</span><span class="s3">navbar ul li a </span><span class="s4">{</span>
+        <span class="s5">font-size</span><span class="s2">: </span><span class="s8">1.2</span><span class="s7">rem</span><span class="s4">;</span>
+        <span class="s5">font-weight</span><span class="s2">: </span><span class="s8">500</span><span class="s4">;</span>
+        <span class="s5">padding</span><span class="s2">: </span><span class="s8">1</span><span class="s7">rem </span><span class="s8">0</span><span class="s4">;</span>
+        <span class="s5">display</span><span class="s2">: </span><span class="s7">flex</span><span class="s4">;</span>
+        <span class="s5">width</span><span class="s2">: </span><span class="s8">100</span><span class="s4">%;</span>
+        <span class="s5">transition</span><span class="s2">: </span><span class="s7">background </span><span class="s8">0.2</span><span class="s7">s</span><span class="s4">, </span><span class="s7">color </span><span class="s8">0.2</span><span class="s7">s</span><span class="s4">;</span>
+    <span class="s4">}</span>
+
+    <span class="s4">.</span><span class="s3">content </span><span class="s4">{</span>
+        <span class="s5">width</span><span class="s2">: </span><span class="s8">100</span><span class="s4">%;</span>
+        <span class="s5">max-width</span><span class="s2">: </span><span class="s8">100</span><span class="s4">%;</span>
+        <span class="s5">padding</span><span class="s2">: </span><span class="s8">3</span><span class="s7">rem </span><span class="s8">1</span><span class="s7">rem </span><span class="s8">1</span><span class="s7">rem </span><span class="s8">1</span><span class="s7">rem</span><span class="s4">;</span>
+        <span class="s5">margin</span><span class="s2">: </span><span class="s8">0</span><span class="s4">;</span>
+        <span class="s5">text-align</span><span class="s2">: </span><span class="s7">center</span><span class="s4">;</span>
+        <span class="s5">box-sizing</span><span class="s2">: </span><span class="s7">border-box</span><span class="s4">;</span>
+        <span class="s5">overflow-x</span><span class="s2">: </span><span class="s7">hidden</span><span class="s4">;</span>
+    <span class="s4">}</span>
+
+    <span class="s4">.</span><span class="s3">gallery </span><span class="s4">{</span>
+        <span class="s5">margin</span><span class="s2">: </span><span class="s8">0 </span><span class="s7">auto</span><span class="s4">;</span>
+        <span class="s5">text-align</span><span class="s2">: </span><span class="s7">center</span><span class="s4">;</span>
+    <span class="s4">}</span>
+
+    <span class="s4">.</span><span class="s3">gallery figcaption </span><span class="s4">{</span>
+    <span class="s4">}</span>
+
+    <span class="s4">.</span><span class="s3">lightbox </span><span class="s4">{</span>
+        <span class="s5">justify-content</span><span class="s2">: </span><span class="s7">center </span><span class="s9">!important</span><span class="s4">;</span>
+        <span class="s5">align-items</span><span class="s2">: </span><span class="s7">center </span><span class="s9">!important</span><span class="s4">;</span>
+        <span class="s5">padding</span><span class="s2">: </span><span class="s8">0 </span><span class="s9">!important</span><span class="s4">;</span>
+    <span class="s4">}</span>
+    <span class="s4">.</span><span class="s3">lightbox-img </span><span class="s4">{</span>
+        <span class="s5">max-width</span><span class="s2">: </span><span class="s8">100</span><span class="s4">%;</span>
+        <span class="s5">max-height</span><span class="s2">: </span><span class="s8">100</span><span class="s4">%;</span>
+    <span class="s4">}</span>
+
+    <span class="s4">.</span><span class="s3">arrow </span><span class="s4">{</span>
+        <span class="s5">display</span><span class="s2">: </span><span class="s7">none </span><span class="s9">!important</span><span class="s4">;</span>
+    <span class="s4">}</span>
+
+    <span class="s0">/* ========== RESUME PAGE ========== */</span>
+
+    <span class="s4">.</span><span class="s3">resume </span><span class="s4">{</span>
+        <span class="s5">margin</span><span class="s2">: </span><span class="s8">0 </span><span class="s7">auto</span><span class="s4">;</span>
+        <span class="s5">text-align</span><span class="s2">: </span><span class="s7">center</span><span class="s4">;</span>
+    <span class="s4">}</span>
+
+    <span class="s0">/* ========== CONTACT PAGE ========== */</span>
+
+    <span class="s4">.</span><span class="s3">contact </span><span class="s4">{</span>
+        <span class="s5">margin</span><span class="s2">: </span><span class="s8">0 </span><span class="s7">auto</span><span class="s4">;</span>
+        <span class="s5">text-align</span><span class="s2">: </span><span class="s7">center</span><span class="s4">;</span>
+    <span class="s4">}</span>
+
+    <span class="s4">.</span><span class="s3">content</span><span class="s4">.</span><span class="s3">contact </span><span class="s4">{</span>
+        <span class="s5">padding-top</span><span class="s2">: </span><span class="s8">1.2</span><span class="s7">rem </span><span class="s9">!important</span><span class="s4">;</span>
+    <span class="s4">}</span>
+
+    <span class="s4">.</span><span class="s3">contact-title h1 </span><span class="s4">{</span>
+        <span class="s5">color</span><span class="s2">: </span><span class="s3">var</span><span class="s4">(</span><span class="s3">--color-content</span><span class="s4">);</span>
+        <span class="s5">font-size</span><span class="s2">: </span><span class="s8">1.5</span><span class="s7">rem</span><span class="s4">;</span>
+    <span class="s4">}</span>
+
+    <span class="s4">.</span><span class="s3">contact-icons a </span><span class="s4">{</span>
+        <span class="s5">font-size</span><span class="s2">: </span><span class="s8">1.2</span><span class="s7">rem</span><span class="s4">;</span>
+        <span class="s5">color</span><span class="s2">: </span><span class="s3">var</span><span class="s4">(</span><span class="s3">--color-text</span><span class="s4">);</span>
+        <span class="s5">text-decoration</span><span class="s2">: </span><span class="s7">none</span><span class="s4">;</span>
+        <span class="s5">font-weight</span><span class="s2">: </span><span class="s8">500</span><span class="s4">;</span>
+    <span class="s4">}</span>
+
+    <span class="s4">.</span><span class="s3">contact-icons a</span><span class="s2">:</span><span class="s3">hover </span><span class="s4">{</span>
+        <span class="s5">color</span><span class="s2">: </span><span class="s3">var</span><span class="s4">(</span><span class="s3">--color-active</span><span class="s4">);</span>
+    <span class="s4">}</span>
+
+    <span class="s4">.</span><span class="s3">contact-icons i </span><span class="s4">{</span>
+        <span class="s5">font-size</span><span class="s2">: </span><span class="s8">1.2</span><span class="s7">em</span><span class="s4">;</span>
+    <span class="s4">}</span>
+
+    <span class="s4">.</span><span class="s3">bottom-bar </span><span class="s4">{</span>
+        <span class="s5">padding</span><span class="s2">: </span><span class="s8">1.5</span><span class="s7">rem </span><span class="s8">0</span><span class="s4">;</span>
+        <span class="s5">font-size</span><span class="s2">: </span><span class="s8">1</span><span class="s7">rem</span><span class="s4">;</span>
+    <span class="s4">}</span>
+<span class="s4">}</span></pre>
+</body>
+</html>
