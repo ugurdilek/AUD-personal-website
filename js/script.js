@@ -21,9 +21,9 @@ document.addEventListener("DOMContentLoaded", function () {
     let currentIndex = 0;
 
     async function loadImages() {
-        const user = "ugurdilek";            // Sadece kullanıcı adı
-        const repo = "websiteGallery"; // Sadece repo adı
-        const path = "photos";               // Fotoğrafların olduğu klasör
+        const user = "ugurdilek";
+        const repo = "websiteGallery";
+        const path = "photos";
 
         const url = `https://api.github.com/repos/${user}/${repo}/contents/${path}`;
         const res = await fetch(url);
@@ -37,7 +37,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 img.src = file.download_url;
                 img.alt = file.name;
-                caption.textContent = file.name.replace(/\.[^/.]+$/, "");
+                caption.textContent = file.name
+                    .replace(/\.[^/.]+$/, "")
+                    .replace(/[-_]/g, " ")
+                    .replace(/\b\w/g, c => c.toUpperCase());
 
                 imagesArray.push(file.download_url);
 
