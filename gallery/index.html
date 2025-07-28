@@ -79,9 +79,9 @@
         <button aria-label="Menu" class="burger-button">
             <svg viewBox="0 0 100 100" width="40">
                 <circle class="circle-bg" cx="52" cy="48" r="45"/>
-                <path class="line top"      d="M 10,35 H 70"/>
-                <path class="line middle"   d="M 20,50 H 60"/>
-                <path class="line bottom"   d="M 10,65 H 70"/>
+                <path class="line top" d="M 10,35 H 70"/>
+                <path class="line middle" d="M 20,50 H 60"/>
+                <path class="line bottom" d="M 10,65 H 70"/>
             </svg>
         </button>
     </div>
@@ -96,34 +96,52 @@
 
 <!-- Gallery -->
 <main class="gallery">
-    <figure>
-        <img alt="Karakoy, Istanbul, Turkey" src="/photos/KarakoyIstanbulTurkey.png">
-        <figcaption>Karakoy, Istanbul, Turkey</figcaption>
-    </figure>
-    <figure>
-        <img alt="Cappadocia, Nevşehir, Turkey" src="/photos/CappadociaNevsehirTurkey.png">
-        <figcaption>Cappadocia, Nevşehir, Turkey</figcaption>
-    </figure>
-    <figure>
-        <img alt="St. Anthony of Padua Church, Istanbul, Turkey" src="/photos/St.AnthonyPaduaChurch.png">
-        <figcaption>St. Anthony of Padua Church, Istanbul, Turkey</figcaption>
-    </figure>
+    <script>
+        const API_KEY = "AIzaSyD0hMC24h_zqak9jmy9hUmv28DarYpr_9U";
+        const FOLDER_ID = "1DUyfrnibIxHfoMy-Gd3t_0d_G_9syGE0";
+        const gallery = document.getElementById("gallery");
+
+        async function loadImages() {
+            const url = `https://www.googleapis.com/drive/v3/files?q='${FOLDER_ID}'+in+parents&key=${API_KEY}&fields=files(id,name,mimeType)`;
+            const res = await fetch(url);
+            const data = await res.json();
+
+            data.files.forEach(file => {
+                if (file.mimeType.startsWith("image/")) {
+                    const figure = document.createElement("figure");
+                    const img = document.createElement("img");
+                    const caption = document.createElement("figcaption");
+
+                    img.src = `https://drive.google.com/uc?export=view&id=${file.id}`;
+                    img.alt = file.name;
+                    caption.textContent = file.name.replace(/\.[^/.]+$/, ""); // Uzantıyı sil
+
+                    figure.appendChild(img);
+                    figure.appendChild(caption);
+                    gallery.appendChild(figure);
+                }
+            });
+        }
+        loadImages();
+    </script>
 </main>
 
 <!-- Lightbox container -->
 <div class="lightbox" id="lightbox">
     <span class="close" id="closeLightbox">&times;</span>
-    <img class="lightbox-img" id="lightboxImg" src="" alt="">
+    <img alt="" class="lightbox-img" id="lightboxImg" src="">
     <!-- Sol ok (SVG ile) -->
     <span class="arrow left" id="lightboxPrev">
-      <svg width="40" height="40" viewBox="0 0 40 40">
-    <polyline points="25,13 16,20 25,27" fill="none" stroke="#d6d1ca" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <svg height="40" viewBox="0 0 40 40" width="40">
+    <polyline fill="none" points="25,13 16,20 25,27" stroke="#d6d1ca" stroke-linecap="round" stroke-linejoin="round"
+              stroke-width="2.5"/>
       </svg>
     </span>
     <!-- Sağ ok (SVG ile) -->
     <span class="arrow right" id="lightboxNext">
-      <svg width="40" height="40" viewBox="0 0 40 40">
-        <polyline points="15,13 24,20 15,27" fill="none" stroke="#d6d1ca" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <svg height="40" viewBox="0 0 40 40" width="40">
+        <polyline fill="none" points="15,13 24,20 15,27" stroke="#d6d1ca" stroke-linecap="round" stroke-linejoin="round"
+                  stroke-width="2.5"/>
       </svg>
     </span>
 </div>
