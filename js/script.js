@@ -21,35 +21,29 @@ document.addEventListener("DOMContentLoaded", function () {
     let currentIndex = 0;
 
     async function loadImages() {
-        const user = "ugurdilek";
-        const repo = "websiteGallery";
-        const path = "photos";
+        // photos.json dosyasının RAW linki
+        const jsonUrl = "/photos/photos.json";
 
-        const url = `https://api.github.com/repos/${user}/${repo}/contents/${path}`;
-        const res = await fetch(url);
-        const files = await res.json();
 
-        files.forEach((file, index) => {
-            if (file.name.match(/\.(jpg|jpeg|png|gif)$/i)) {
-                const figure = document.createElement("figure");
-                const img = document.createElement("img");
-                const caption = document.createElement("figcaption");
+        const res = await fetch(jsonUrl);
+        const data = await res.json();
 
-                img.src = file.download_url;
-                img.alt = file.name;
-                caption.textContent = file.name
-                    .replace(/\.[^/.]+$/, "")
-                    .replace(/[-_]/g, " ")
-                    .replace(/\b\w/g, c => c.toUpperCase());
+        data.forEach((item, index) => {
+            const figure = document.createElement("figure");
+            const img = document.createElement("img");
+            const caption = document.createElement("figcaption");
 
-                imagesArray.push(file.download_url);
+            img.src = `/photos/${item.file}`;
+            img.alt = item.caption;
+            caption.textContent = item.caption;
 
-                img.addEventListener("click", () => openLightbox(index));
+            imagesArray.push(img.src);
 
-                figure.appendChild(img);
-                figure.appendChild(caption);
-                gallery.appendChild(figure);
-            }
+            img.addEventListener("click", () => openLightbox(index));
+
+            figure.appendChild(img);
+            figure.appendChild(caption);
+            gallery.appendChild(figure);
         });
     }
 
