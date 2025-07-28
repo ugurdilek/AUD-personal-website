@@ -1,7 +1,7 @@
 [
-  { "file": "KarakoyIstanbulTurkey.png", "caption": "Karakoy, Istanbul, Turkey" },
-  { "file": "CappadociaNevsehirTurkey.png", "caption": "Cappadocia, Nevsehir, Turkey" },
-  { "file": "StAnthonyPaduaChurch.png", "caption": "St. Anthony of Padua Church, Istanbul, Turkey" },
-  { "file": "KaltenkirchenHamburgGermany.png", "caption": "Kaltenkirchen, Hamburg, Germany" },
-  { "file": "AdanaTurkey.png", "caption": "Adana, Turkey" }
+  { "file": "karakoy-istanbul-turkey.png", "caption": "Karakoy, Istanbul, Turkey" },
+  { "file": "cappadocia-nevsehir-turkey.png", "caption": "Cappadocia, Nevsehir, Turkey" },
+  { "file": "st-anthony-padua-church.png", "caption": "St. Anthony of Padua Church, Istanbul, Turkey" },
+  { "file": "kaltenkirchen-hamburg-germany.png", "caption": "Kaltenkirchen, Hamburg, Germany" },
+  { "file": "adana-turkey.png", "caption": "Adana, Turkey" }
 ]
