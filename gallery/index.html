@@ -101,20 +101,31 @@
         const FOLDER_ID = "1DUyfrnibIxHfoMy-Gd3t_0d_G_9syGE0";
         const gallery = document.getElementById("gallery");
 
+        let imagesArray = []; // Lightbox için tüm resimlerin sırasını tutacağız
+
         async function loadImages() {
             const url = `https://www.googleapis.com/drive/v3/files?q='${FOLDER_ID}'+in+parents&key=${API_KEY}&fields=files(id,name,mimeType)`;
             const res = await fetch(url);
             const data = await res.json();
 
-            data.files.forEach(file => {
+            data.files.forEach((file, index) => {
                 if (file.mimeType.startsWith("image/")) {
                     const figure = document.createElement("figure");
                     const img = document.createElement("img");
                     const caption = document.createElement("figcaption");
 
-                    img.src = `https://drive.google.com/uc?export=view&id=${file.id}`;
+                    const imgUrl = `https://drive.google.com/uc?export=view&id=${file.id}`;
+                    img.src = imgUrl;
                     img.alt = file.name;
-                    caption.textContent = file.name.replace(/\.[^/.]+$/, ""); // Uzantıyı sil
+                    caption.textContent = file.name.replace(/\.[^/.]+$/, "");
+
+                    // Lightbox için sırayı kaydet
+                    imagesArray.push(imgUrl);
+
+                    // Lightbox event ekle
+                    img.addEventListener("click", () => {
+                        openLightbox(index); // script.js içinde openLightbox(index) fonksiyonu olmalı
+                    });
 
                     figure.appendChild(img);
                     figure.appendChild(caption);
@@ -122,7 +133,33 @@
                 }
             });
         }
+
         loadImages();
+
+        // Eğer script.js'te openLightbox yoksa ekleyebiliriz:
+        function openLightbox(index) {
+            const lightbox = document.getElementById("lightbox");
+            const lightboxImg = document.getElementById("lightboxImg");
+            lightbox.style.display = "block";
+            lightboxImg.src = imagesArray[index];
+
+            // Sol/Sağ oklar için event
+            let currentIndex = index;
+
+            document.getElementById("lightboxPrev").onclick = () => {
+                currentIndex = (currentIndex - 1 + imagesArray.length) % imagesArray.length;
+                lightboxImg.src = imagesArray[currentIndex];
+            };
+
+            document.getElementById("lightboxNext").onclick = () => {
+                currentIndex = (currentIndex + 1) % imagesArray.length;
+                lightboxImg.src = imagesArray[currentIndex];
+            };
+
+            document.getElementById("closeLightbox").onclick = () => {
+                lightbox.style.display = "none";
+            };
+        }
     </script>
 </main>
 
