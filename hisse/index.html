@@ -45,35 +45,44 @@
     </style>
     <script>
         async function loadData() {
-            const response = await fetch('data.json');
-            const data = await response.json();
+            try {
+                const response = await fetch('data.json');
+                if (!response.ok) {
+                    throw new Error("HTTP hata: " + response.status);
+                }
+                const data = await response.json();
 
-            const container = document.getElementById('content');
-            container.innerHTML = '';
+                const container = document.getElementById('content');
+                container.innerHTML = '';
 
-            Object.keys(data).forEach(symbol => {
-                const stock = data[symbol];
-                const card = document.createElement('div');
-                card.className = 'card';
-                card.innerHTML = `
-          <h2>${symbol}</h2>
-          <p>${stock.yorum}</p>
-          <table>
-            <tr><th>Destek 1</th><td>${stock.destek1}</td></tr>
-            <tr><th>Destek 2</th><td>${stock.destek2}</td></tr>
-            <tr><th>Direnç 1</th><td>${stock.direnc1}</td></tr>
-            <tr><th>Direnç 2</th><td>${stock.direnc2}</td></tr>
-          </table>
-          <ul>
-            <li><strong>RSI:</strong> ${stock.rsi}</li>
-            <li><strong>MACD:</strong> ${stock.macd}</li>
-            <li><strong>50 Günlük Ortalama:</strong> ${stock.ma50}</li>
-            <li><strong>200 Günlük Ortalama:</strong> ${stock.ma200}</li>
-          </ul>
-          <p><em>Güncelleme: ${stock.guncelleme}</em></p>
-        `;
-                container.appendChild(card);
-            });
+                Object.keys(data).forEach(symbol => {
+                    const stock = data[symbol];
+                    const card = document.createElement('div');
+                    card.className = 'card';
+                    card.innerHTML = `
+            <h2>${symbol}</h2>
+            <p>${stock.yorum}</p>
+            <table>
+              <tr><th>Destek 1</th><td>${stock.destek1}</td></tr>
+              <tr><th>Destek 2</th><td>${stock.destek2}</td></tr>
+              <tr><th>Direnç 1</th><td>${stock.direnc1}</td></tr>
+              <tr><th>Direnç 2</th><td>${stock.direnc2}</td></tr>
+            </table>
+            <ul>
+              <li><strong>RSI:</strong> ${stock.rsi}</li>
+              <li><strong>MACD:</strong> ${stock.macd}</li>
+              <li><strong>50 Günlük Ortalama:</strong> ${stock.ma50}</li>
+              <li><strong>200 Günlük Ortalama:</strong> ${stock.ma200}</li>
+            </ul>
+            <p><em>Güncelleme: ${stock.guncelleme}</em></p>
+          `;
+                    container.appendChild(card);
+                });
+            } catch (error) {
+                console.error("JSON fetch error:", error);
+                document.getElementById('content').innerHTML =
+                    "<p style='color:red'>Veriler yüklenemedi. Detay için konsolu kontrol edin.</p>";
+            }
         }
 
         window.onload = loadData;
