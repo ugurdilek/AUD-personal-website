@@ -1,131 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
-    <!-- Basic Meta Tags -->
-    <meta charset="UTF-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Contact – Uğur Dilek</title>
-    <meta content="Get in touch with Uğur Dilek via email or LinkedIn." name="description">
-
-    <!-- Canonical link for SEO -->
-    <link href="https://www.ugurdilek.com/contact" rel="canonical"/>
-
-    <!-- CSS Styles -->
-    <link as="style" href="/css/!nostyleacx27css.css" rel="preload"/>
-    <link href="/css/!nostyleacx27css.css" rel="stylesheet"/>
-
-    <!-- Font Awesome Icons -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hisse Senedi Teknik Analiz - Haftalık Özet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 2rem;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+        .card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 0.75rem;
+            text-align: center;
+        }
+        th {
+            background-color: #2c3e50;
+            color: white;
+        }
+        .footer {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #888;
+            margin-top: 2rem;
+        }
+    </style>
     <script>
-        window.addEventListener('load', function () {
-            const fa = document.createElement('link');
-            fa.rel = 'stylesheet';
-            fa.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css';
-            fa.crossOrigin = 'anonymous';
-            document.head.appendChild(fa);
-        });
+        async function loadData() {
+            const response = await fetch('data.json');
+            const data = await response.json();
+
+            const container = document.getElementById('content');
+            container.innerHTML = '';
+
+            Object.keys(data).forEach(symbol => {
+                const stock = data[symbol];
+                const card = document.createElement('div');
+                card.className = 'card';
+                card.innerHTML = `
+          <h2>${symbol}</h2>
+          <p>${stock.yorum}</p>
+          <table>
+            <tr><th>Destek 1</th><td>${stock.destek1}</td></tr>
+            <tr><th>Destek 2</th><td>${stock.destek2}</td></tr>
+            <tr><th>Direnç 1</th><td>${stock.direnc1}</td></tr>
+            <tr><th>Direnç 2</th><td>${stock.direnc2}</td></tr>
+          </table>
+          <ul>
+            <li><strong>RSI:</strong> ${stock.rsi}</li>
+            <li><strong>MACD:</strong> ${stock.macd}</li>
+            <li><strong>50 Günlük Ortalama:</strong> ${stock.ma50}</li>
+            <li><strong>200 Günlük Ortalama:</strong> ${stock.ma200}</li>
+          </ul>
+          <p><em>Güncelleme: ${stock.guncelleme}</em></p>
+        `;
+                container.appendChild(card);
+            });
+        }
+
+        window.onload = loadData;
     </script>
-
-    <!-- Google Analytics Tracking -->
-    <script>
-        window.addEventListener('DOMContentLoaded', function () {
-            setTimeout(function () {
-                const gtagScript = document.createElement('script');
-                gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-9P7Z2XMBMH";
-                gtagScript.async = true;
-                document.head.appendChild(gtagScript);
-
-                window.dataLayer = window.dataLayer || [];
-
-                function gtag() {
-                    dataLayer.push(arguments);
-                }
-
-                gtag('js', new Date());
-                gtag('config', 'G-9P7Z2XMBMH');
-            }, 2000);
-        });
-    </script>
-
-    <!-- Basic Security: Disable right click & developer shortcuts -->
-    <script>
-        document.addEventListener('contextmenu', e => e.preventDefault());
-        document.addEventListener('keydown', e => {
-            const keys = ['F12', 'U', 'S', 'I', 'J'];
-            if ((e.key === 'F12') || (e.ctrlKey && (keys.includes(e.key.toUpperCase()) || (e.shiftKey && ['I', 'J'].includes(e.key))))) {
-                e.preventDefault();
-            }
-        });
-    </script>
-
-    <!-- Favicon -->
-    <link href="/favicon.ico" rel="icon" type="image/x-icon"/>
-
-    <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    />
-
 </head>
-
 <body>
+<h1>Hisse Senedi Teknik Analiz - Haftalık Özet</h1>
+<div id="content">Veriler yükleniyor...</div>
 
-<!-- Site Header with Navigation -->
-<header>
-    <nav class="navbar">
-        <ul>
-            <li><a href="/"><i class="fa-solid fa-house"></i> Home</a></li>
-            <li><a href="/gallery"><i class="fa-solid fa-image"></i> Gallery</a></li>
-            <li><a href="/resume"><i class="fa-solid fa-file-lines"></i> Resume</a></li>
-            <li><a class="active" href="/contact"><i class="fa-solid fa-envelope"></i> Contact</a></li>
-        </ul>
-    </nav>
-
-    <!-- Mobile Burger Menu Button -->
-    <div class="top-bar">
-        <button aria-label="Menu" class="burger-button">
-            <svg viewBox="0 0 100 100" width="40">
-                <circle class="circle-bg" cx="52" cy="48" r="45"/>
-                <path class="line top" d="M 10,35 H 70"/>
-                <path class="line middle" d="M 20,50 H 60"/>
-                <path class="line bottom" d="M 10,65 H 70"/>
-            </svg>
-        </button>
-    </div>
-</header>
-
-<!-- Site Footer with Navigation -->
-<footer class="bottom-bar">
-    <div class="footer-content">
-        <span class="motto"><em>İyilik, iyidir.</em></span>
-    </div>
-</footer>
-
-<!-- Contact -->
-<main class="contact">
-        <div class="contact-icons">
-        <p>
-            <a href="mailto:contact@ugurdilek.com" target="_blank" title="Email">
-                <i class="fa-solid fa-envelope"></i> contact@ugurdilek.com
-            </a>
-        </p>
-
-        <p>
-            <a href="https://www.linkedin.com/in/ugurdilek" target="_blank" title="LinkedIn">
-                <i class="fa-brands fa-linkedin"></i> linkedin.com/in/ugurdilek
-            </a>
-        </p>
-
-
-            <p>
-                <a href="https://github.com/ugurdilek" target="_blank" title="GitHub">
-                    <i class="fa-brands fa-github"></i> github.com/ugurdilek
-                </a>
-            </p>
-
-    </div>
-</main>
-
-<!-- JS Script -->
-<script src="/js/script.js"></script>
+<div class="footer">
+    Bu analiz ChatGPT (OpenAI) tarafından hazırlanmıştır. Yatırım tavsiyesi değildir.
+</div>
 </body>
 </html>
