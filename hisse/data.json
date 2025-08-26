@@ -1,0 +1,50 @@
+{
+  "BFREN": {
+    "destek1": 188,
+    "destek2": 178,
+    "direnc1": 191,
+    "direnc2": 200,
+    "rsi": 59,
+    "macd": "Pozitif",
+    "ma50": 186,
+    "ma200": 178,
+    "guncelleme": "26 Ağustos 2025",
+    "yorum": "Orta-uzun vadede yükseliş trendi devam ediyor."
+  },
+  "THYAO": {
+    "destek1": 310,
+    "destek2": 295,
+    "direnc1": 325,
+    "direnc2": 340,
+    "rsi": 63,
+    "macd": "Pozitif",
+    "ma50": 305,
+    "ma200": 280,
+    "guncelleme": "26 Ağustos 2025",
+    "yorum": "Güçlü alım sinyalleri ile yukarı yönlü trend sürüyor."
+  },
+  "FROTO": {
+    "destek1": 970,
+    "destek2": 940,
+    "direnc1": 1000,
+    "direnc2": 1050,
+    "rsi": 57,
+    "macd": "Nötr",
+    "ma50": 960,
+    "ma200": 920,
+    "guncelleme": "26 Ağustos 2025",
+    "yorum": "Yatay hareket devam ediyor, direnç kırılımı yeni ivme getirebilir."
+  },
+  "SASA": {
+    "destek1": 65,
+    "destek2": 62,
+    "direnc1": 70,
+    "direnc2": 75,
+    "rsi": 52,
+    "macd": "Negatif",
+    "ma50": 66,
+    "ma200": 60,
+    "guncelleme": "26 Ağustos 2025",
+    "yorum": "Zayıf görünüm devam ediyor, desteklerin altına inerse satış baskısı artabilir."
+  }
+}
