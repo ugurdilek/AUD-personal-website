@@ -1,108 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Basic Meta Tags -->
     <meta charset="UTF-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Home - Uğur Dilek</title>
-    <meta content="Hi, I'm Uğur." name="description">
+    <meta name="description" content="Hi, I'm Uğur.">
+    <link rel="canonical" href="https://www.ugurdilek.com/"/>
+    <link rel="preload" as="style" href="/css/!nostyleacx27css.css"/>
+    <link rel="stylesheet" href="/css/!nostyleacx27css.css"/>
 
-    <!-- Canonical link for SEO -->
-    <link href="https://www.ugurdilek.com/" rel="canonical"/>
-
-    <!-- CSS Styles -->
-    <link as="style" href="/css/!nostyleacx27css.css" rel="preload"/>
-    <link href="/css/!nostyleacx27css.css" rel="stylesheet"/>
-
-    <!-- Font Awesome Icons -->
     <script>
-        window.addEventListener('load', function () {
-            const fa = document.createElement('link');
-            fa.rel = 'stylesheet';
-            fa.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css';
-            fa.crossOrigin = 'anonymous';
-            document.head.appendChild(fa);
-        });
-    </script>
+        const loadScript = (src, async = false) => {
+            const script = document.createElement('script');
+            script.src = src;
+            script.async = async;
+            document.head.appendChild(script);
+        };
 
-    <!-- Google Analytics Tracking -->
-    <script>
-        window.addEventListener('DOMContentLoaded', function () {
-            setTimeout(function () {
-                const gtagScript = document.createElement('script');
-                gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-9P7Z2XMBMH";
-                gtagScript.async = true;
-                document.head.appendChild(gtagScript);
+        const loadStylesheet = (href, crossOrigin = null) => {
+            const link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.href = href;
+            if (crossOrigin) link.crossOrigin = crossOrigin;
+            document.head.appendChild(link);
+        };
 
+        window.addEventListener('load', () => loadStylesheet('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css', 'anonymous'));
+
+        window.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                loadScript('https://www.googletagmanager.com/gtag/js?id=G-9P7Z2XMBMH', true);
                 window.dataLayer = window.dataLayer || [];
-
-                function gtag() {
-                    dataLayer.push(arguments);
-                }
-
+                function gtag() { dataLayer.push(arguments); }
                 gtag('js', new Date());
                 gtag('config', 'G-9P7Z2XMBMH');
             }, 2000);
         });
-    </script>
 
-    <!-- Basic Security: Disable right click & developer shortcuts -->
-    <script>
+        const preventKeys = ['F12', 'U', 'S', 'I', 'J'];
         document.addEventListener('contextmenu', e => e.preventDefault());
         document.addEventListener('keydown', e => {
-            const keys = ['F12', 'U', 'S', 'I', 'J'];
-            if ((e.key === 'F12') || (e.ctrlKey && (keys.includes(e.key.toUpperCase()) || (e.shiftKey && ['I', 'J'].includes(e.key))))) {
+            if (e.key === 'F12' || (e.ctrlKey && (preventKeys.includes(e.key.toUpperCase()) || (e.shiftKey && (e.key === 'I' || e.key === 'J'))))) {
                 e.preventDefault();
             }
         });
     </script>
 
-    <!-- Favicon -->
-    <link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
 </head>
-
 <body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a class="active" href="/"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="/gallery"><i class="fa-solid fa-image"></i> Gallery</a></li>
+                <li><a href="/resume"><i class="fa-solid fa-file-lines"></i> Resume</a></li>
+                <li><a href="/contact"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+            </ul>
+        </nav>
+        <div class="top-bar">
+            <button class="burger-button" aria-label="Menu">
+                <svg width="40" viewBox="0 0 100 100">
+                    <circle class="circle-bg" cx="52" cy="48" r="45"/>
+                    <path class="line top" d="M 10,35 H 70"/>
+                    <path class="line middle" d="M 20,50 H 60"/>
+                    <path class="line bottom" d="M 10,65 H 70"/>
+                </svg>
+            </button>
+        </div>
+    </header>
 
-<!-- Site Header with Navigation -->
-<header>
-    <nav class="navbar">
-        <ul>
-            <li><a class="active" href="/"><i class="fa-solid fa-house"></i> Home</a></li>
-            <li><a href="/gallery"><i class="fa-solid fa-image"></i> Gallery</a></li>
-            <li><a href="/resume"><i class="fa-solid fa-file-lines"></i> Resume</a></li>
-            <li><a href="/contact"><i class="fa-solid fa-envelope"></i> Contact</a></li>
-        </ul>
-    </nav>
+    <footer class="bottom-bar">
+        <div class="footer-content">
+            <span class="motto"><em>İyilik, iyidir.</em></span>
+        </div>
+    </footer>
 
-    <!-- Mobile Burger Menu Button -->
-    <div class="top-bar">
-        <button aria-label="Menu" class="burger-button">
-            <svg viewBox="0 0 100 100" width="40">
-                <circle class="circle-bg" cx="52" cy="48" r="45"/>
-                <path class="line top"      d="M 10,35 H 70"/>
-                <path class="line middle"   d="M 20,50 H 60"/>
-                <path class="line bottom"   d="M 10,65 H 70"/>
-            </svg>
-        </button>
-    </div>
-</header>
+    <main class="content">
+        <p>Hello! 👋 I'm Uğur</p>
+        <p>Welcome to my personal website</p>
+        <p>I am an electrical and electronics engineer and currently work as a software test engineer.</p>
+        <p>Here you can find photos from my travels, my resume and my contact information.</p>
+    </main>
 
-<!-- Site Footer with Navigation -->
-<footer class="bottom-bar">
-    <div class="footer-content">
-        <span class="motto"><em>İyilik, iyidir.</em></span>
-    </div>
-</footer>
-
-<!-- Main -->
-<main class="content">
-    <p> Hello! 👋 I'm Uğur </p>
-    <p> Welcome to my personal website </p>
-    <p> I am an electrical and electronics engineer and currently work as a software test engineer. </p>
-    <p> Here you can find photos from my travels, my resume and my contact information. </p>
-</main>
-
-<!-- JS Script -->
-<script src="/js/script.js"></script>
+    <script src="/js/script.js"></script>
 </body>
 </html>
