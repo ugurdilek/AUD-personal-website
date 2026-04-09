@@ -1,87 +1,578 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Home - Uğur Dilek</title>
-    <meta name="description" content="Hi, I'm Uğur.">
-    <link rel="canonical" href="https://www.ugurdilek.com/"/>
-    <link rel="preload" as="style" href="/css/!nostyleacx27css.css"/>
-    <link rel="stylesheet" href="/css/!nostyleacx27css.css"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Uğur Dilek</title>
+  <meta name="description" content="Personal website of Uğur Dilek — Software Test Engineer focused on building reliable systems." />
+  <style>
+    :root {
+      --bg: #f7f8fa;
+      --surface: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --line: #e5e7eb;
+      --accent: #111827;
+      --accent-2: #374151;
+      --shadow: 0 10px 30px rgba(17, 24, 39, 0.08);
+      --radius: 18px;
+      --max: 1100px;
+    }
 
-    <script>
-        const loadScript = (src, async = false) => {
-            const script = document.createElement('script');
-            script.src = src;
-            script.async = async;
-            document.head.appendChild(script);
-        };
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
 
-        const loadStylesheet = (href, crossOrigin = null) => {
-            const link = document.createElement('link');
-            link.rel = 'stylesheet';
-            link.href = href;
-            if (crossOrigin) link.crossOrigin = crossOrigin;
-            document.head.appendChild(link);
-        };
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
 
-        window.addEventListener('load', () => loadStylesheet('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css', 'anonymous'));
+    .container {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+    }
 
-        window.addEventListener('DOMContentLoaded', () => {
-            setTimeout(() => {
-                loadScript('https://www.googletagmanager.com/gtag/js?id=G-9P7Z2XMBMH', true);
-                window.dataLayer = window.dataLayer || [];
-                function gtag() { dataLayer.push(arguments); }
-                gtag('js', new Date());
-                gtag('config', 'G-9P7Z2XMBMH');
-            }, 2000);
-        });
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(10px);
+      background: rgba(247, 248, 250, 0.88);
+      border-bottom: 1px solid rgba(229, 231, 235, 0.9);
+    }
 
-        const preventKeys = ['F12', 'U', 'S', 'I', 'J'];
-        document.addEventListener('contextmenu', e => e.preventDefault());
-        document.addEventListener('keydown', e => {
-            if (e.key === 'F12' || (e.ctrlKey && (preventKeys.includes(e.key.toUpperCase()) || (e.shiftKey && (e.key === 'I' || e.key === 'J'))))) {
-                e.preventDefault();
-            }
-        });
-    </script>
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 72px;
+      gap: 16px;
+    }
 
-    <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+    .brand {
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      font-size: 1.05rem;
+    }
+
+    .menu {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .menu a {
+      color: var(--muted);
+      font-size: 0.96rem;
+      transition: color 0.2s ease;
+    }
+
+    .menu a:hover { color: var(--accent); }
+
+    section {
+      padding: 88px 0;
+    }
+
+    .hero {
+      padding: 96px 0 72px;
+    }
+
+    .hero-box {
+      background: linear-gradient(180deg, #ffffff 0%, #f9fafb 100%);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      padding: 56px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-bottom: 14px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3 {
+      margin: 0 0 16px;
+      line-height: 1.2;
+      letter-spacing: -0.03em;
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 6vw, 4.2rem);
+      max-width: 820px;
+    }
+
+    h2 {
+      font-size: clamp(1.7rem, 4vw, 2.4rem);
+    }
+
+    .lead {
+      max-width: 760px;
+      font-size: 1.08rem;
+      color: var(--accent-2);
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 28px 0 34px;
+    }
+
+    .chip {
+      background: #f3f4f6;
+      color: var(--accent-2);
+      border: 1px solid var(--line);
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-size: 0.92rem;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 8px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 18px;
+      border-radius: 12px;
+      font-weight: 600;
+      border: 1px solid var(--accent);
+      transition: all 0.2s ease;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background: #000;
+      border-color: #000;
+    }
+
+    .btn-secondary {
+      background: #fff;
+      color: var(--accent);
+    }
+
+    .btn-secondary:hover {
+      background: #f3f4f6;
+    }
+
+    .section-head {
+      max-width: 700px;
+      margin-bottom: 28px;
+    }
+
+    .section-head p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .about-box,
+    .contact-box {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 32px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 26px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 38px rgba(17, 24, 39, 0.1);
+    }
+
+    .card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+    }
+
+    .card p,
+    .card li,
+    .about-box p,
+    .contact-box p {
+      color: var(--muted);
+    }
+
+    .work-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 20px;
+      align-items: start;
+    }
+
+    .experience-item {
+      padding: 18px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .experience-item:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .role {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 8px;
+    }
+
+    .role strong {
+      font-size: 1.04rem;
+    }
+
+    .period {
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    ul.clean {
+      margin: 10px 0 0;
+      padding-left: 18px;
+    }
+
+    .stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .stack span {
+      font-size: 0.9rem;
+      background: #f3f4f6;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 8px 12px;
+      color: var(--accent-2);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .photo {
+      aspect-ratio: 4 / 3;
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      background: linear-gradient(135deg, #dbeafe, #e5e7eb);
+      position: relative;
+    }
+
+    .photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .photo-label {
+      position: absolute;
+      bottom: 12px;
+      left: 12px;
+      background: rgba(17, 24, 39, 0.72);
+      color: #fff;
+      font-size: 0.82rem;
+      padding: 6px 10px;
+      border-radius: 999px;
+    }
+
+    .contact-links {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 22px;
+    }
+
+    .contact-link {
+      background: #f9fafb;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 18px;
+    }
+
+    .contact-link span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-bottom: 4px;
+    }
+
+    footer {
+      padding: 28px 0 44px;
+      color: var(--muted);
+      font-size: 0.94rem;
+      text-align: center;
+    }
+
+    @media (max-width: 900px) {
+      .grid-3,
+      .gallery-grid,
+      .contact-links,
+      .work-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-box {
+        padding: 32px 24px;
+      }
+
+      section {
+        padding: 72px 0;
+      }
+
+      .hero {
+        padding-top: 72px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .nav-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 12px 0;
+      }
+
+      .menu {
+        gap: 14px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <ul>
-                <li><a class="active" href="/"><i class="fa-solid fa-house"></i> Home</a></li>
-                <li><a href="/gallery"><i class="fa-solid fa-image"></i> Gallery</a></li>
-                <li><a href="/resume"><i class="fa-solid fa-file-lines"></i> Resume</a></li>
-                <li><a href="/contact"><i class="fa-solid fa-envelope"></i> Contact</a></li>
-            </ul>
-        </nav>
-        <div class="top-bar">
-            <button class="burger-button" aria-label="Menu">
-                <svg width="40" viewBox="0 0 100 100">
-                    <circle class="circle-bg" cx="52" cy="48" r="45"/>
-                    <path class="line top" d="M 10,35 H 70"/>
-                    <path class="line middle" d="M 20,50 H 60"/>
-                    <path class="line bottom" d="M 10,65 H 70"/>
-                </svg>
-            </button>
-        </div>
-    </header>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="#home" class="brand">Uğur Dilek</a>
+      <nav class="menu" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-    <footer class="bottom-bar">
-        <div class="footer-content">
-            <span class="motto"><em>İyilik, iyidir.</em></span>
-        </div>
-    </footer>
+  <main>
+    <section id="home" class="hero">
+      <div class="container">
+        <div class="hero-box">
+          <span class="eyebrow">Personal Website</span>
+          <h1>Software Test Engineer focused on building reliable systems.</h1>
+          <p class="lead">
+            I have a background in Electrical &amp; Electronics Engineering and experience in software testing and quality assurance. This website reflects both my professional work and personal interests.
+          </p>
 
-    <main class="content">
-        <p>Hello! I'm Uğur</p>
-        <p>Software Test Engineer focused on building reliable systems.</p>
-        <p>I have a background in Electrical & Electronics Engineering and experience in software testing and quality assurance.</p>
-        <p>This website reflects both my professional work and personal interests.</p>
-    </main>
-    <script src="/js/script.js"></script>
+          <div class="chips" aria-label="Highlights">
+            <span class="chip">Siemens</span>
+            <span class="chip">ISTQB Certified</span>
+            <span class="chip">Software Testing</span>
+          </div>
+
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#work">View Work</a>
+            <a class="btn btn-secondary" href="#gallery">View Gallery</a>
+            <a class="btn btn-secondary" href="#contact">Contact</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-head">
+          <h2>About</h2>
+          <p>A short introduction about who I am and what this website represents.</p>
+        </div>
+
+        <div class="about-box">
+          <p>
+            I am a Software Test Engineer with a background in Electrical &amp; Electronics Engineering. I focus on building reliable systems and continuously improving software quality. Outside of work, I enjoy photography and exploring new places.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="grid-3">
+          <div class="card">
+            <h3>Professional Focus</h3>
+            <p>
+              My work centers on software testing, validation, and quality assurance with a structured engineering mindset.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Personal Side</h3>
+            <p>
+              I also use this space to share moments, interests, and visual memories beyond work.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Simple and Clear</h3>
+            <p>
+              The goal of this website is to present both my work and my interests in a clean, direct, and accessible way.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="work">
+      <div class="container">
+        <div class="section-head">
+          <h2>Work</h2>
+          <p>My professional background, experience, and the areas I focus on.</p>
+        </div>
+
+        <div class="work-grid">
+          <div class="card">
+            <h3>What I Do</h3>
+            <p>
+              I work in software testing and quality assurance, focusing on building reliable and stable systems. I am involved in testing processes, validation, and improving overall software quality.
+            </p>
+
+            <div class="experience-item">
+              <div class="role">
+                <strong>Software Test Engineer — Siemens</strong>
+                <span class="period">Present</span>
+              </div>
+              <ul class="clean">
+                <li>Working on software testing and quality assurance processes</li>
+                <li>Performing validation and testing activities</li>
+                <li>Contributing to improving system reliability</li>
+              </ul>
+            </div>
+
+            <div class="experience-item">
+              <div class="role">
+                <strong>Background in Electrical &amp; Electronics Engineering</strong>
+                <span class="period">Foundation</span>
+              </div>
+              <p>
+                My engineering education helps me approach products and systems with both technical depth and system-level thinking.
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Skills &amp; Keywords</h3>
+            <div class="stack">
+              <span>Software Testing</span>
+              <span>Quality Assurance</span>
+              <span>Validation</span>
+              <span>System Reliability</span>
+              <span>Test Processes</span>
+              <span>Engineering Mindset</span>
+              <span>ISTQB</span>
+            </div>
+
+            <h3 style="margin-top: 28px;">Resume</h3>
+            <p>
+              You can also provide a downloadable resume link here if you would like to keep that option available.
+            </p>
+            <a class="btn btn-secondary" href="#contact">Request Resume</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <div class="container">
+        <div class="section-head">
+          <h2>Gallery</h2>
+          <p>A personal section for photography, places, and moments I enjoy capturing.</p>
+        </div>
+
+        <div class="gallery-grid">
+          <div class="photo">
+            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80" alt="Travel photography placeholder" />
+            <div class="photo-label">Travel</div>
+          </div>
+          <div class="photo">
+            <img src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?auto=format&fit=crop&w=1200&q=80" alt="Nature photography placeholder" />
+            <div class="photo-label">Nature</div>
+          </div>
+          <div class="photo">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80" alt="Sea photography placeholder" />
+            <div class="photo-label">Moments</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="section-head">
+          <h2>Contact</h2>
+          <p>If you would like to get in touch, feel free to reach out through the channels below.</p>
+        </div>
+
+        <div class="contact-box">
+          <p>
+            For professional communication, collaboration, or general contact, you can reach me via email or connect with me on social platforms.
+          </p>
+
+          <div class="contact-links">
+            <a class="contact-link" href="mailto:yourmail@example.com">
+              <span>Email</span>
+              yourmail@example.com
+            </a>
+            <a class="contact-link" href="https://www.linkedin.com" target="_blank" rel="noreferrer">
+              <span>LinkedIn</span>
+              linkedin.com/in/yourprofile
+            </a>
+            <a class="contact-link" href="https://github.com" target="_blank" rel="noreferrer">
+              <span>GitHub</span>
+              github.com/yourusername
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © 2026 Uğur Dilek. All rights reserved.
+    </div>
+  </footer>
 </body>
 </html>
